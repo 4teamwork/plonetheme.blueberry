@@ -4,4 +4,12 @@
     <layer name="plonetheme.blueberry"
            interface="plonetheme.blueberry.interfaces.IBlueberryLayer" />
 
+    <!-- Because we have forked plonetheme.onegovbear,
+         we are switching from the bear to the blueberry on some deployments,
+         which results a leftover browser layer.
+         It is not a supported use case to run these two themes in parallel,
+         so we can safely just remove the layer when it exists.
+         /-->
+    <layer name="plonetheme.onegovbear" remove="True" />
+
 </layers>
