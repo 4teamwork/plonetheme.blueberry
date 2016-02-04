@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+    <!-- The skip links for accessibility -->
+    <browser:viewlet
+        name="plone.skip_links"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".accesskeys.BlueberrySkipLinksViewlet"
+        permission="zope2.View"
+        layer="plonetheme.blueberry.interfaces.IBlueberryLayer"
+        />
+
+</configure>

@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0.0a5.dev0'
+version = '1.0.0.dev0'
 
 tests_require = [
     'ftw.builder',
@@ -10,9 +10,9 @@ tests_require = [
     'unittest2',
     ]
 
-setup(name='plonetheme.onegovbear',
+setup(name='plonetheme.blueberry',
       version=version,
-      description='OneGov Plone theme sponsored by the city of Bern.',
+      description='A Plone 4 theme',
       long_description=(open('README.rst').read() + '\n' +
                         open(os.path.join('docs', 'HISTORY.txt')).read()),
 
@@ -25,10 +25,10 @@ setup(name='plonetheme.onegovbear',
         'Programming Language :: Python',
         ],
 
-      keywords='plone theme onegov',
+      keywords='plone theme 4teamwork',
       author='4teamwork AG',
       author_email='mailto:info@4teamwork.ch',
-      url='https://github.com/OneGov/plonetheme.onegovbear',
+      url='https://github.com/4teamwork/plonetheme.blueberry',
       license='GPL2',
 
       packages=find_packages(exclude=['ez_setup']),

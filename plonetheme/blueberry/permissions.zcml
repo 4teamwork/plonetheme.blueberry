@@ -1,0 +1,10 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="plonetheme.blueberry">
+
+    <permission
+        id="plonetheme.blueberry.CustomizeDesignVariables"
+        title="plonetheme.blueberry: Customize Design Variables"
+        />
+
+</configure>
