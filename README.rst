@@ -25,8 +25,8 @@ After rerunning buildout install the Generic Setup profile.
 Links
 -----
 
-- Github project repository: https://github.com/OneGov/plonetheme.blueberry
-- Issue tracker: https://github.com/OneGov/plonetheme.blueberry/issues
+- Github project repository: https://github.com/4teamwork/plonetheme.blueberry
+- Issue tracker: https://github.com/4teamwork/plonetheme.blueberry/issues
 - Continuous integration: https://jenkins.4teamwork.ch/search?q=plonetheme.blueberry
 
 

@@ -28,7 +28,7 @@ setup(name='plonetheme.blueberry',
       keywords='plone theme 4teamwork',
       author='4teamwork AG',
       author_email='mailto:info@4teamwork.ch',
-      url='https://github.com/OneGov/plonetheme.blueberry',
+      url='https://github.com/4teamwork/plonetheme.blueberry',
       license='GPL2',
 
       packages=find_packages(exclude=['ez_setup']),
