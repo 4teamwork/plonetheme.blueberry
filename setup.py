@@ -12,7 +12,7 @@ tests_require = [
 
 setup(name='plonetheme.blueberry',
       version=version,
-      description='OneGov Plone theme sponsored by the city of Bern.',
+      description='A Plone 4 theme',
       long_description=(open('README.rst').read() + '\n' +
                         open(os.path.join('docs', 'HISTORY.txt')).read()),
 
@@ -25,7 +25,7 @@ setup(name='plonetheme.blueberry',
         'Programming Language :: Python',
         ],
 
-      keywords='plone theme onegov',
+      keywords='plone theme 4teamwork',
       author='4teamwork AG',
       author_email='mailto:info@4teamwork.ch',
       url='https://github.com/OneGov/plonetheme.blueberry',

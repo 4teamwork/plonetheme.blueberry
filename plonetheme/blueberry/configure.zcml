@@ -25,7 +25,7 @@
         name="default"
         title="plonetheme.blueberry"
         directory="profiles/default"
-        description="A OneGov Plone Theme."
+        description="Blueberry Theme"
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 

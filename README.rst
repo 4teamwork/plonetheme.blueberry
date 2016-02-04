@@ -1,9 +1,7 @@
 plonetheme.blueberry
 =====================
 
-This is a Plone theme optimized for use with OneGov module  (http://onegov.ch).
-
-Thi theme is based on `ftw.theming`_.
+An `ftw.theming`_ based Plone 4 theme.
 
 
 Installation
