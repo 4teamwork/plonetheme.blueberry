@@ -1,7 +1,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:theme="http://namespaces.zope.org/ftw.theming"
-    i18n_domain="plonetheme.onegovbear">
+    i18n_domain="plonetheme.blueberry">
 
     <include package="ftw.theming" file="meta.zcml" />
 
@@ -10,7 +10,7 @@
     <theme:scss file="theme/scss/globals/variables.scss" slot="variables"
                 after="ftw.theming:resources/scss/globals/variables.scss" />
 
-    <theme:resources profile="plonetheme.onegovbear:default" slot="theme">
+    <theme:resources profile="plonetheme.blueberry:default" slot="theme">
         <theme:scss file="theme/scss/accessibility.scss" />
 
         <theme:scss file="theme/scss/elements/menues.scss" />

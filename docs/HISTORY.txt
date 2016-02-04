@@ -30,7 +30,7 @@ Changelog
 - Add missing !default to font family definitions.
   [mathias.leimgruber]
 
-- Fix init apply of onegovbear profile. Check commit desc for details.
+- Fix init apply of blueberry profile. Check commit desc for details.
   [mathias.leimgruber]
 
 - Apply pagewrapper padding only to header if feature is enabled.

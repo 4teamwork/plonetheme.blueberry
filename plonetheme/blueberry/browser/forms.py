@@ -4,8 +4,8 @@ from persistent.mapping import PersistentMapping
 from plone.app.layout.navigation.interfaces import INavigationRoot
 from plone.directives import form
 from plone.z3cform.layout import wrap_form
-from plonetheme.onegovbear import _
-from plonetheme.onegovbear.interfaces import ICustomDesignVariablesSchema
+from plonetheme.blueberry import _
+from plonetheme.blueberry.interfaces import ICustomDesignVariablesSchema
 from z3c.form import button
 from zope.annotation import IAnnotations
 from zope.component import adapter, getMultiAdapter
@@ -17,7 +17,7 @@ from zope.schema import TextLine
 from zope.schema._compat import u
 import time
 
-VARIABLES_ANNOTATION_KEY = 'plonetheme.onegovebear.custom_scss_variables'
+VARIABLES_ANNOTATION_KEY = 'plonetheme.blueberry.custom_scss_variables'
 TIMESTAMP_ANNOTATION_KEY = VARIABLES_ANNOTATION_KEY + '.last_update_timestamp'
 
 

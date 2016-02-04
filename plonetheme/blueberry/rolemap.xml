@@ -2,7 +2,7 @@
 <rolemap>
     <permissions>
 
-        <permission name="plonetheme.onegovbear: Customize Design Variables" acquire="False">
+        <permission name="plonetheme.blueberry: Customize Design Variables" acquire="False">
             <role name="Manager" />
             <role name="Site Manager" />
         </permission>

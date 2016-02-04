@@ -25,11 +25,11 @@ class ThemeLayer(PloneSandboxLayer):
         z2.installProduct(app, 'ftw.simplelayout')
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'plonetheme.onegovbear:default')
+        applyProfile(portal, 'plonetheme.blueberry:default')
 
 
 THEME_FIXTURE = ThemeLayer()
 THEME_FUNCTIONAL = FunctionalTesting(
     bases=(THEME_FIXTURE,
            set_builder_session_factory(functional_session_factory)),
-    name='plonetheme.onegovbear:functional')
+    name='plonetheme.blueberry:functional')

@@ -10,7 +10,7 @@ tests_require = [
     'unittest2',
     ]
 
-setup(name='plonetheme.onegovbear',
+setup(name='plonetheme.blueberry',
       version=version,
       description='OneGov Plone theme sponsored by the city of Bern.',
       long_description=(open('README.rst').read() + '\n' +
@@ -28,7 +28,7 @@ setup(name='plonetheme.onegovbear',
       keywords='plone theme onegov',
       author='4teamwork AG',
       author_email='mailto:info@4teamwork.ch',
-      url='https://github.com/OneGov/plonetheme.onegovbear',
+      url='https://github.com/OneGov/plonetheme.blueberry',
       license='GPL2',
 
       packages=find_packages(exclude=['ez_setup']),

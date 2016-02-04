@@ -2,9 +2,9 @@ from ftw.builder import Builder
 from ftw.builder import create
 from ftw.testbrowser import browsing
 from plone.app.layout.navigation.interfaces import INavigationRoot
-from plonetheme.onegovbear.browser.dynamic_scss_resources import custom_design_variables_resource_factory
-from plonetheme.onegovbear.browser.forms import VARIABLES_ANNOTATION_KEY
-from plonetheme.onegovbear.tests import FunctionalTestCase
+from plonetheme.blueberry.browser.dynamic_scss_resources import custom_design_variables_resource_factory
+from plonetheme.blueberry.browser.forms import VARIABLES_ANNOTATION_KEY
+from plonetheme.blueberry.tests import FunctionalTestCase
 from zope.annotation import IAnnotations
 import transaction
 
@@ -128,7 +128,7 @@ class TestCustomSCSSVariables(FunctionalTestCase):
 
         # Give the user the permission to configure the contact form and
         # make sure the user can see the action.
-        permissions = 'plonetheme.onegovbear: Customize Design Variables'
+        permissions = 'plonetheme.blueberry: Customize Design Variables'
         self.portal.manage_permission(permissions, roles=['Member'],
                                       acquire=False)
         transaction.commit()

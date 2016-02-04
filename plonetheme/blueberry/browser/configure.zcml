@@ -1,12 +1,12 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
-    i18n_domain="plonetheme.onegovbear">
+    i18n_domain="plonetheme.blueberry">
 
     <browser:page
         for="plone.app.layout.navigation.interfaces.INavigationRoot"
         name="customize-design"
-        permission="plonetheme.onegovbear.CustomizeDesignVariables"
+        permission="plonetheme.blueberry.CustomizeDesignVariables"
         class=".forms.WrappedDesignVariablesForm"
         />
 
@@ -16,7 +16,7 @@
 
     <browser:jbot
         directory="z3cjbot"
-        layer="plonetheme.onegovbear.interfaces.IOneGovBearLayer" />
+        layer="plonetheme.blueberry.interfaces.IBlueberryLayer" />
 
 
 </configure>

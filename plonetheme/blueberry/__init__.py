@@ -1,4 +1,4 @@
 from zope.i18nmessageid import MessageFactory
 
 
-_ = MessageFactory('plonetheme.onegovbear')
+_ = MessageFactory('plonetheme.blueberry')

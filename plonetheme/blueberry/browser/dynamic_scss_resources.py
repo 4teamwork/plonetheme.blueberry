@@ -1,9 +1,9 @@
 from Acquisition import aq_chain
 from ftw.theming.interfaces import ISCSSResourceFactory
 from ftw.theming.resource import DynamicSCSSResource
-from plonetheme.onegovbear.browser.forms import TIMESTAMP_ANNOTATION_KEY
-from plonetheme.onegovbear.browser.forms import VARIABLES_ANNOTATION_KEY
-from plonetheme.onegovbear.interfaces import ICustomDesignVariablesSchema
+from plonetheme.blueberry.browser.forms import TIMESTAMP_ANNOTATION_KEY
+from plonetheme.blueberry.browser.forms import VARIABLES_ANNOTATION_KEY
+from plonetheme.blueberry.interfaces import ICustomDesignVariablesSchema
 from zope.annotation import IAnnotations
 from zope.component import queryMultiAdapter
 from zope.interface import provider
@@ -65,7 +65,7 @@ class CustomDesignVariablesSCSSResource(DynamicSCSSResource):
 @provider(ISCSSResourceFactory)
 def custom_design_variables_resource_factory(context, request):
     return CustomDesignVariablesSCSSResource(
-        'plonetheme.onegovbear.custom_design_variables.scss',
+        'plonetheme.blueberry.custom_design_variables.scss',
         slot='variables',
         before='ftw.theming:portal_url',
     )

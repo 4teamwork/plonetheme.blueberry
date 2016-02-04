@@ -1,6 +1,6 @@
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
-from plonetheme.onegovbear.testing import THEME_FUNCTIONAL
+from plonetheme.blueberry.testing import THEME_FUNCTIONAL
 from unittest2 import TestCase
 import transaction
 

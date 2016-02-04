@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <layers>
 
-    <layer name="plonetheme.onegovbear"
-           interface="plonetheme.onegovbear.interfaces.IOneGovBearLayer" />
+    <layer name="plonetheme.blueberry"
+           interface="plonetheme.blueberry.interfaces.IBlueberryLayer" />
 
 </layers>

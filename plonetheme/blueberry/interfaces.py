@@ -5,8 +5,8 @@
 from zope.interface import Interface
 
 
-class IOneGovBearLayer(Interface):
-    """Browser layer for plonetheme.onegovbear.
+class IBlueberryLayer(Interface):
+    """Browser layer for plonetheme.blueberry.
     """
 
 
