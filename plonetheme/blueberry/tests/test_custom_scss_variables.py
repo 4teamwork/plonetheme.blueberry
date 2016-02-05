@@ -18,7 +18,7 @@ class TestCustomSCSSVariables(FunctionalTestCase):
     @browsing
     def test_values_in_annotations(self, browser):
         browser.login()
-        browser.visit(self.portal, view='customize-design')
+        browser.visit(self.portal, view='manage-theme')
         browser.fill({
             '$primary-color': '#FF00FF',
             '$secondary-color': 'red',
@@ -35,7 +35,7 @@ class TestCustomSCSSVariables(FunctionalTestCase):
     @browsing
     def test_value_inheritance(self, browser):
         browser.login()
-        browser.visit(self.portal, view='customize-design')
+        browser.visit(self.portal, view='manage-theme')
         browser.fill({
             '$primary-color': 'blue',
             '$secondary-color': 'red',
@@ -43,7 +43,7 @@ class TestCustomSCSSVariables(FunctionalTestCase):
         }).save()
 
         page = create(Builder('folder').titled(u'My Subsite').providing(INavigationRoot))
-        browser.visit(page, view='customize-design')
+        browser.visit(page, view='manage-theme')
         browser.fill({
             '$secondary-color': 'green',
         }).save()
@@ -58,7 +58,7 @@ class TestCustomSCSSVariables(FunctionalTestCase):
 
         page2 = create(Builder('folder').titled(u'My Subsite').within(page)
                        .providing(INavigationRoot))
-        browser.visit(page2, view='customize-design')
+        browser.visit(page2, view='manage-theme')
         browser.fill({
             '$primary-color': 'yellow',
         }).save()
@@ -79,7 +79,7 @@ class TestCustomSCSSVariables(FunctionalTestCase):
         no longer is present in the storage.
         """
         browser.login()
-        browser.visit(self.portal, view='customize-design')
+        browser.visit(self.portal, view='manage-theme')
         browser.fill({
             '$primary-color': 'blue',
             '$secondary-color': 'red',
@@ -93,7 +93,7 @@ class TestCustomSCSSVariables(FunctionalTestCase):
         )
 
         # Now empty a value and make sure its no longer there.
-        browser.visit(self.portal, view='customize-design')
+        browser.visit(self.portal, view='manage-theme')
         browser.fill({
             '$primary-color': 'blue',
             '$secondary-color': '',
@@ -109,7 +109,7 @@ class TestCustomSCSSVariables(FunctionalTestCase):
     @browsing
     def test_user_action(self, browser):
         action_link_label = 'Customize design'
-        action_link_url = '@@customize-design'
+        action_link_url = '@@manage-theme'
 
         # Make sure the manager
         browser.login().visit(self.portal)

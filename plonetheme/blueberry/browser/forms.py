@@ -280,7 +280,7 @@ class DesignVariablesForm(form.SchemaEditForm):
 
     @property
     def redirect_url(self):
-        return self.context.absolute_url() + '/@@customize-design'
+        return self.context.absolute_url() + '/@@manage-theme'
 
     def update(self):
         super(DesignVariablesForm, self).update()
