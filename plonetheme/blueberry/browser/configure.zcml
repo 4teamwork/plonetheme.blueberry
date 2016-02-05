@@ -5,7 +5,7 @@
 
     <browser:page
         for="plone.app.layout.navigation.interfaces.INavigationRoot"
-        name="customize-design"
+        name="manage-theme"
         permission="plonetheme.blueberry.CustomizeDesignVariables"
         class=".forms.WrappedDesignVariablesForm"
         />
