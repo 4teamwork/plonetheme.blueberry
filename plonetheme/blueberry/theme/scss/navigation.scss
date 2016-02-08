@@ -1,81 +1,31 @@
-$portlet-navigation-bg-color: $color-content-background !default;
-$portlet-navigation-hover-color: lighten($color-gray-dark, 97.5%) !default;
-$portlet-navigation-active-color: lighten($color-gray-dark, 95.5%) !default;
+.navTree {
+  @include list();
 
-@include declare-variables(
-  portlet-navigation-bg-color,
-  portlet-navigation-hover-color,
-  portlet-navigation-active-color);
+  > li > a {
+    padding: $padding-vertical 0;
+    display: table;
+    width: 100%;
+    text-align: left;
 
-
-
-@mixin navigationitem($color) {
-  @include borderradius();
-  background-color: $color;
-  border: 1px solid $color;
-  display: table;
-  &:hover {
-    text-decoration: none;
-  }
-  &:before {
-    display: table-cell !important;
-  }
-  > span {
-    display: table-cell;
-    padding-left: $padding-vertical;
-  }
-}
-
-
-.portlet.portletNavigationTree {
-  @include dl(plain);
-
-  border-top: 1px solid $color-gray-light;
-  border-bottom: 1px solid $color-gray-light;
-}
-
-
-ul.navTree {
-  @include ul(plain);
-  li {
-    margin-bottom: 0;
-  }
-
-  .navTreeItem {
-    display: block;
-  }
-
-  a {
-    padding: 0.4em 0;
-    display: block;
-    text-decoration: none;
-    @include navigationitem($portlet-navigation-bg-color);
-    &:hover {
-      @include navigationitem($portlet-navigation-hover-color);
-    }
-  }
-
-  a.navTreeCurrentItem, li.navTreeCurrentItem > a {
-    @include navigationitem($portlet-navigation-active-color);
-    font-weight: bold;
     &:before {
+      display: table-cell;
       font-weight: normal;
     }
-  }
 
-  @for $i from 1 through 10 {
-    &.navTreeLevel#{$i} a {
-      padding-left: $i + 1 * 1em;
+    span {
+      display: table-cell;
+      width: 100%;
     }
   }
+}
 
-  &.navTreeLevel0 > li > a{
-    padding-left: 1em;
+@for $i from 1 through 10 {
+  .navTreeLevel#{$i} > li > a {
+    padding-left: $padding-vertical * $i;
   }
+}
 
-  li.navTreeTopNode {
-    border-bottom: 1px solid $color-gray-light;
-    padding-left: 0;
-  }
-
+.navTreeTopNode a {
+  padding: $padding-vertical 0;
+  font-weight: bold;
 }
