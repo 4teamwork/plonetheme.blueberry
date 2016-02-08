@@ -1,0 +1,9 @@
+.ArchetypesKeywordWidget {
+  .newTagsSection {
+    @include reset-definition-list();
+
+    br {
+      display: none;
+    }
+  }
+}

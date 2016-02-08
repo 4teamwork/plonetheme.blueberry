@@ -31,6 +31,8 @@
          - Make sure link / style tags are before script tags (parallel downloading)
          - Move #portal-top link / style tags to the head before script tags
     -->
+    <drop content="/html/head/style[contains(text(),'keywordwidget.css')]"/>
+    <drop content="/html/head/style[contains(text(),'querywidget.css')]"/>
     <after theme-children="/html/head" css:content="html > head > style.top"  />
     <after theme-children="/html/head" css:content="#portal-top style.top"/>
     <after content="/html/head/link | /html/head/style" theme-children="/html/head" />

@@ -1,0 +1,31 @@
+.contenttreeWidget {
+
+  overflow: auto;
+  position: absolute;
+  top: $padding-vertical + $font-size-medium + $margin-vertical;
+  right: $padding-horizontal;
+  bottom: $padding-vertical * 4 + $margin-vertical + 1em;
+  left: $padding-horizontal;
+
+  a {
+    @include list-group-item-interactive();
+    display: table;
+    width: 100%;
+  }
+}
+
+.contenttreeWindowActions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: $padding-vertical $padding-horizontal;
+  box-sizing: border-box;
+  background-color: $color-content-background;
+  border-bottom-right-radius: $border-radius-primary;
+  border-bottom-left-radius: $border-radius-primary;
+  right: 0;
+  > input {
+    // http://blog.getpostman.com/2015/01/23/ui-repaint-issue-on-chrome/
+    -webkit-transform: translate3d(0, 0, 0)
+  }
+}

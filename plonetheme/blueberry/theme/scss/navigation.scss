@@ -19,9 +19,9 @@
   }
 }
 
-@for $i from 1 through 10 {
+@for $i from 0 through 10 {
   .navTreeLevel#{$i} > li > a {
-    padding-left: $padding-vertical * $i;
+    padding-left: $padding-vertical * ($i + 1);
   }
 }
 

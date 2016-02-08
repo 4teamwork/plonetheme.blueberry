@@ -23,6 +23,13 @@
         <theme:scss file="theme/scss/site/layout.scss" />
         <theme:scss file="theme/scss/site/typography.scss" />
 
+        <theme:scss file="theme/scss/widgets/datagrid.scss" />
+        <theme:scss file="theme/scss/widgets/select2.scss" />
+        <theme:scss file="theme/scss/widgets/keyword.scss" />
+        <theme:scss file="theme/scss/widgets/query.scss" />
+        <theme:scss file="theme/scss/widgets/contenttree.scss" />
+        <theme:scss file="theme/scss/widgets/autocomplete.scss" />
+
         <theme:scss file="theme/scss/startpage.scss" />
         <theme:scss file="theme/scss/contacts.scss" />
         <theme:scss file="theme/scss/content.scss" />
@@ -33,7 +40,6 @@
         <theme:scss file="theme/scss/tinymce.scss" />
         <theme:scss file="theme/scss/plone-datepicker.scss" />
         <theme:scss file="theme/scss/plone-legacy.scss" />
-        <theme:scss file="theme/scss/formwidget-contenttree.scss" />
         <theme:scss file="theme/scss/search.scss" />
         <theme:scss file="theme/scss/overlays.scss" />
         <theme:scss file="theme/scss/messages.scss" />
@@ -43,7 +49,6 @@
         <theme:scss file="theme/scss/controlpanel.scss" />
         <theme:scss file="theme/scss/login.scss" />
         <theme:scss file="theme/scss/sitemap.scss" />
-        <theme:scss file="theme/scss/datagridwidget.scss" />
         <theme:scss file="theme/scss/additionallogo.scss" />
         <theme:scss file="theme/scss/languageselector.scss" />
         <theme:scss file="theme/scss/plonebrowser.scss" />
