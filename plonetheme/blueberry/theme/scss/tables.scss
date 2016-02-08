@@ -1,232 +1,116 @@
-$table-heading-bg-color: $color-gray-light !default;
-$table-border-color: darken($table-heading-bg-color, 15%) !default;
-$table-seperator-border-color: darken($color-content-background, 15%) !default;
-$table-odd-bg-color: darken($color-content-background, 2%) !default;
-$table-drag-bg-color: change-color($color-primary, $lightness: 93%) !default;
-$table-drag-border-color: change-color($color-primary, $lightness: 85%) !default;
-
-@include declare-variables(table-heading-bg-color,
-                           table-border-color,
-                           table-seperator-border-color,
-                           table-odd-bg-color,
-                           table-drag-bg-color,
-                           table-drag-border-color);
+@mixin heading-cell() {
+  @include auto-text-color();
+  background-color: $color-primary;
+}
 
 table {
-  margin-bottom: 1.3em;
+  width: 100%;
+  margin-bottom: $margin-vertical;
+  border-radius: $border-radius-primary;
+}
 
-  &.plain {
-    width: 100%;
-    th, thead td {
-      font-weight: bold;
-      text-align: left;
-    }
+caption {
+  @include heading-cell();
+  padding: $padding-vertical $padding-horizontal;
+  font-weight: bold;
+  border-top-left-radius: $border-radius-primary;
+  border-top-right-radius: $border-radius-primary;
 
-    td, th {
-      padding: 0.4em 1em;
-      border: 1px solid $table-seperator-border-color;
-    }
+  ~ thead tr {
+    th, td {
 
-    tbody {
-      th {
-        background-color: $table-heading-bg-color;
+      &:first-child {
+        border-top-left-radius: 0;
       }
-      tr:nth-child(odd) td {
-        background-color: $table-odd-bg-color;
+
+      &:last-child {
+        border-top-right-radius: 0;
       }
     }
-
   }
 
-  &.invisible {
-    width: 100%;
-
-    th, thead td {
-      font-weight: bold;
-      text-align: left;
-    }
-
-    td, th {
-      padding: 0.4em 1em;
-    }
-
-  }
-
-  &.listing {
-    border: 1px solid $table-border-color;
-    border-collapse: separate;
-    width: 100%;
-    @include borderradius;
-
-    th, thead td {
-      font-weight: bold;
-    }
-
-    td, th {
-      padding: 0.4em 1em;
-    }
-
-    thead {
-      td, th {
-        background-color: $table-heading-bg-color;
-        border-bottom: 1px solid $table-seperator-border-color;
-      }
-
-      tr:first-child {
-        td, th {
-          &:first-child {
-            @include borderradius-top-left($border-radius-primary - 1px);
-          }
-
-          &:last-child {
-            @include borderradius-top-right($border-radius-primary - 1px);
-          }
-        }
-      }
-    }
-
-    tbody {
+  ~ tbody tr th {
+    &:first-child {
       th {
-        border-bottom: 1px solid $table-seperator-border-color;
-        background-color: $table-heading-bg-color;
-      }
-
-      tr:nth-child(odd) td {
-        background-color: $table-odd-bg-color;
-      }
-
-      td, th {
-        text-align: left;
-      }
-
-      tr:last-child {
-        td, th {
-          border-bottom: none;
-
-          &:first-child {
-            @include borderradius-bottom-left($border-radius-primary - 1px);
-          }
-
-          &:last-child {
-            @include borderradius-bottom-right($border-radius-primary - 1px);
-          }
-        }
+        border-top-left-radius: 0;
       }
     }
-
-    tfoot {
-      td, th {
-        background-color: $table-heading-bg-color;
-        border-top: 1px solid $table-seperator-border-color;
-      }
-
-      tr:last-child {
-        td, th {
-          &:first-child {
-            @include borderradius-bottom-left($border-radius-primary - 1px);
-          }
-
-          &:last-child {
-            @include borderradius-bottom-right($border-radius-primary - 1px);
-          }
-        }
-      }
-    }
-
-    tr.dragindicator {
-      background-color: $table-drag-bg-color;
-      outline: 2px solid $table-drag-border-color;
-    }
-
-    &.vertical {
+    &:last-child {
       th {
-        background-color: $table-heading-bg-color;
-        border-right: 1px solid $table-seperator-border-color;
-        text-align: right;
-      }
-
-      tr:first-child {
-        th:first-child {
-          @include borderradius-top-left;
-        }
-      }
-    }
-
-    &.grid {
-      td, th {
-        border-right: 1px solid $table-seperator-border-color;
-
-        &:last-child {
-          border-right: none;
-        }
+        border-bottom-left-radius: 0;
       }
     }
   }
 }
 
-/* responsive table */
-/*
-  Force tables to not be like tables anymore. Borrowed from this example:
-  http://elvery.net/demo/responsive-tables/#no-more-tables
-  */
-@include tablet {
-  table.responsive {
-    border: none;
-
-    &, thead, tbody, th, td, tr {
-      display: block;
-      word-wrap: break-word;
-      line-height: 1em;
+tr {
+  &:last-child {
+    td {
+      border: 0;
     }
-    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+  td {
+    border-bottom: 1px solid $color-gray-dark;
+  }
+}
 
-    thead tr {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
+td, th {
+  text-align: left;
+  padding: $padding-vertical $padding-horizontal;
+}
 
-    /* Have spaces between the rows which look like business cards */
-    tbody tr:first-child {
-      margin-top: 0.5em;
+thead tr {
+  th, td {
+    @include heading-cell();
+
+    &:first-child {
+      border-top-left-radius: $border-radius-primary;
     }
 
-    tbody tr {
-      margin-bottom: 0.5em;
+    &:last-child {
+      border-top-right-radius: $border-radius-primary;
+    }
+  }
+}
+
+tbody tr {
+  &:first-child {
+    th {
+      border-top-left-radius: $border-radius-primary;
+    }
+  }
+  &:last-child {
+    th {
+      border-bottom-left-radius: $border-radius-primary;
+    }
+  }
+}
+
+tfoot tr {
+  th, td {
+    @include heading-cell();
+
+    &:first-child {
+      border-bottom-left-radius: $border-radius-primary;
     }
 
-    /* Behave like a "row" */
-    tbody tr td {
-      position: relative;
-      padding-left: 45%;
-      white-space: normal;
-      text-align: left;
-      border: 1px solid $table-border-color;
-      border-width: 0 1px 0 1px;
-      min-height: 1em;
+    &:last-child {
+      border-bottom-right-radius: $border-radius-primary;
     }
+  }
+}
 
-    tbody tr td:first-child {
-      @include borderradius-top-left;
-      @include borderradius-top-right;
-      border-top: 1px solid $table-border-color;
-    }
+table.listing {
+  td {
+    border-color: $color-gray-light;
+  }
+  tr:nth-child(even) td {
+    background-color: $color-gray-light;
+  }
+}
 
-    tbody tr td:last-child {
-      @include borderradius-bottom-left;
-      @include borderradius-bottom-right;
-      border-bottom: 1px solid $table-border-color;
-    }
-
-    /* Table header as label */
-    td:before {
-      position: absolute;
-      top: 0.5em;
-      left: 0.5em;
-      width: 40%;
-      padding-right: 1em;
-      text-align: right;
-      content: attr(data-title);
-    }
+table.invisible {
+  td {
+    border: 0;
   }
 }
