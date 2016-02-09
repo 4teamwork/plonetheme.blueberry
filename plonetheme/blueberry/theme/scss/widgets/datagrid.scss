@@ -1,0 +1,106 @@
+/*
+  Styling this widget was a pain #tableflip.
+  (╯°□°)╯︵ ┻━━━━━━┻
+ */
+
+.datagridwidget-table-view {
+
+  width: 100%;
+
+  .formControls {
+    display: none;
+  }
+
+  .header {
+    padding: 0;
+  }
+
+
+  input[type="text"] {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .datagridwidget-cell {
+    vertical-align: bottom;
+  }
+
+  .cell-1 {
+    padding: $padding-vertical $padding-horizontal;
+    width: 20%;
+  }
+
+  .cell-2 {
+    padding: $padding-vertical $padding-horizontal;
+    width: 20%;
+  }
+
+  .cell-3 {
+    padding: $padding-vertical $padding-horizontal;
+    width: 30%;
+  }
+
+  .cell-4 {
+    padding: $padding-vertical $padding-horizontal;
+    width: 30%;
+  }
+
+  .querySelectSearch {
+    .field {
+      margin: 0;
+    }
+    input[type="text"] {
+      width: 70%;
+      float: left;
+    }
+
+    input[type="button"] {
+      width: 30%;
+      float: left;
+      margin: 0;
+    }
+  }
+
+}
+
+
+.datagridwidget-hidden-data {
+  display: none;
+}
+
+.datagridwidget-manipulator {
+  @extend .fa-icon;
+  position: relative;
+  padding: 0;
+  width: 0;
+  padding: 0;
+
+  &.insert-row {
+    @extend .fa-plus;
+  }
+  &.delete-row {
+    @extend .fa-minus;
+  }
+  &.move-up {
+    @extend .fa-arrow-up;
+  }
+  &.move-down {
+    @extend .fa-arrow-down;
+  }
+
+  img {
+    @include link();
+
+    // The eventhandles for the buttons are registered to the img tags.
+    // So make sure that the images cover the icons to trigger the actions.
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+}
