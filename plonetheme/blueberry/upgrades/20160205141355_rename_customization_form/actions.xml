@@ -3,6 +3,7 @@
         xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
     <object name="site_actions" meta_type="CMF Action Category">
+        <object name="customize_design" remove="True"/>
         <object name="manage-theme" meta_type="CMF Action"
                 i18n:domain="plonetheme.blueberry">
             <property name="title" i18n:translate="">Customize design</property>
