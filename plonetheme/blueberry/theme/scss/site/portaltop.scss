@@ -1,9 +1,10 @@
 .masthead {
-  @include clearfix();
   background-color: $color-primary;
+  height: $line-height-base + 2 * $padding-vertical;
 }
 
 #portal-top {
+  @include clearfix();
   max-width: $max-width-page;
   margin: 0 auto;
   .actionMenuHeader > a {
