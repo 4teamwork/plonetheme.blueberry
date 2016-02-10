@@ -1,0 +1,108 @@
+.ArchetypesQueryWidget {
+
+  > div {
+    padding-bottom: $padding-vertical / 2;
+  }
+
+  > div > div > .formHelp {
+    padding: 0;
+    padding-bottom: $padding-vertical / 2;
+  }
+
+  .criteria {
+    @include clearfix();
+    margin-bottom: $margin-vertical;
+    padding: $padding-vertical $padding-horizontal;
+    background-color: $color-gray-light;
+
+    select {
+      display: block;
+      margin-bottom: $padding-vertical / 2;
+    }
+
+    > div {
+      padding-bottom: $padding-vertical / 2;
+    }
+
+    > label {
+      @include visible-structure();
+      padding-bottom: $padding-vertical / 2;
+    }
+
+    input[type="text"] {
+      margin: 0;
+      box-sizing: border-box;
+      min-width: 0;
+      width: 100%;
+    }
+
+    select, > div:not(.queryresults), > input[type="text"] {
+      @include floatgrid($row-width: 4, $offset: 1);
+    }
+
+    .emptyWidget {
+      display: none;
+    }
+
+    .multipleSelectionWidget {
+      @include reset-definition-list();
+      max-height: 400px;
+      overflow: auto;
+      label {
+        @include list-group-item-interactive();
+      }
+    }
+
+    .removecriteria {
+      @include button-danger();
+    }
+
+    .multipleSelectionWidgetTitle {
+      display: block;
+      padding-bottom: $padding-vertical / 2;
+    }
+
+    .arrowDownAlternative {
+      @extend .fa-icon;
+      @extend .fa-angle-down;
+      float: left;
+      font-size: 0;
+      &:before {
+        font-size: $font-size-base;
+      }
+    }
+
+  }
+
+  .sortingField {
+    margin-bottom: $margin-vertical;
+    padding: $padding-vertical $padding-horizontal;
+    background-color: $color-gray-light;
+  }
+
+  .previewresults {
+    background-color: $color-gray-light;
+    padding: $padding-vertical $padding-horizontal;
+  }
+
+  .searchResults {
+    @include reset-definition-list();
+
+    dt {
+      float: left;
+      line-height: 1em + $padding-vertical / 2;
+    }
+
+    dd {
+      line-height: 1em + $padding-vertical / 2;
+      &:before {
+        content: '—';
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+}

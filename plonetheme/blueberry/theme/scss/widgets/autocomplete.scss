@@ -1,0 +1,15 @@
+.ac_results {
+  z-index: 1;
+  min-width: 400px;
+  box-shadow: $box-shadow-secondary;
+
+  ul {
+    @include list-group-interactive();
+    max-height: 400px !important;
+  }
+
+  li {
+    @include list-group-item-interactive();
+  }
+
+}
