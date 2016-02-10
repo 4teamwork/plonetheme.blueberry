@@ -6,3 +6,83 @@ input[type="password"] {
 textarea {
   @include textarea();
 }
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+// Form: Image widget.
+// On some images the width calculation fails -> -1 appears.
+#form-widgets-image > span > img:first-child {
+  width: 128px;
+}
+
+.formTabs {
+  margin-bottom: $margin-vertical;
+}
+
+.field {
+  @include clearfix();
+  margin-bottom: $margin-vertical;
+
+  &.error {
+    input[type="text"] {
+      @include input-error();
+    }
+    .fieldErrorBox {
+      display: block;
+    }
+  }
+
+  input[type="checkbox"], input[type="radio"] {
+    vertical-align: baseline;
+
+    &~label, ~.label {
+      display: inline-block;
+    }
+  }
+
+  span.required {
+    @extend .fa-icon;
+    @extend .fa-asterisk;
+    vertical-align: baseline;
+    color: $color-danger;
+    font-size: $font-size-small;
+    &:before {
+      min-width: 0 !important;
+    }
+  }
+
+}
+
+.fieldErrorBox {
+  display: none;
+  color: $color-danger;
+  font-weight: bold;
+  padding-bottom: $padding-vertical / 2;
+}
+
+.formHelp {
+  color: $color-text-light;
+  font-weight: normal;
+  display: block;
+  padding-top: $padding-vertical / 2;
+  &:empty {
+    display: none;
+  }
+}
+
+label, .label {
+  display: block;
+  padding-bottom: $padding-vertical / 2;
+  font-weight: bold;
+}
+
+.editionComment {
+  .formHelp {
+    padding-top: 0;
+    padding-bottom: $padding-vertical / 2;
+  }
+}
