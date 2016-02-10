@@ -20,39 +20,39 @@ class TestCustomSCSSVariables(FunctionalTestCase):
         browser.login()
         browser.visit(self.portal, view='manage-theme')
         browser.fill({
-            '$primary-color': '#FF00FF',
-            '$secondary-color': 'red',
+            '$color-primary': '#FF00FF',
+            '$color-secondary': 'red',
         }).save()
 
         annotations = IAnnotations(self.portal)
-        self.assertEqual(
-            {'primary_color': {'value': u'#FF00FF',
-                               'variable_name': '$primary-color'},
-             'secondary_color': {'value': u'red',
-                                 'variable_name': '$secondary-color'}},
-            annotations[VARIABLES_ANNOTATION_KEY])
+        self.assertDictEqual(
+            {'color_primary': {'value': u'#FF00FF',
+                               'variable_name': '$color-primary'},
+             'color_secondary': {'value': u'red',
+                                 'variable_name': '$color-secondary'}},
+            dict(annotations[VARIABLES_ANNOTATION_KEY]))
 
     @browsing
     def test_value_inheritance(self, browser):
         browser.login()
         browser.visit(self.portal, view='manage-theme')
         browser.fill({
-            '$primary-color': 'blue',
-            '$secondary-color': 'red',
-            '$globalnav-bg-color': 'fuchsia',
+            '$color-primary': 'blue',
+            '$color-secondary': 'red',
+            '$color-link': 'fuchsia',
         }).save()
 
         page = create(Builder('folder').titled(u'My Subsite').providing(INavigationRoot))
         browser.visit(page, view='manage-theme')
         browser.fill({
-            '$secondary-color': 'green',
+            '$color-secondary': 'green',
         }).save()
 
         scss_resource = custom_design_variables_resource_factory(
             page, self.request)
         self.assertEqual(
-            '$primary-color: blue;\n$secondary-color: red;\n'
-            '$globalnav-bg-color: fuchsia;\n$secondary-color: green;',
+            '$color-primary: blue;\n$color-secondary: red;\n'
+            '$color-link: fuchsia;\n$color-secondary: green;',
             scss_resource.get_source(page, self.request)
         )
 
@@ -60,15 +60,15 @@ class TestCustomSCSSVariables(FunctionalTestCase):
                        .providing(INavigationRoot))
         browser.visit(page2, view='manage-theme')
         browser.fill({
-            '$primary-color': 'yellow',
+            '$color-secondary': 'yellow',
         }).save()
 
         scss_resource = custom_design_variables_resource_factory(
             page2, self.request)
         self.assertEqual(
-            '$primary-color: blue;\n$secondary-color: red;\n'
-            '$globalnav-bg-color: fuchsia;\n$secondary-color: green;\n'
-            '$primary-color: yellow;',
+            '$color-primary: blue;\n$color-secondary: red;\n'
+            '$color-link: fuchsia;\n$color-secondary: green;\n'
+            '$color-secondary: yellow;',
             scss_resource.get_source(page2, self.request)
         )
 
@@ -81,28 +81,28 @@ class TestCustomSCSSVariables(FunctionalTestCase):
         browser.login()
         browser.visit(self.portal, view='manage-theme')
         browser.fill({
-            '$primary-color': 'blue',
-            '$secondary-color': 'red',
+            '$color-primary': 'blue',
+            '$color-secondary': 'red',
         }).save()
 
         scss_resource = custom_design_variables_resource_factory(
             self.portal, self.request)
         self.assertEqual(
-            '$primary-color: blue;\n$secondary-color: red;',
+            '$color-primary: blue;\n$color-secondary: red;',
             scss_resource.get_source(self.portal, self.request)
         )
 
         # Now empty a value and make sure its no longer there.
         browser.visit(self.portal, view='manage-theme')
         browser.fill({
-            '$primary-color': 'blue',
-            '$secondary-color': '',
+            '$color-primary': 'blue',
+            '$color-secondary': '',
         }).save()
 
         scss_resource = custom_design_variables_resource_factory(
             self.portal, self.request)
         self.assertEqual(
-            '$primary-color: blue;',
+            '$color-primary: blue;',
             scss_resource.get_source(self.portal, self.request)
         )
 
