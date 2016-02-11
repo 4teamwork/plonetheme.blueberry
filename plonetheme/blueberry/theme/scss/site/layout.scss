@@ -1,21 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  @include clearfix();
-  margin: 0;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  font-family: $font-family-primary;
-  color: $color-text;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .portaltype-plone-site {
   #breadcrumbs-wrapper {
     display: none;
@@ -29,31 +11,22 @@ img {
   }
 }
 
-#container {
-  width: 100%;
-  float: left;
-}
-
 #content-core {
   @include clearfix();
 }
 
 #header {
+  @include clearfix();
   padding-bottom: $padding-vertical * 10;
   border-bottom: $padding-vertical solid $color-primary;
-  @include clearfix();
 }
 
 #columns {
-  @include clearfix();
+  @include row();
   border-radius: $border-radius-primary;
-  max-width: $max-width-page;
-  margin-left: auto;
-  margin-right: auto;
   box-shadow: $box-shadow-secondary;
   margin-top: -$padding-vertical * 10 - $padding-vertical;
   background-color: $color-content-background;
-  padding-bottom: $margin-vertical;
   > .row {
     @include row();
   }
@@ -97,109 +70,42 @@ img {
   background-color: $color-primary;
 }
 
-#portal-siteactions {
-  @include list-horizontal();
-  max-width: $max-width-page;
-  margin: 0 auto;
-  > li > a {
-    @include no-link();
-    @include auto-link-color();
-  }
-}
-
-.logoRow {
-  @include clearfix();
-  max-width: $max-width-page;
-  margin: $margin-vertical auto;
-  > .cell {
-    @include cell();
-    @include gridposition(0);
-    @include gridwidth(16);
-  }
-}
-
-.globalnavRow {
+.logo {
   @include row();
+  margin-bottom: $margin-vertical;
+}
+
+#portal-logo {
+  @include cell();
+  @include gridposition(0);
+  @include gridwidth(12);
+}
+
+.navigation {
   border-bottom: 1px solid $color-primary;
-  margin: $margin-vertical 0;
-  .fixed-header {
-    max-width: $max-width-page;
-    margin: 0 auto;
-  }
-  .navigation {
-    @include cell();
-    @include gridposition(0);
-    @include gridwidth(16);
+  margin-bottom: $margin-vertical;
+
+  > .navigation-row {
+    @include row();
   }
 }
 
-.logoRow {
-  max-width: $max-width-page;
-  margin: $margin-vertical auto;
+.global-navigation {
+  @include cell();
+  @include gridposition(0);
+  @include gridwidth(16);
 }
 
-.globalnavRow {
-  @include row();
-  border-bottom: 1px solid $color-primary;
-  margin: $margin-vertical 0;
-  .fixed-header {
-    max-width: $max-width-page;
-    margin: 0 auto;
-  }
-  .navigation {
-    @include cell();
-    @include gridposition(0);
-    @include gridwidth(16);
-  }
+.global-navigation {
+  @include cell();
+  @include gridposition(0);
+  @include gridwidth(12);
 }
 
-#portal-globalnav {
-  @include list-horizontal();
-
-  li.selected a{
-    border-bottom-color: $color-primary;
-  }
-
-  > li > a {
-    @include no-link();
-    font-size: $font-size-medium;
-    margin-right: $margin-horizontal;
-    padding: $padding-vertical ($padding-horizontal / 2);
-    border-bottom: 3px solid transparent;
-    &:hover {
-      border-bottom-color: $color-primary;
-    }
-  }
-}
-
-.LSBox {
-  @include clearfix();
-  position: relative;
-  &:after {
-    font-family: FontAwesome;
-    content: "\f002";
-    position: absolute;
-    visibility: visible;
-    right: - 2 * $padding-horizontal - ($padding-horizontal / 2);
-    top: $padding-vertical;
-  }
-  input[type="text"] {
-    padding-right: 2 * $padding-horizontal;
-  }
-}
-
-.global-nav-search-wrapper {
-  position: relative;
-  .portal-searchbox-wrapper {
-    position: absolute;
-    height: auto;
-    right: 3 * $padding-horizontal;
-    top: -$line-height-base - $padding-vertical * 2 - $margin-vertical - $margin-vertical;
-  }
-}
-
-.global-nav-search-wrapper {
-  @include clearfix();
+#portal-searchbox {
+  @include cell();
+  @include gridposition(12);
+  @include gridwidth(4);
 }
 
 // Responsive styles if both columns are available
