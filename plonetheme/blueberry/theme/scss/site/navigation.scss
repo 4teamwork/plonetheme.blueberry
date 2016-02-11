@@ -29,3 +29,21 @@
   padding: $padding-vertical 0;
   font-weight: bold;
 }
+
+#portal-globalnav {
+  @include list-horizontal();
+  li.selected a {
+    border-bottom-color: $color-primary;
+  }
+
+  > li > a {
+    @include no-link();
+    font-size: $font-size-medium;
+    margin-right: $margin-horizontal;
+    padding: $padding-vertical ($padding-horizontal / 2);
+    border-bottom: 3px solid transparent;
+    &:hover {
+      border-bottom-color: $color-primary;
+    }
+  }
+}

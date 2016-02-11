@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include clearfix();
+  margin: 0;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-family: $font-family-primary;
+  color: $color-text;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
