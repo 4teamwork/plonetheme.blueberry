@@ -7,6 +7,14 @@ textarea {
   @include textarea();
 }
 
+input[type="checkbox"], input[type="radio"] {
+  vertical-align: baseline;
+
+  &~label, ~.label {
+    display: inline-block;
+  }
+}
+
 fieldset {
   margin: 0;
   padding: 0;
@@ -33,14 +41,6 @@ fieldset {
     }
     .fieldErrorBox {
       display: block;
-    }
-  }
-
-  input[type="checkbox"], input[type="radio"] {
-    vertical-align: baseline;
-
-    &~label, ~.label {
-      display: inline-block;
     }
   }
 
