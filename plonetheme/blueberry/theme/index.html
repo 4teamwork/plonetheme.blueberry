@@ -6,37 +6,19 @@
     <title>Plone</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width" />
-
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/iefixes.css" />
-    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
-
-    <link rel="stylesheet" type="text/css" href="https://rawgithub.com/4teamwork/ftw.mobilenavigation/master/ftw/mobilenavigation/browser/resources/navigation.css" />
-
-    <link rel="stylesheet" type="text/css" href="static/static.css" />
   </head>
   <body>
     <ul id="accesskeys" class="hiddenStructure" />
     <div class="masthead">
       <div id="portal-top">
-        <ul class="mobileButtons">
-          <li>
-            <a href="#" id="toggle_search" title=""></a>
-          </li>
-          <li>
-            <a href="#" id="toggle_slidenavi" title=""></a>
-          </li>
-          <li>
-            <a href="#" id="toggle_subsitelangs" title="">de</a>
-          </li>
-        </ul>
         <div id="portal-personaltools-wrapper">
-          <dl class="actionMenu deactivated" id="portal-personaltools"><dt id="anon-personalbar">
-            <a href="#" id="personaltools-a">Kontakt</a>
-            <a href="#" id="personaltools-b">Login</a>
-          </dt></dl>
+          <dl class="actionMenu deactivated" id="portal-personaltools">
+            <dt id="anon-personalbar">
+              <a href="#" id="personaltools-a">Kontakt</a>
+              <a href="#" id="personaltools-b">Login</a>
+            </dt>
+          </dl>
         </div>
-
         <div id="service-navigation">
             <ul>
                 <li>
@@ -47,11 +29,10 @@
                 </li>
             </ul>
         </div>
-
         <div id="portal-languageselector-wrapper">
           <dl id="portal-languageselector" class="actionMenu deactivated">
             <dt class="actionMenuHeader">
-              <a href="#">Deutsch <span style="font-size:10px;"> ▼</span></a>
+              <a href="#">Deutsch <span> ▼</span></a>
             </dt>
             <dd class="actionMenuContent">
               <ul>
@@ -69,48 +50,37 @@
     </div>
     <div id="container">
       <div id="page-wrapper" class="clearfix">
-
         <div id="header" class="clearfix">
-          <div class="logoRow">
-            <div>
-              <h2 class="hiddenStructure">Logo</h2>
-              <a id="portal-logo" href="#"><img src="images/logo.png" alt="" /></a>
+          <div class="logo">
+            <a id="portal-logo" href="#"><img src="images/logo.png" alt="" /></a>
+            <h2 class="hiddenStructure">Logo</h2>
+            <div id="portal-searchbox">
+              <form action="#search" id="livesearch0" name="searchform">
+                <div class="LSBox">
+                  <input type="text" id="searchGadget" class="searchField inputLabel"  placeholder="Seite durchsuchen" />
+                <input type="submit" value="Suche" class="searchButton" />
+                </div>
+              </form>
             </div>
           </div>
-
-          <div class="globalnavRow">
-            <div class="navigation">
-              <div class="fixed-header">
-                <div class="global-nav-search-wrapper">
-                 <nav id="portal-globalnav-wrapper">
-                  <ul id="portal-globalnav">
-                    <li class="">
-                      <span class="wrapper"><a title="" href="#">Private</a></span>
-                    </li>
-                    <li class="">
-                      <span class="wrapper"><a title="" href="#">Unternehmen</a></span>
-                    </li>
-                    <li class="plain">
-                      <span class="wrapper"><a title="" href="#">Portrait</a></span>
-                    </li>
-                    <li class="selected">
-                      <span class="wrapper"><a title="" href="#">Beh&ouml;rden</a></span>
-                    </li>
-                  </ul>
-                </nav>
-
-                <div class="portal-searchbox-wrapper">
-                  <div id="portal-searchbox">
-                    <form action="#search" id="livesearch0" name="searchform">
-                      <div class="LSBox">
-                        <input type="text" id="searchGadget" class="searchField inputLabel"  placeholder="Seite durchsuchen" />
-                      <input type="submit" value="Suche" class="searchButton" />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-             </div>
+          <div class="navigation">
+            <div class="navigation-row">
+              <nav class="global-navigation">
+                <ul id="portal-globalnav">
+                  <li class="">
+                    <span class="wrapper"><a title="" href="#">Private</a></span>
+                  </li>
+                  <li class="">
+                    <span class="wrapper"><a title="" href="#">Unternehmen</a></span>
+                  </li>
+                  <li class="plain">
+                    <span class="wrapper"><a title="" href="#">Portrait</a></span>
+                  </li>
+                  <li class="selected">
+                    <span class="wrapper"><a title="" href="#">Beh&ouml;rden</a></span>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
           <!-- closes #header -->
@@ -118,7 +88,6 @@
 
         <div id="columns" class="clearfix">
           <div id="edit-bar"></div>
-
           <div class="row">
             <div id="breadcrumbs-wrapper">
               <div id="portal-breadcrumbs">

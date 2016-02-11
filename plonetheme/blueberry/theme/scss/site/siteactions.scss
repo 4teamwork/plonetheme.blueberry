@@ -1,0 +1,8 @@
+#portal-siteactions {
+  @include list-horizontal();
+  @include row();
+  > li > a {
+    @include no-link();
+    @include auto-link-color();
+  }
+}

@@ -3,7 +3,7 @@
   position: relative;
 
   /* Because the gridsystem uses relative position we have to set a fixed z-index for the actionMenu */
-  z-index: 1;
+  z-index: 3;
 
   &.activated {
     .actionMenuContent {

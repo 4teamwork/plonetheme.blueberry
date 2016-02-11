@@ -1,12 +1,11 @@
 .masthead {
   background-color: $color-primary;
   height: $line-height-base + 2 * $padding-vertical;
+  margin-bottom: $margin-vertical;
 }
 
 #portal-top {
-  @include clearfix();
-  max-width: $max-width-page;
-  margin: 0 auto;
+  @include row();
   .actionMenuHeader > a {
     @include auto-link-color($color-primary);
   }
