@@ -26,6 +26,11 @@
     @include list-group-interactive();
   }
 }
+.actionSeparator > div {
+  padding: $padding-vertical / 2 $padding-horizontal / 2;
+  background-color: $color-content-background;
+  font-weight: bold;
+}
 
 
 #column-content section.actionMenu header,
