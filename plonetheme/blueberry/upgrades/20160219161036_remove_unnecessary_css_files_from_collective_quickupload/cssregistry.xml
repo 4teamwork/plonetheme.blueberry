@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<object name="portal_css">
+
+    <stylesheet id="++resource++quickupload_static/fileuploader.css" enabled="False" />
+    <stylesheet id="++resource++quickupload_static/uploadify.css" enabled="False" />
+
+</object>
