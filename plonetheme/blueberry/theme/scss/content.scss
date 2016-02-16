@@ -4,9 +4,7 @@ $mark-broken-links: true !default;
   text-color-light,
   mark-broken-links);
 
-a,
-:link,
-:visited {
+a, :visited {
   color: $color-link;
   text-decoration: $text-decoration-link;
   font-weight: $font-weight-link;
