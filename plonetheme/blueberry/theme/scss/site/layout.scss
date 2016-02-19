@@ -96,12 +96,6 @@
   @include gridwidth(16);
 }
 
-.global-navigation {
-  @include cell();
-  @include gridposition(0);
-  @include gridwidth(12);
-}
-
 #portal-searchbox {
   @include cell();
   @include gridposition(12);
