@@ -1,6 +1,5 @@
 @mixin heading-cell() {
-  @include auto-text-color();
-  background-color: $color-primary;
+  border-bottom: 2px solid $color-primary;
 }
 
 table {
@@ -13,34 +12,6 @@ caption {
   @include heading-cell();
   padding: $padding-vertical $padding-horizontal;
   font-weight: bold;
-  border-top-left-radius: $border-radius-primary;
-  border-top-right-radius: $border-radius-primary;
-
-  ~ thead tr {
-    th, td {
-
-      &:first-child {
-        border-top-left-radius: 0;
-      }
-
-      &:last-child {
-        border-top-right-radius: 0;
-      }
-    }
-  }
-
-  ~ tbody tr th {
-    &:first-child {
-      th {
-        border-top-left-radius: 0;
-      }
-    }
-    &:last-child {
-      th {
-        border-bottom-left-radius: 0;
-      }
-    }
-  }
 }
 
 tr {
@@ -62,41 +33,12 @@ td, th {
 thead tr {
   th, td {
     @include heading-cell();
-
-    &:first-child {
-      border-top-left-radius: $border-radius-primary;
-    }
-
-    &:last-child {
-      border-top-right-radius: $border-radius-primary;
-    }
-  }
-}
-
-tbody tr {
-  &:first-child {
-    th {
-      border-top-left-radius: $border-radius-primary;
-    }
-  }
-  &:last-child {
-    th {
-      border-bottom-left-radius: $border-radius-primary;
-    }
   }
 }
 
 tfoot tr {
   th, td {
     @include heading-cell();
-
-    &:first-child {
-      border-bottom-left-radius: $border-radius-primary;
-    }
-
-    &:last-child {
-      border-bottom-right-radius: $border-radius-primary;
-    }
   }
 }
 
