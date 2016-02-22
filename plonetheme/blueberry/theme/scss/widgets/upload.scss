@@ -1,0 +1,129 @@
+$upload-area-animation: wobble;
+
+.pannelHeader {
+  font-size: $font-size-h3;
+}
+
+.qq-upload-button {
+  @include button();
+  position: relative;
+  > input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.qq-upload-list {
+  @include list();
+  margin-bottom: $margin-vertical;
+  > li {
+    @include list-group-item();
+    position: relative;
+    &:nth-child(even) {
+      background-color: $color-gray-light;
+    }
+    &.qq-upload-fail {
+      .qq-upload-size {
+        .sizeContainer {
+          @include progressbar-danger();
+        }
+      }
+    }
+    > .qq-upload-cancel {
+      @extend .fa-icon;
+      @extend .fa-trash-o;
+      position: absolute;
+      top: $padding-vertical;
+      right: $padding-horizontal;
+      font-size: $font-size-medium;
+      color: $color-danger;
+      float: left;
+      width: $line-height-base;
+      display: inline-block;
+      padding: 0;
+      border: 0;
+      &:visited {
+        color: $color-danger;
+      }
+      &:hover {
+        color: $color-danger;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.qq-upload-failed-text {
+  display: none !important;
+}
+
+.qq-upload-spinner {
+  display: none !important;
+}
+
+.qq-upload-file {
+  color: $color-text-light;
+}
+
+.uploadField {
+  width: 100%;
+  display: inline-block;
+  .file_title_field {
+    width: 100%;
+  }
+}
+
+.qq-upload-size {
+  .sizeContainer {
+    @include progressbar-success();
+  }
+}
+
+.qq-upload-drop-area {
+  @extend .fa-icon;
+  @extend .fa-upload;
+  position: relative;
+  border-radius: $border-radius-primary;
+  font-size: $font-size-large;
+  text-align: center;
+  margin: $margin-vertical 0;
+  padding: $padding-vertical $padding-horizontal;
+  border: 2px dashed $color-gray-dark;
+  background-color: $color-gray-light;
+  min-height: 200px;
+  width: 100%;
+  &:before {
+    position: absolute;
+    display: block !important;
+    top: 50%;
+    left: 50%;
+    margin-top: -$font-size-large / 2;
+    margin-left: -.7em
+  }
+  &.qq-upload-drop-area-active {
+    border-color: $color-primary;
+    color: $color-primary;
+    &:before {
+      @include animation($upload-area-animation, 1s linear infinite);
+    }
+  }
+  > span {
+    display: none;
+  }
+}
+
+.uploadifybuttons {
+  display: none;
+}
+
+@include keyframes($upload-area-animation) {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
+};

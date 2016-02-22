@@ -36,6 +36,7 @@
         <theme:scss file="theme/scss/widgets/query.scss" />
         <theme:scss file="theme/scss/widgets/contenttree.scss" />
         <theme:scss file="theme/scss/widgets/autocomplete.scss" />
+        <theme:scss file="theme/scss/widgets/upload.scss" />
 
         <theme:scss file="theme/scss/contacts.scss" />
         <theme:scss file="theme/scss/content.scss" />
