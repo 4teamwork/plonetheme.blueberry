@@ -17,8 +17,18 @@ Add ``plonetheme.blueberry`` to your buildout configuration
 
 or as dependency to the ``setup.py`` of your policy package.
 
-After rerunning buildout install the Generic Setup profile.
 
+Styles
+------
+
+There are multiple styles in this theme, which can be selected by
+installing the corresponding Generic Setup profile.
+
+- **Blueberry Standard Style**: The target audience of this style are
+  municipalities and other government websites.
+
+- **Blueberry Marketing Style**: The target audience of this style are
+  product presentation and marketing websites.
 
 
 
