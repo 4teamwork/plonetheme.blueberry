@@ -18,13 +18,11 @@
 #header {
   @include clearfix();
   padding-bottom: $padding-vertical * 10;
-  border-bottom: $padding-vertical solid $color-primary;
 }
 
 #columns {
   @include row();
   border-radius: $border-radius-primary;
-  box-shadow: $box-shadow-secondary;
   margin-top: -$padding-vertical * 10 - $padding-vertical;
   background-color: $color-content-background;
   > .row {

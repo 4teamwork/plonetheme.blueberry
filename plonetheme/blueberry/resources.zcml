@@ -57,6 +57,9 @@
         <theme:scss file="scss/iconset.scss"
                     slot="bottom"
                     after="ftw.theming:resources/scss/iconset_font-awesome.scss" />
+
+        <theme:scss file="scss/style/standard.scss" />
+        <theme:scss file="scss/style/marketing.scss" />
     </theme:resources>
 
 </configure>
