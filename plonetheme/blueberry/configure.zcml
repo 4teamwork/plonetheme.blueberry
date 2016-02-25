@@ -19,6 +19,7 @@
     <include package=".browser" />
     <include package=".viewlets" />
     <include package=".standard" />
+    <include package=".marketing" />
 
     <genericsetup:registerProfile
         name="default"
