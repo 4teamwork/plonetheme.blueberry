@@ -8,4 +8,10 @@
     box-shadow: $box-shadow-secondary;
   }
 
+  #portal-globalnav {
+    > li > a {
+      margin-right: $margin-horizontal;
+    }
+  }
+
 }
