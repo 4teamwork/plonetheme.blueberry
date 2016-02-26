@@ -7,10 +7,6 @@ $color-header: $color-gray-light !default;
 
 .blueberry-marketing {
 
-  #portal-top {
-    display: none;
-  }
-
   #service-navigation > ul > li > a {
     @include auto-link-color($color-header);
   }
