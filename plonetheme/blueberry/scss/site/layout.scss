@@ -77,6 +77,10 @@
   @include cell();
   @include gridposition(0);
   @include gridwidth(12);
+
+  > img {
+    vertical-align: middle;
+  }
 }
 
 .navigation {
