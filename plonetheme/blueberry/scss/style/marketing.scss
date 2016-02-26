@@ -1,5 +1,6 @@
-$height-banner: 600px !default;
+$height-banner: 800px !default;
 $color-header: $color-gray-light !default;
+$color-top-section: $color-primary !default;
 
 @include declare-variables(
   $height-banner,
@@ -7,8 +8,18 @@ $color-header: $color-gray-light !default;
 
 .blueberry-marketing {
 
-  #service-navigation > ul > li > a {
-    @include auto-link-color($color-header);
+  #service-navigation {
+    @include cell();
+    @include gridposition(4);
+    @include gridwidth(12);
+
+    > ul {
+      @include list-horizontal($direction: rtl);
+
+      > li > a {
+        @include auto-link-color($color-top-section);
+      }
+    }
   }
 
   #masthead {
@@ -17,7 +28,6 @@ $color-header: $color-gray-light !default;
     width: 100%;
     top: 0;
     z-index: 2;
-    padding: 2 * $padding-vertical 0;
     box-shadow: $box-shadow-secondary;
   }
 
@@ -27,7 +37,20 @@ $color-header: $color-gray-light !default;
 
   #header {
     @include row();
-    padding: 0;
+    padding: 2 * $padding-vertical 0;
+  }
+
+  .top-section {
+    background-color: $color-top-section;
+    > .row {
+      @include row();
+    }
+  }
+
+  .dachmarke {
+    @include cell();
+    @include gridposition(0);
+    @include gridwidth(4);
   }
 
   #portal-searchbox {
@@ -40,14 +63,26 @@ $color-header: $color-gray-light !default;
   }
 
   .logo {
-    display: inline-block;
+    @include cell();
+    @include gridposition(0);
+    @include gridwidth(4);
+    margin-bottom: 0;
+  }
+
+  #portal-logo {
+    position: static;
+    float: none;
+    left: auto;
+    margin-left: 0;
     width: auto;
-    margin: 0;
   }
 
   .globalnav {
-    float: right;
+    @include cell();
+    @include gridposition(4);
+    @include gridwidth(12);
   }
+
 
   #portal-globalnav {
     float: right;
@@ -77,7 +112,7 @@ $color-header: $color-gray-light !default;
   }
 
   .banner {
-    margin-top: $line-height-base + 4 * $padding-vertical + $margin-vertical;
+    margin-top: $line-height-base * 2 + 6 * $padding-vertical + $margin-vertical;
     margin-bottom: $margin-vertical;
     height: $height-banner;
     @include screen-large() {
