@@ -1,0 +1,91 @@
+$height-banner: 600px !default;
+$color-header: $color-gray-light !default;
+
+@include declare-variables(
+  $height-banner,
+  $color-header);
+
+.blueberry-marketing {
+
+  #portal-top {
+    display: none;
+  }
+
+  #service-navigation > ul > li > a {
+    @include auto-link-color($color-header);
+  }
+
+  #masthead {
+    background-color: $color-header;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    padding: 2 * $padding-vertical 0;
+    box-shadow: $box-shadow-secondary;
+  }
+
+  .documentFirstHeading {
+    display: none;
+  }
+
+  #header {
+    @include row();
+    padding: 0;
+  }
+
+  #portal-searchbox {
+    display: none;
+  }
+
+  #columns {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .logo {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+  }
+
+  .globalnav {
+    float: right;
+  }
+
+  #portal-globalnav {
+    float: right;
+    > li {
+
+      &.selected > a {
+        color: $color-primary;
+      }
+
+      > a {
+        border: 0;
+        font-size: 1em;
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  #footer {
+    margin-top: 0;
+    padding-top: $margin-vertical;
+  }
+
+  #ftw-footer {
+    padding-top: 0;
+  }
+
+  .banner {
+    margin-top: $line-height-base + 4 * $padding-vertical + $margin-vertical;
+    margin-bottom: $margin-vertical;
+    height: $height-banner;
+    @include screen-large() {
+      background-position: center center;
+    }
+  }
+}

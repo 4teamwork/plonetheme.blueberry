@@ -18,8 +18,8 @@
 
     <include package=".browser" />
     <include package=".viewlets" />
-
-    <plone:static type="theme" directory="theme" />
+    <include package=".standard" />
+    <include package=".marketing" />
 
     <genericsetup:registerProfile
         name="default"
