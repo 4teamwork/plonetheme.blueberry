@@ -74,13 +74,20 @@
 }
 
 #portal-logo {
+  @include screen-small() {
+    @include gridwidth(10);
+    margin-bottom: 0;
+  }
   @include cell();
   @include gridposition(0);
-  @include gridwidth(12);
+  @include gridwidth(16);
+
+  margin-bottom: $margin-vertical;
 
   > img {
     vertical-align: middle;
   }
+
 }
 
 .navigation {
@@ -100,8 +107,15 @@
 
 #portal-searchbox {
   @include cell();
-  @include gridposition(12);
-  @include gridwidth(4);
+  @include gridposition(0);
+  @include gridwidth(16);
+  clear: both;
+
+  @include screen-small() {
+    @include gridposition(10);
+    @include gridwidth(6);
+    clear: none;
+  }
 }
 
 // Responsive styles if both columns are available

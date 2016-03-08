@@ -25,7 +25,8 @@
         <theme:scss file="scss/site/scaffolding.scss" />
         <theme:scss file="scss/site/siteactions.scss" />
         <theme:scss file="scss/site/navigation.scss" />
-        <theme:scss file="scss/site/search.scss" />
+        <theme:scss file="scss/site/livesearch.scss" />
+        <theme:scss file="scss/site/searchpage.scss" />
         <theme:scss file="scss/site/overlays.scss" />
         <theme:scss file="scss/site/controlpanel.scss" />
         <theme:scss file="scss/site/tables.scss" />
