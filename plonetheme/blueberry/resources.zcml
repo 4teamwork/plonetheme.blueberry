@@ -38,6 +38,7 @@
         <theme:scss file="scss/widgets/contenttree.scss" />
         <theme:scss file="scss/widgets/autocomplete.scss" />
         <theme:scss file="scss/widgets/upload.scss" />
+        <theme:scss file="scss/widgets/datetime.scss" />
 
         <theme:scss file="scss/contacts.scss" />
         <theme:scss file="scss/content.scss" />
