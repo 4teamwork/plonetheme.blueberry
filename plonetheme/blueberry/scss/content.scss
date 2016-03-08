@@ -4,9 +4,7 @@ $mark-broken-links: true !default;
   text-color-light,
   mark-broken-links);
 
-a,
-:link,
-:visited {
+a, a:visited {
   color: $color-link;
   text-decoration: $text-decoration-link;
   font-weight: $font-weight-link;
@@ -22,6 +20,7 @@ ul.listTypePlain {
 
 .discreet {
   color: $color-text-light;
+  font-size: $font-size-small;
 }
 
 .hiddenStructure {

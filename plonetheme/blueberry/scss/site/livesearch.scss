@@ -3,16 +3,14 @@
 }
 
 .searchSection {
-  label {
-    padding-bottom: 0;
-    padding-top: $padding-vertical / 2;
-  }
+  display: none;
 }
 
 #portal-searchbox {
   input[type=text] {
     min-width: 0;
     width: 100%;
+    float: right;
   }
 }
 
@@ -24,7 +22,7 @@
   @extend .fa-icon-right;
   @include clearfix();
   position: relative;
-  z-index: 2;
+  z-index: 4;
   &:after {
     content: "\f002";
     position: absolute;
@@ -41,11 +39,33 @@
 
 .LSResult {
   position: absolute;
+  top: $line-height-base + 2 * $padding-vertical;
 }
 
 .LSTable {
-  @include list-group-interactive();
+  @include list();
   box-shadow: $box-shadow-secondary;
+
+  > li {
+    @include list-group-item();
+
+    &:hover {
+      @include list-group-item-select();
+
+      > a {
+        @include auto-link-color($color-primary);
+      }
+    }
+
+    > a {
+      padding: 0;
+    }
+  }
+}
+
+.LSDescr {
+  white-space: normal;
+  font-size: $font-size-small;
 }
 
 .advancedsearchlink.advanced-search {

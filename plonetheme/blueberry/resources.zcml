@@ -7,56 +7,60 @@
 
     <theme:scss_factory factory=".browser.dynamic_scss_resources.custom_design_variables_resource_factory" />
 
-    <theme:scss file="theme/scss/globals/variables.scss" slot="variables"
+    <theme:scss file="scss/globals/variables.scss" slot="variables"
                 after="ftw.theming:resources/scss/globals/variables.scss" />
 
     <theme:resources profile="plonetheme.blueberry:default" slot="theme">
-        <theme:scss file="theme/scss/accessibility.scss" />
+        <theme:scss file="scss/accessibility.scss" />
 
-        <theme:scss file="theme/scss/elements/menues.scss" />
-        <theme:scss file="theme/scss/elements/buttons.scss" />
-        <theme:scss file="theme/scss/elements/tabs.scss" />
-        <theme:scss file="theme/scss/elements/form.scss" />
+        <theme:scss file="scss/elements/menues.scss" />
+        <theme:scss file="scss/elements/buttons.scss" />
+        <theme:scss file="scss/elements/tabs.scss" />
+        <theme:scss file="scss/elements/form.scss" />
 
-        <theme:scss file="theme/scss/site/editbar.scss" />
-        <theme:scss file="theme/scss/site/portaltop.scss" />
-        <theme:scss file="theme/scss/site/layout.scss" />
-        <theme:scss file="theme/scss/site/typography.scss" />
-        <theme:scss file="theme/scss/site/scaffolding.scss" />
-        <theme:scss file="theme/scss/site/siteactions.scss" />
-        <theme:scss file="theme/scss/site/navigation.scss" />
-        <theme:scss file="theme/scss/site/search.scss" />
-        <theme:scss file="theme/scss/site/overlays.scss" />
-        <theme:scss file="theme/scss/site/controlpanel.scss" />
-        <theme:scss file="theme/scss/site/tables.scss" />
+        <theme:scss file="scss/site/editbar.scss" />
+        <theme:scss file="scss/site/portaltop.scss" />
+        <theme:scss file="scss/site/layout.scss" />
+        <theme:scss file="scss/site/typography.scss" />
+        <theme:scss file="scss/site/scaffolding.scss" />
+        <theme:scss file="scss/site/siteactions.scss" />
+        <theme:scss file="scss/site/navigation.scss" />
+        <theme:scss file="scss/site/livesearch.scss" />
+        <theme:scss file="scss/site/searchpage.scss" />
+        <theme:scss file="scss/site/overlays.scss" />
+        <theme:scss file="scss/site/controlpanel.scss" />
+        <theme:scss file="scss/site/tables.scss" />
 
-        <theme:scss file="theme/scss/widgets/datagrid.scss" />
-        <theme:scss file="theme/scss/widgets/select2.scss" />
-        <theme:scss file="theme/scss/widgets/keyword.scss" />
-        <theme:scss file="theme/scss/widgets/query.scss" />
-        <theme:scss file="theme/scss/widgets/contenttree.scss" />
-        <theme:scss file="theme/scss/widgets/autocomplete.scss" />
-        <theme:scss file="theme/scss/widgets/upload.scss" />
+        <theme:scss file="scss/widgets/datagrid.scss" />
+        <theme:scss file="scss/widgets/select2.scss" />
+        <theme:scss file="scss/widgets/keyword.scss" />
+        <theme:scss file="scss/widgets/query.scss" />
+        <theme:scss file="scss/widgets/contenttree.scss" />
+        <theme:scss file="scss/widgets/autocomplete.scss" />
+        <theme:scss file="scss/widgets/upload.scss" />
 
-        <theme:scss file="theme/scss/contacts.scss" />
-        <theme:scss file="theme/scss/content.scss" />
-        <theme:scss file="theme/scss/portlets.scss" />
-        <theme:scss file="theme/scss/portlet-calendar.scss" />
-        <theme:scss file="theme/scss/tinymce.scss" />
-        <theme:scss file="theme/scss/plone-datepicker.scss" />
-        <theme:scss file="theme/scss/plone-legacy.scss" />
-        <theme:scss file="theme/scss/messages.scss" />
-        <theme:scss file="theme/scss/batching.scss" />
-        <theme:scss file="theme/scss/login.scss" />
-        <theme:scss file="theme/scss/sitemap.scss" />
-        <theme:scss file="theme/scss/additionallogo.scss" />
-        <theme:scss file="theme/scss/languageselector.scss" />
-        <theme:scss file="theme/scss/plonebrowser.scss" />
-        <theme:scss file="theme/scss/print.scss" />
+        <theme:scss file="scss/contacts.scss" />
+        <theme:scss file="scss/content.scss" />
+        <theme:scss file="scss/portlets.scss" />
+        <theme:scss file="scss/portlet-calendar.scss" />
+        <theme:scss file="scss/tinymce.scss" />
+        <theme:scss file="scss/plone-datepicker.scss" />
+        <theme:scss file="scss/plone-legacy.scss" />
+        <theme:scss file="scss/messages.scss" />
+        <theme:scss file="scss/batching.scss" />
+        <theme:scss file="scss/login.scss" />
+        <theme:scss file="scss/sitemap.scss" />
+        <theme:scss file="scss/additionallogo.scss" />
+        <theme:scss file="scss/languageselector.scss" />
+        <theme:scss file="scss/plonebrowser.scss" />
+        <theme:scss file="scss/print.scss" />
 
-        <theme:scss file="theme/scss/iconset.scss"
+        <theme:scss file="scss/iconset.scss"
                     slot="bottom"
                     after="ftw.theming:resources/scss/iconset_font-awesome.scss" />
+
+        <theme:scss file="scss/style/standard.scss" />
+        <theme:scss file="scss/style/marketing.scss" />
     </theme:resources>
 
 </configure>

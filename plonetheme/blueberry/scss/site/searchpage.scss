@@ -1,0 +1,133 @@
+#searchform {
+  .cell {
+    position: static;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.searchResults {
+  @include reset-definition-list();
+}
+
+#search-results-bar {
+  padding: $padding-vertical $padding-horizontal;
+  background-color: $color-gray-light;
+  border-radius: $border-radius-primary;
+  margin-bottom: $margin-vertical;
+
+  > span {
+    display: block;
+  }
+}
+
+#search-filter-toggle {
+  padding: 0;
+}
+
+#search-filter {
+  background-color: $color-list-group;
+  padding: $padding-vertical $padding-horizontal;
+
+  .field {
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  legend {
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  label {
+    white-space: nowrap;
+    font-weight: normal;
+  }
+
+  fieldset:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+#search-results-bar {
+  // This strange selector is needed becuase this element can not get selected specificly.
+  > span:first-child {
+    font-size: $font-size-h3;
+    margin-bottom: $margin-heading-vertical;
+    display: block;
+
+   @include screen-small() {
+    display: inline-block;
+   }
+  }
+
+  .actionMenu {
+    @include screen-small() {
+      float: right;
+      margin-bottom: 0;
+     }
+
+    float: none;
+    margin-bottom: $margin-vertical;
+
+    a {
+      @extend .fa-icon;
+      @extend .fa-filter;
+
+      &:before {
+        font-size: $font-size-medium;
+        display: inline !important;
+        margin-right: $margin-horizontal;
+      }
+    }
+
+  }
+}
+
+#sorting-options {
+  display: block;
+
+  span {
+    display: none;
+  }
+
+  > * {
+    display: block;
+  }
+
+  @include screen-small() {
+    span {
+      display: inline;
+    }
+
+    > * {
+      display: inline;
+    }
+  }
+}
+
+.searchResults {
+  dt {
+    font-size: $font-size-medium;
+    > a {
+      font-weight: $font-weight-heading;
+    }
+  }
+
+  dd {
+    margin-bottom: $margin-vertical;
+    padding-bottom: $padding-vertical;
+    border-bottom: 1px solid $color-gray-dark;
+
+    &:last-of-type {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  cite {
+    font-style: normal;
+    font-size: $font-size-small;
+  }
+}

@@ -33,6 +33,7 @@
     -->
     <drop content="/html/head/style[contains(text(),'keywordwidget.css')]"/>
     <drop content="/html/head/style[contains(text(),'querywidget.css')]"/>
+    <drop content="/html/head/link[contains(@href, '++resource++plone.app.registry/style.css')]"/>
     <after css:content="html > head > style.top" theme-children="/html/head"  />
     <after css:content="#portal-top style.top" theme-children="/html/head" />
     <after css:content="html > head > link, html > head > style:not(.top)" theme-children="/html/head" />

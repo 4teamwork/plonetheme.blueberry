@@ -1,3 +1,8 @@
+#portal-personaltools-wrapper .actionMenu {
+  // We need to handle the personaltools menu diffrent becuase its always above the searchbar.
+  z-index: 5;
+}
+
 .actionMenu {
   margin: 0;
   position: relative;

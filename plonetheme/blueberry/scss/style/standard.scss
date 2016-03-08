@@ -1,0 +1,17 @@
+.blueberry-standard {
+
+  #header {
+    border-bottom: $padding-vertical solid $color-primary;
+  }
+
+  #columns {
+    box-shadow: $box-shadow-secondary;
+  }
+
+  #portal-globalnav {
+    > li > a {
+      margin-right: $margin-horizontal;
+    }
+  }
+
+}

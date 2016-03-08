@@ -17,6 +17,7 @@ input[type="checkbox"], input[type="radio"] {
 
 fieldset {
   margin: 0;
+  margin-bottom: $margin-vertical;
   padding: 0;
   border: 0;
 }
@@ -42,6 +43,10 @@ fieldset {
     .fieldErrorBox {
       display: block;
     }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
   }
 
   span.required {
