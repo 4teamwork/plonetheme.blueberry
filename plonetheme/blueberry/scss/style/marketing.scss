@@ -65,7 +65,13 @@ $color-top-section: $color-primary !default;
   .logo {
     @include cell();
     @include gridposition(0);
-    @include gridwidth(4);
+    @include gridwidth(16);
+
+    @include screen-small() {
+      @include gridposition(0);
+      @include gridwidth(4);
+    }
+
     margin-bottom: 0;
   }
 
@@ -79,13 +85,23 @@ $color-top-section: $color-primary !default;
 
   .globalnav {
     @include cell();
-    @include gridposition(4);
-    @include gridwidth(12);
+    @include gridposition(0);
+    @include gridwidth(16);
+    clear: both;
+
+    @include screen-small() {
+      @include gridposition(4);
+      @include gridwidth(12);
+      clear: none;
+    }
   }
 
 
   #portal-globalnav {
-    float: right;
+    @include screen-small() {
+      float: right;
+    }
+
     > li {
 
       &.selected > a {
@@ -117,6 +133,13 @@ $color-top-section: $color-primary !default;
     height: $height-banner;
     @include screen-large() {
       background-position: center center;
+    }
+  }
+
+  .mobileButtons {
+    > li > a {
+      @extend .fa-icon;
+      @include auto-text-color($color-header);
     }
   }
 }
