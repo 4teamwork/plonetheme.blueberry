@@ -71,8 +71,6 @@ $color-top-section: $color-primary !default;
       @include gridposition(0);
       @include gridwidth(4);
     }
-
-    margin-bottom: 0;
   }
 
   #portal-logo {
