@@ -1,0 +1,94 @@
+.blueberry-government {
+
+  #content-views {
+    > li > a {
+      border-top: 2px solid $color-secondary;
+    }
+  }
+
+  ul#portal-languageselector {
+    @include list-horizontal;
+
+    > li > a {
+      @include no-link;
+
+      background-color: transparent;
+
+      @include auto-link-color($color-page-background);
+
+      border-bottom: none;
+      padding: $padding-vertical ($padding-horizontal / 2);
+      &:hover {
+        text-decoration: underline;
+        border-bottom: none;
+        &:before {
+          background-color: transparent;
+        }
+      }
+      &.current {
+        font-weight: bold;
+      }
+    }
+  }
+
+  #portal-siteactions > li > a {
+    @include auto-link-color($color-page-background);
+  }
+
+  .masthead {
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+
+  #anon-personalbar a {
+    @include auto-link-color($color-page-background);
+  }
+
+  #service-navigation ul li a {
+    @include auto-link-color($color-page-background);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  #header {
+    padding-bottom: 0;
+    padding-top: $margin-vertical;
+    border-bottom: none;
+  }
+
+  #portal-personaltools-wrapper .actionMenuHeader a {
+    @include auto-link-color($color-page-background);
+  }
+
+  #edit-bar {
+    border-radius: 0;
+  }
+
+  #container #columns {
+    margin-top: 0;
+    box-shadow: none;
+  }
+
+  #bottom-actions {
+    background-color: transparent;
+  }
+
+  #footer {
+    margin-top: 0;
+  }
+
+  #ftw-footer {
+    border-bottom-right-radius: $border-radius-primary;
+    border-bottom-left-radius: $border-radius-primary;
+    padding: 0;
+  }
+
+  #page-wrapper {
+    @include row();
+    border-radius: $border-radius-primary;
+    box-shadow: $box-shadow-secondary;
+    background-color: $color-content-background;
+
+  }
+}
