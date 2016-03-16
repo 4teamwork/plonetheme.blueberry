@@ -1,6 +1,8 @@
 #portal-siteactions {
   @include list-horizontal();
-  @include row();
+  @include cell();
+  @include gridposition(0);
+  @include gridwidth(16);
   > li > a {
     @include no-link();
     @include auto-link-color();

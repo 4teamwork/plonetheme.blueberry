@@ -62,6 +62,7 @@
 
         <theme:scss file="scss/style/standard.scss" />
         <theme:scss file="scss/style/marketing.scss" />
+        <theme:scss file="scss/style/government.scss" />
     </theme:resources>
 
 </configure>

@@ -5,9 +5,13 @@
 }
 
 #portal-top {
-  @include row();
+  @include cell();
+  @include gridposition(0);
+  @include gridwidth(16);
   .actionMenuHeader > a {
     @include auto-link-color($color-primary);
+    padding-right: 0;
+    padding-left: $padding-horizontal / 2;
   }
 }
 

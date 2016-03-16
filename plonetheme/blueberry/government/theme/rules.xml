@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <!-- Rules applying to standard Plone pages -->
+  <rules css:if-content="#visual-portal-wrapper">
+
+    <theme href="index.html" />
+
+    <!-- Copy standard header tags, including base (very important for
+         Plone default pages to work correctly), meta, title and
+         style sheets/scripts, in the order they appear in the content.
+    -->
+    <drop theme="/html/head/meta" />
+    <drop theme="/html/head/title" />
+    <drop theme="/html/head/base" />
+    <drop theme="/html/head/style" />
+    <drop theme="/html/head/script" />
+    <drop theme="/html/head/link" />
+    <drop theme="/html/head/comment()" />
+
+    <after content="/html/head/meta" theme-children="/html/head" />
+    <after content="/html/head/title" theme-children="/html/head" />
+    <after content="/html/head/base | /html/head/comment()" theme-children="/html/head" />
+
+    <!-- CSS:
+         - Insert style.top-nodes at the very top, allowing to early-load custom
+           inline CSS.
+         - Make sure link / style tags are before script tags (parallel downloading)
+         - Move #portal-top link / style tags to the head before script tags
+    -->
+    <drop content="/html/head/style[contains(text(),'keywordwidget.css')]"/>
+    <drop content="/html/head/style[contains(text(),'querywidget.css')]"/>
+    <drop content="/html/head/link[contains(@href, '++resource++plone.app.registry/style.css')]"/>
+    <after css:content="html > head > style.top" theme-children="/html/head"  />
+    <after css:content="#portal-top style.top" theme-children="/html/head" />
+    <after css:content="html > head > link, html > head > style:not(.top)" theme-children="/html/head" />
+    <after css:content="#portal-top link" theme-children="/html/head" />
+    <after css:content="#portal-top style:not(.top)" theme-children="/html/head" />
+
+    <!-- JAVASCRIPT:
+         - Raven Integration JS always at top
+         - JS always after CSS
+         - external JS before embedded JS
+         - Move #portal-top script tags to the head
+    -->
+    <after content="/html/head/script[contains(text(), 'var raven_config')]" theme-children="/html/head" />
+    <after content="/html/head/script[@src]" theme-children="/html/head" />
+    <after css:content="#portal-top script[src]" theme-children="/html/head" />
+    <after content="/html/head/script[not(@src) and not(contains(text(), 'var raven_config'))]" theme-children="/html/head" />
+    <after css:content="#portal-top script:not([src])" theme-children="/html/head" />
+
+    <!-- Copy html lang -->
+    <copy attributes="lang" content="/html" theme="/html" />
+    <!-- Copy body attributes -->
+    <copy attributes="class id dir" content="/html/body" theme="/html/body" />
+
+    <replace content="/html/head/meta[@name='viewport']">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
+    </replace>
+
+    <replace css:content="#portal-logo" css:theme="#portal-logo" />
+    <rules if-content="//*[@id='additional-logo']">
+        <after css:content="#additional-logo" css:theme="#portal-logo" />
+    </rules>
+
+    <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
+    <!-- Move hidden h2 of global section too -->
+    <before css:content="#portal-header > h2.hiddenStructure" css:theme="#portal-globalnav"/>
+
+    <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
+    <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper" />
+
+    <rules if-content="not(//*[@id='portal-languageselector-wrapper'])">
+        <replace css:content="#portal-languageselector" css:theme="#portal-languageselector" />
+    </rules>
+    <rules if-content="//*[@id='portal-languageselector-wrapper']">
+        <replace css:content="#portal-languageselector-wrapper" css:theme="#portal-languageselector-wrapper" />
+    </rules>
+
+    <replace css:content="#service-navigation" css:theme="#service-navigation" />
+    <replace css:content="ul.mobileButtons" css:theme="ul.mobileButtons" />
+
+    <replace css:content-children="#edit-bar" css:theme-children="#edit-bar" />
+    <rules if-content="not(//*[@id='edit-bar']/*)">
+        <drop css:theme="#edit-bar" />
+    </rules>
+    <drop css:content="#edit-bar" />
+
+    <replace css:content-children="#portal-breadcrumbs" css:theme-children="#portal-breadcrumbs" />
+    <drop css:content="#portal-breadcrumbs" if="$pathbar_full_width" />
+    <drop css:theme="#portal-breadcrumbs" if="$pathbar_full_width = False" />
+
+    <replace css:content-children="div.documentActions" css:theme-children="#document-actions" />
+    <drop css:content="div.documentActions" />
+
+    <!-- copy missing accesskeys -->
+    <replace css:theme="#accesskeys" css:content="#accesskeys" />
+
+    <!-- Move hidden titles from accesskeys viewlet to place, where they belong -->
+    <drop css:content="#hidden_content_navigation_title" />
+    <before css:theme="#column-navigation">
+        <xsl:copy-of css:select="#hidden_content_navigation_title"/>
+    </before>
+
+    <drop css:content="#hidden_further_infos_title" />
+    <before css:theme="#column-sidebar">
+        <xsl:copy-of css:select="#hidden_further_infos_title"/>
+    </before>
+
+    <drop css:content="#hidden_footer_title" />
+    <before css:theme="#footer">
+        <xsl:copy-of css:select="#hidden_footer_title"/>
+    </before>
+
+
+    <replace css:content-children="#portal-column-one" css:theme-children="#column-navigation" />
+    <replace css:content-children="#portal-column-content" css:theme-children="#column-content" />
+    <replace css:content-children="#portal-column-two" css:theme-children="#column-sidebar" />
+
+    <replace css:content="div.to_top" css:theme="div.to_top" method="raw" />
+    <drop css:content="div.to_top" />
+
+    <!-- Drop columns without content -->
+    <rules if-content="not(//*[@id='portal-column-one'])">
+      <drop css:theme="#column-navigation" />
+    </rules>
+    <rules if-content="not(//*[@id='portal-column-two'])">
+      <drop css:theme="#column-sidebar" />
+    </rules>
+
+    <!-- Append css classes to body, which indicates the amount of rendered columns -->
+    <before theme-children="/html/body" method="raw">
+      <xsl:attribute name="class">
+          <xsl:value-of select="/html/body/@class" />
+          <xsl:if css:test="#portal-column-one"> has-nav-column</xsl:if>
+          <xsl:if css:test="#portal-column-content"> has-content-column</xsl:if>
+          <xsl:if css:test="#portal-column-two"> has-sidebar-column</xsl:if>
+      </xsl:attribute>
+    </before>
+
+
+    <replace css:content="#viewlet-below-content" css:theme="#viewlet-below-content" />
+
+    <replace css:content="#ftw-footer" css:theme-children="#footer" />
+
+    <!-- Insert content from IPortalFooter viewlet -->
+    <after css:content="#portal-footer-wrapper > div >*:not(#portal-footer):not(#portal-colophon):not(#portal-siteactions):not(#ftw-footer)"
+           css:theme="#bottom-actions" />
+
+
+    <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" />
+
+    <!-- Wrap p tag around the text inside of the documentDescription -->
+    <replace content="//div[@id='content']/div[contains(@class, 'documentDescription')]">
+        <div class="documentDescription description">
+            <p>
+                <xsl:apply-templates select="//div[@id='content']/div[contains(@class, 'documentDescription')]/text()" mode="raw"/>
+            </p>
+        </div>
+    </replace>
+
+    <!-- Insert analytics js -->
+    <after content="//*[@id='portal-footer-wrapper']/div/script" css:theme="#container" />
+    <after content="//*[@id='portal-footer-wrapper']/div/noscript" css:theme="#container" />
+
+    <!-- Drop empty attributes on the logo image tag -->
+    <drop attributes="alt" content="//a[@id='portal-logo']/img[@alt='']" />
+    <drop attributes="title" content="//a[@id='portal-logo']/img[@title='']" />
+
+  </rules>
+</rules>
