@@ -52,22 +52,11 @@
   }
 
   #header {
-    padding-bottom: 0;
     padding-top: $margin-vertical;
-    border-bottom: none;
   }
 
   #portal-personaltools-wrapper .actionMenuHeader a {
     @include auto-link-color($color-page-background);
-  }
-
-  #edit-bar {
-    border-radius: 0;
-  }
-
-  #container #columns {
-    margin-top: 0;
-    box-shadow: none;
   }
 
   #bottom-actions {
@@ -76,6 +65,9 @@
 
   #footer {
     margin-top: 0;
+    padding-top: $margin-vertical;
+    border-bottom-left-radius: $border-radius-primary;
+    border-bottom-right-radius: $border-radius-primary;
   }
 
   #ftw-footer {

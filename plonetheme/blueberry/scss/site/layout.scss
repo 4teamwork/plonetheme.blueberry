@@ -17,13 +17,9 @@
 
 #header {
   @include clearfix();
-  padding-bottom: $padding-vertical * 10;
 }
 
 #columns {
-  @include row();
-  border-radius: $border-radius-primary;
-  margin-top: -$padding-vertical * 10 - $padding-vertical;
   background-color: $color-content-background;
   > .row {
     @include row();
