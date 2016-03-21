@@ -27,7 +27,12 @@ tr {
 
 td, th {
   text-align: left;
-  padding: $padding-vertical $padding-horizontal;
+  padding: $padding-vertical $padding-horizontal $padding-vertical 0;
+  vertical-align: top;
+
+  &:last-child {
+    padding-right: 0;
+  }
 }
 
 thead tr {
