@@ -1,8 +1,6 @@
 #edit-bar {
   @include clearfix();
   background-color: $color-edit;
-  border-top-left-radius: $border-radius-primary + 2;
-  border-top-right-radius: $border-radius-primary;
   margin-bottom: $margin-vertical;
 }
 
@@ -22,7 +20,4 @@
 #content-views {
   @include tab-list();
   float: left;
-  li:first-child a {
-    border-top-left-radius: $border-radius-primary;
-  }
 }
