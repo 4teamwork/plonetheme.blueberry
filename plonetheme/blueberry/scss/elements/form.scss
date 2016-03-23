@@ -91,3 +91,13 @@ label, .label {
     padding-bottom: $padding-vertical / 2;
   }
 }
+
+#column-navigation, #column-sidebar {
+  input[type="text"],
+  input[type="password"] {
+    @include screen-medium() {
+      min-width: 0;
+      width: 100%;
+    }
+  }
+}
