@@ -46,13 +46,21 @@ p {
   font-weight: bold;
 }
 
+.discreet {
+  color: $color-text-light;
+  font-size: $font-size-small;
+}
+
 /*
   Links
  */
-a {
-  color: $color-link;
 
+a, a:visited {
+  color: $color-link;
+  text-decoration: $text-decoration-link;
+  font-weight: $font-weight-link;
   &:hover {
     color: $color-link-hover;
+    text-decoration: $text-decoration-link-hover;
   }
 }

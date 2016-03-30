@@ -1,35 +1,10 @@
 $mark-broken-links: true !default;
 
 @include declare-variables(
-  text-color-light,
   mark-broken-links);
-
-a, a:visited {
-  color: $color-link;
-  text-decoration: $text-decoration-link;
-  font-weight: $font-weight-link;
-  &:hover {
-    color: $color-link-hover;
-    text-decoration: $text-decoration-link-hover;
-  }
-}
-
-ul.listTypePlain {
-  @include list();
-}
-
-.discreet {
-  color: $color-text-light;
-  font-size: $font-size-small;
-}
 
 .hiddenStructure {
   @include hidden-structure();
-}
-
-#content .visualNoMarker {
-  list-style: none;
-  margin-left: 0;
 }
 
 dl.collapsible {
@@ -47,10 +22,7 @@ dl.collapsible {
 .documentByLine {
   color: $color-text-light;
   margin-bottom: $margin-vertical;
-}
-
-#viewlet-below-content {
-  margin-top: $margin-vertical;
+  font-size: $font-size-small;
 }
 
 #category.documentByLine {
@@ -75,15 +47,16 @@ dl.collapsible {
 }
 
 iframe {
-  border: none;
+  border: 0;
 }
 
-#folderlisting-main-table #listing-table .draggable.draggingHook {
+.draggingHook {
+  vertical-align: middle;
   font-size: 0;
   @extend .fa-icon;
   @extend .fa-bars;
   &:before {
-    font-size: $font-size-medium;
-    padding-left: $padding-horizontal * 2;
+    font-size: $font-size-base;
+    padding-right: $padding-horizontal;
   }
 }

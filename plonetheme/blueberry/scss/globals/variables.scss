@@ -8,6 +8,8 @@ $font-family-code: "Courier New", Courier, monospace !default;
 $color-page-background: $color-gray-light !default;
 $color-content-background: $color-white !default;
 
+$font-weight-heading: normal;
+
 @include declare-variables(
   font-family-primary,
   font-family-heading,

@@ -1,0 +1,19 @@
+#accesskeys ul {
+  @include list();
+
+  > li {
+
+    > a:focus,
+    a[accesskey]:focus {
+      @include auto-text-color($color-secondary);
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: $color-secondary;
+      min-width: 295px;
+      outline: none;
+      padding: $padding-vertical $padding-horizontal;
+      z-index: 999;
+    }
+  }
+}

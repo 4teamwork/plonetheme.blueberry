@@ -1,39 +1,24 @@
-$calendar-portlet-bg-color: $portlet-column-bg-color !default;
+$calendar-portlet-bg-color: $color-primary !default;
 
 @include declare-variables(
   calendar-portlet-bg-color);
 
+#calendar-previous {
+  @include no-link();
+  float: left;
+}
+
+#calendar-next {
+  @include no-link();
+  float: right;
+}
 
 .portletCalendar {
-  width: auto;
-  margin: 1px 0 1em 0;
-  dt {
-    background-color: $calendar-portlet-bg-color;
-    font-weight: bold;
+
+  .portletHeader {
     text-align: center;
-    line-height: 1.6em;
-    border-bottom: none;
-    #calendar-previous {
-      float: left;
-      padding: 0 1em;
-      margin: 0 -.5em;
-    }
-    #calendar-next {
-      float: right;
-      padding: 0 1em;
-      margin: 0 -.5em;
-    }
   }
-  dd {
-    margin: 0;
-    padding: 0;
-  }
-  a,
-  a:focus,
-  a:hover,
-  .ploneCalendar a {
-    text-decoration: none;
-  }
+
   .ploneCalendar {
     border-spacing: 0;
     width:100%;
