@@ -27,7 +27,7 @@
         title="plonetheme.blueberry"
         directory="profiles/default"
         description="Blueberry Theme"
-        provides="Products.GenericSetup.interfaces.EXTENSION"
+        provides="Products.GenericSetup.interfaces.BASE"
         />
 
     <upgrade-step:directory
