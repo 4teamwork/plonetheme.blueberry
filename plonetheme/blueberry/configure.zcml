@@ -24,10 +24,10 @@
 
     <genericsetup:registerProfile
         name="default"
-        title="plonetheme.blueberry"
+        title="plonetheme.blueberry (base)"
         directory="profiles/default"
         description="Blueberry Theme"
-        provides="Products.GenericSetup.interfaces.BASE"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
     <upgrade-step:directory
