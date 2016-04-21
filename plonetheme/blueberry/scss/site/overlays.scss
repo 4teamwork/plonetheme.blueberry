@@ -107,5 +107,15 @@
   overflow: auto;
   width: 100%;
   height: 100%;
-  padding-bottom: $padding-vertical * 4 + $margin-vertical + 1em;
+
+  &:after {
+    /*
+      Add some space so that we can place the buttons (save / cancel)
+      absolutely.
+      We need to do this with an after pseudo element in order to support IE11.
+   */
+    content: "";
+    display: block;
+    height: $padding-vertical * 4 + $margin-vertical + 1em;
+  }
 }
