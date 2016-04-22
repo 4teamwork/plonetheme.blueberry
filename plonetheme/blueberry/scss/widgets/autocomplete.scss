@@ -1,5 +1,5 @@
 .ac_results {
-  z-index: 2000;
+  z-index: $zindex-overlay * 2 + $zindex-dropdown !important;
   min-width: 400px;
   box-shadow: $box-shadow-secondary;
 

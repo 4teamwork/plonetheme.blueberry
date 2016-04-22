@@ -19,7 +19,7 @@
   @extend .fa-icon-right;
   @include clearfix();
   position: relative;
-  z-index: 4;
+  z-index: $zindex-header + $zindex-dropdown;
   &:after {
     content: "\f002";
     position: absolute;

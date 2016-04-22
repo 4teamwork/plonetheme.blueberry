@@ -17,7 +17,7 @@
       text-decoration: none;
       top: 0;
       width: auto;
-      z-index: 999;
+      z-index: $zindex-tooltip;
       line-height: 27px;
     }
   }

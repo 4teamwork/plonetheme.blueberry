@@ -9,6 +9,7 @@
 
     <theme:scss file="scss/globals/variables.scss" slot="variables"
                 after="ftw.theming:resources/scss/globals/variables.scss" />
+    <theme:scss file="scss/globals/zindex.scss" slot="variables" />
 
     <theme:resources profile="plonetheme.blueberry:default" slot="theme">
         <theme:scss file="scss/accessibility.scss" />
