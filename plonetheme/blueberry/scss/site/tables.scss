@@ -1,5 +1,5 @@
 @mixin heading-cell() {
-  border-bottom: 2px solid $color-primary;
+  border-bottom: 1px solid $color-primary;
 }
 
 table {
@@ -9,17 +9,12 @@ table {
 }
 
 caption {
-  @include heading-cell();
+  background-color: $color-gray-light;
   padding: $padding-vertical $padding-horizontal;
   font-weight: bold;
 }
 
 tr {
-  &:last-child {
-    td {
-      border: 0;
-    }
-  }
   td {
     border-bottom: 1px solid $color-gray-dark;
   }
@@ -27,11 +22,18 @@ tr {
 
 td, th {
   text-align: left;
-  padding: $padding-vertical $padding-horizontal $padding-vertical 0;
+  padding: $padding-vertical $padding-horizontal $padding-vertical $padding-horizontal;
   vertical-align: top;
 
   &:last-child {
     padding-right: 0;
+  }
+}
+
+tbody tr {
+  th {
+    text-align: right;
+    border-right: 1px solid $color-primary;
   }
 }
 
@@ -47,7 +49,7 @@ tfoot tr {
   }
 }
 
-table.listing {
+table.listing tbody {
   td {
     border-color: $color-gray-light;
   }
@@ -56,7 +58,7 @@ table.listing {
   }
 }
 
-table.invisible {
+table.invisible tbody {
   td {
     border: 0;
   }
