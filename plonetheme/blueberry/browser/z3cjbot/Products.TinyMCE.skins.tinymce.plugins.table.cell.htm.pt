@@ -8,7 +8,11 @@
     <script type="text/javascript" src="../../utils/validate.js"></script>
     <script type="text/javascript" src="../../utils/editable_selects.js"></script>
     <script type="text/javascript" src="js/cell.js"></script>
-    <link href="css/cell.css" rel="stylesheet" type="text/css" />
+    <!-- PATCH START -->
+    <!-- <link href="css/cell.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" type="text/css" tal:attributes="href context/theming.css/get_url" />
+    <!-- PATCH END -->
+
 </head>
 <body id="tablecell" role="application">
     <div class="dialog-wrapper" id="content">
@@ -32,7 +36,9 @@
                                     <input id="width" name="width" type="text" value="" size="4" maxlength="4" onchange="changedSize();" />
                                 </div>
                             </div>
-                            &nbsp;x&nbsp;
+                            <!-- PATCH START -->
+                            <!-- &nbsp;x&nbsp; -->
+                            <!-- PATCH END -->
                             <div class="width-height">
                                 <label for="height" i18n:translate="table_dlg_height"></label>
                                 <div class="widget">

@@ -8,7 +8,12 @@
     <script type="text/javascript" src="../../utils/validate.js?v={tinymce_version}"></script>
     <script type="text/javascript" src="../../utils/editable_selects.js?v={tinymce_version}"></script>
     <script type="text/javascript" src="js/row.js?v={tinymce_version}"></script>
-    <link href="css/row.css?v={tinymce_version}" rel="stylesheet" type="text/css" />
+    <!-- PATCH START -->
+    <!--     <link href="css/row.css?v={tinymce_version}" rel="stylesheet" type="text/css" />
+     -->
+    <link rel="stylesheet" type="text/css" tal:attributes="href context/theming.css/get_url" />
+    <!-- PATCH END -->
+
   </head>
   <body id="tablerow" style="display: none" role="application">
     <div id="content" class="dialog-wrapper">
