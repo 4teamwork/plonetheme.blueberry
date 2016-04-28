@@ -47,6 +47,61 @@ body.mceContentBody {
   }
 }
 
+/* TinyMCE dialog styles */
+
+.dialog-wrapper {
+
+  .formTabs {
+    @include tab-list;
+    height: 2.12em;
+    > li {
+
+      &:first-child > span > a {
+        padding-left: $padding-horizontal;
+      }
+
+      &:last-child > span > a {
+        padding-right: $padding-horizontal;
+      }
+
+      & {
+        > span > a.selected {
+          @include tab-select($color-tab-select);
+        }
+      }
+      > span > a {
+        @include tab($color-tab);
+      }
+    }
+
+  }
+
+  .mceActionPanel {
+    // Abord button
+    input[type="button"]#cancel {
+      @include button-danger;
+    }
+
+    input[type="submit"]#insert {
+      @include button-success;
+    }
+    select {
+      margin: $margin-vertical $margin-horizontal;
+    }
+  }
+
+  // Table row Panel
+  #styleSelectRow {
+    display: none; // Broken by default
+  }
+
+  // Table cell Panel
+  .hiddenset {
+    display: none;
+  }
+
+}
+
 
 /* TinyMCE styles */
 
