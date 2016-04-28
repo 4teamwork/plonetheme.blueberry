@@ -5,6 +5,9 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
+- Styles all table cells (th and td) bold if they are in a thead. TinyMCE needs both ways.
+  [mathias.leimgruber]
+
 - Add manage portlets styling.
   [mathias.leimgruber]
 

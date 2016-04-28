@@ -1,5 +1,6 @@
 @mixin heading-cell() {
   border-bottom: 1px solid $color-primary;
+  font-weight: bold;
 }
 
 table {
@@ -37,7 +38,7 @@ tbody tr {
   }
 }
 
-thead tr {
+thead tr, .mceItemTable thead tr {
   th, td {
     @include heading-cell();
   }
