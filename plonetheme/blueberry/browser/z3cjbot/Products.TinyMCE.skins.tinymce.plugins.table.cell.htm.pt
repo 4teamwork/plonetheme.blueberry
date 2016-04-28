@@ -33,7 +33,7 @@
                             <div class="width-height">
                                 <label for="width" i18n:translate="table_dlg_width"></label>
                                 <div class="widget">
-                                    <input id="width" name="width" type="text" value="" size="4" maxlength="4" onchange="changedSize();" />
+                                    <input id="width" name="width" type="text" value="" size="6" maxlength="6" onchange="changedSize();" />
                                 </div>
                             </div>
                             <!-- PATCH START -->
@@ -42,7 +42,7 @@
                             <div class="width-height">
                                 <label for="height" i18n:translate="table_dlg_height"></label>
                                 <div class="widget">
-                                    <input id="height" name="height" type="text" value="" size="4" maxlength="4" onchange="changedSize();" />
+                                    <input id="height" name="height" type="text" value="" size="6" maxlength="6" onchange="changedSize();" />
                                 </div>
                             </div>
                         </div>
