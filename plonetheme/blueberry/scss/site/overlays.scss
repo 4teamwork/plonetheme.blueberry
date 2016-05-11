@@ -25,6 +25,7 @@
 .overlay,
 .contenttreeWindow {
   @include overlay();
+  @include overlay-large();
 
   z-index: 1000 !important;
   display: none;
