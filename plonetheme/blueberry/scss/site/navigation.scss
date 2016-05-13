@@ -1,33 +1,42 @@
+.portlet.portletNavigationTree {
+  border: 0;
+}
+
 .navTree {
   @include list();
 
-  > li > a {
-    padding: $padding-vertical 0;
-    display: table;
-    width: 100%;
-    text-align: left;
+  > li {
 
-    &:before {
-      display: table-cell;
-      font-weight: normal;
-    }
-
-    span {
-      display: table-cell;
+    > a {
+      @include list-group-item-interactive($color-gray-light);
+      padding: $padding-vertical $padding-horizontal / 2 $padding-vertical 0;
+      display: table;
       width: 100%;
+
+      &:before {
+        display: table-cell;
+      }
+
+      span {
+        white-space: normal;
+        display: table-cell;
+        width: 100%;
+      }
+      &.navTreeItemInPath, &.navTreeCurrentItem {
+        font-weight: bold;
+      }
+      &.navTreeCurrentItem {
+        background-color: $color-gray-light;
+      }
     }
   }
 }
+
 
 @for $i from 0 through 10 {
   .navTreeLevel#{$i} > li > a {
-    padding-left: $padding-vertical * ($i + 1);
+    padding-left: $padding-horizontal * ($i + 0.5);
   }
-}
-
-.navTreeTopNode a {
-  padding: $padding-vertical 0;
-  font-weight: bold;
 }
 
 #portal-globalnav {
