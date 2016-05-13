@@ -1,13 +1,10 @@
 $portlet-column-bg-color: transparent !default;
 
-.portletWrapper {
+.portlet {
+  @include reset-definition-list;
   margin-bottom: $margin-vertical;
   padding-bottom: $padding-vertical;
   border-bottom: 1px solid $color-gray-dark;
-}
-
-.portlet {
-  @include reset-definition-list;
 }
 
 .portletHeader {
