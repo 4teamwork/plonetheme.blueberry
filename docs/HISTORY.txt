@@ -5,6 +5,9 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
+- Add support for mobile logo
+  [Kevin Bieri]
+
 - Add ftw.mobile support for goverment sites.
   [mathias.leimgruber]
 

@@ -90,9 +90,10 @@
   border-bottom: 1px solid $color-primary;
   margin-bottom: $margin-vertical;
 
-  > .navigation-row {
-    @include row();
-  }
+}
+
+.navigation-row {
+  @include row();
 }
 
 .global-navigation {
