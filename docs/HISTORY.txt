@@ -5,6 +5,10 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
+- Fix dispay issue if ftw.mobilenavigation is not installed.
+  Prevent rendering an empty ul.
+  [mathias.leimgruber]
+
 - Improve FormGen styling (quickedit and view).
   [mathias.leimgruber]
 
