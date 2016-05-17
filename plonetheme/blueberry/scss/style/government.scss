@@ -36,8 +36,13 @@
   }
 
   .masthead {
+    min-height: $line-height-base + 2 * $padding-vertical;
+    height: auto;
     margin-bottom: 0;
-    background-color: transparent;
+
+    @include tablet {
+      background-color: transparent;
+    }
   }
 
   #anon-personalbar a {
@@ -78,9 +83,13 @@
 
   #page-wrapper {
     @include row();
+    box-shadow: none;
     border-radius: $border-radius-primary;
-    box-shadow: $box-shadow-secondary;
     background-color: $color-content-background;
+
+    @include tablet {
+      box-shadow: $box-shadow-secondary;
+    }
 
   }
 }
