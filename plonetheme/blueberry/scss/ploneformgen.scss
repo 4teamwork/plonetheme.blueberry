@@ -1,0 +1,47 @@
+.pfg-form {
+  fieldset {
+    border-top: 1px solid $gray-lighter;
+    border-bottom: 1px solid $gray-lighter;
+    padding-bottom: $padding-vertical;
+    padding-left: $padding-horizontal;
+
+    legend {
+      margin-left: $margin-horizontal;
+      padding: 0 $padding-horizontal;
+    }
+  }
+
+  .formControls {
+    margin-top: $margin-vertical;
+  }
+}
+
+.template-quickedit {
+  #pfg-qetable .field {
+    label {
+      display: inline-block;
+    }
+
+    .required {
+      margin-left: $margin-horizontal / 2;
+    }
+
+    > .fieldErrorBox {
+      display: block;
+      visibility: hidden;
+
+      @include clearfix()
+    }
+  }
+
+  .qefield.new-widget .field {
+    float: none;
+  }
+}
+
+
+#pfgWidgetWrapper {
+  .header h3 {
+    height: auto;
+  }
+}

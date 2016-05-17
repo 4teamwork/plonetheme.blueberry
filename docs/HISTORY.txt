@@ -5,6 +5,9 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
+- Improve FormGen styling (quickedit and view).
+  [mathias.leimgruber]
+
 - Define styling for sidenavigation
   [Kevin Bieri]
 
