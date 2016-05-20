@@ -5,7 +5,9 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Move header rules into its own rules file.
+  No longer use relative paths to inlcude the theme(index.html) file.
+  [mathias.leimgruber]
 
 
 1.1.0 (2016-05-20)

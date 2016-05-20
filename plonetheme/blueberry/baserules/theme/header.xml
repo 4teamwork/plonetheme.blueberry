@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- Copy standard header tags, including base (very important for
+         Plone default pages to work correctly), meta, title and
+         style sheets/scripts, in the order they appear in the content.
+    -->
+    <drop theme="/html/head/meta" />
+    <drop theme="/html/head/title" />
+    <drop theme="/html/head/base" />
+    <drop theme="/html/head/style" />
+    <drop theme="/html/head/script" />
+    <drop theme="/html/head/link" />
+    <drop theme="/html/head/comment()" />
+
+    <after content="/html/head/meta" theme-children="/html/head" />
+    <after content="/html/head/title" theme-children="/html/head" />
+    <after content="/html/head/base | /html/head/comment()" theme-children="/html/head" />
+
+    <!-- CSS:
+         - Insert style.top-nodes at the very top, allowing to early-load custom
+           inline CSS.
+         - Make sure link / style tags are before script tags (parallel downloading)
+         - Move #portal-top link / style tags to the head before script tags
+    -->
+    <drop content="/html/head/style[contains(text(),'keywordwidget.css')]"/>
+    <drop content="/html/head/style[contains(text(),'querywidget.css')]"/>
+    <drop content="/html/head/link[contains(@href, '++resource++plone.app.registry/style.css')]"/>
+    <after css:content="html > head > style.top" theme-children="/html/head"  />
+    <after css:content="#portal-top style.top" theme-children="/html/head" />
+    <after css:content="html > head > link, html > head > style:not(.top)" theme-children="/html/head" />
+    <after css:content="#portal-top link" theme-children="/html/head" />
+    <after css:content="#portal-top style:not(.top)" theme-children="/html/head" />
+
+    <!-- JAVASCRIPT:
+         - Raven Integration JS always at top
+         - JS always after CSS
+         - external JS before embedded JS
+         - Move #portal-top script tags to the head
+    -->
+    <after content="/html/head/script[contains(text(), 'var raven_config')]" theme-children="/html/head" />
+    <after content="/html/head/script[@src]" theme-children="/html/head" />
+    <after css:content="#portal-top script[src]" theme-children="/html/head" />
+    <after content="/html/head/script[not(@src) and not(contains(text(), 'var raven_config'))]" theme-children="/html/head" />
+    <after css:content="#portal-top script:not([src])" theme-children="/html/head" />
+
+    <!-- Copy html lang -->
+    <copy attributes="lang" content="/html" theme="/html" />
+    <!-- Copy body attributes -->
+    <copy attributes="class id dir" content="/html/body" theme="/html/body" />
+
+    <replace content="/html/head/meta[@name='viewport']">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
+    </replace>
+</rules>
