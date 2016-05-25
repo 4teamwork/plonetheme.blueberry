@@ -3,6 +3,7 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:upgrade-step="http://namespaces.zope.org/ftw.upgrade"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="plonetheme.blueberry">
@@ -22,6 +23,11 @@
     <include package=".standard" />
     <include package=".marketing" />
     <include package=".government" />
+
+    <browser:resourceDirectory
+        name="plonetheme.blueberry"
+        directory="resources"
+        />
 
     <genericsetup:registerProfile
         name="default"
