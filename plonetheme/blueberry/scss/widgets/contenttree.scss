@@ -12,6 +12,11 @@
     display: table;
     width: 100%;
   }
+
+  .navTreeCurrentItem > a{
+    font-weight: bold;
+    background-color: $color-gray-light;
+  }
 }
 
 .contenttreeWindowActions {
@@ -29,3 +34,4 @@
     -webkit-transform: translate3d(0, 0, 0)
   }
 }
+
