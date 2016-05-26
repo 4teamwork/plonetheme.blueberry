@@ -1,6 +1,3 @@
-.searchButton {
-  @include hidden-structure();
-}
 
 .searchSection {
   display: none;
@@ -34,6 +31,10 @@
   }
   input[type="text"] {
     padding-right: 2 * $padding-vertical + 1em;
+  }
+
+  .searchButton {
+    @include hidden-structure();
   }
 }
 
