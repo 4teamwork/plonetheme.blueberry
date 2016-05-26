@@ -5,6 +5,9 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
+- Use spinner on body tag provided by ftw.theming.
+  [Kevin Bieri]
+
 - Fix contenttree widget styles: show add button + style selected item.
   [mathias.leimgruber]
 

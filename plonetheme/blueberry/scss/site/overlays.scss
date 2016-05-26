@@ -22,6 +22,15 @@
   };
 }
 
+.ajax-loading {
+  body {
+    @include spinner();
+    > * {
+      @include filter(blur(2px) grayscale(60%));
+    }
+  }
+}
+
 .overlay,
 .contenttreeWindow {
   @include overlay();
