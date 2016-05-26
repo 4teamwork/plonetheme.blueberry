@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1.2 (unreleased)
+1.2.0 (2016-05-26)
 ------------------
 
 - Use spinner on body tag provided by ftw.theming.
