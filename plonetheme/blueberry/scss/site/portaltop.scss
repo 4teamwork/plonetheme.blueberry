@@ -17,6 +17,7 @@
 
 #portal-personaltools-wrapper {
   float: right;
+  padding-left: $padding-horizontal;
   > ul {
     @include list-horizontal();
   }
