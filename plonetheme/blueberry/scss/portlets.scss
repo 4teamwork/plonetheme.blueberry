@@ -24,105 +24,104 @@ $portlet-column-bg-color: transparent !default;
   margin: $margin-vertical 0;
 }
 
-.portlets-manager {
-  .portletAssignments {
-    position: relative;
-    padding: $padding-vertical $padding-horizontal;
-    padding-top: $padding-vertical * 7;
-    top: $padding-vertical * -4;
-    border: 1px solid $color-gray-dark;
+.managedPortlet {
+  @include borderradius-bottom-right;
+  @include borderradius-bottom-left;
+  padding: 0;
+  border: 0;
+  margin-bottom: $margin-vertical;
 
-    @include borderradius;
-
-    background-color: $color-gray-light;
-
-    h4 {
-      margin-top: $margin-horizontal * -8;
-      margin-bottom: $margin-horizontal * 4;
-      padding-top: $padding-vertical / 2;
-    }
-  }
-
-  > :last-child {
-    padding-top: $padding-vertical;
-    margin-top: $margin-vertical;
-
-    h4 {
-      margin: 0;
-      padding-top: 0;
-    }
-  }
-
-  .portletHeader a, .portletAssignments > form > div > .managedPortlet > .portletHeader {
-    border: 1px solid $color-gray-dark;
-
-    @include borderradius-bottom-right;
-
-    @include borderradius-bottom-left;
-
-    padding: $margin-vertical / 2;
-    display: block;
-    font-size: $font-size-base;
-    font-weight: bold;
+  &:last-child {
+    margin: 0;
   }
 
   .portletHeader {
-    background-color: $color-content-background;
+    padding: $padding-vertical $padding-horizontal;
   }
+}
 
-  .managedPortletActions {
-    display: block;
+.portletAssignments {
+  @include borderradius;
+
+  padding: $padding-vertical $padding-horizontal;
+  border: 1px solid $color-gray-dark;
+  background-color: $color-gray-light;
+  margin-bottom: $margin-vertical;
+
+  .portletHeader {
+    @include borderradius;
+    font-size: $font-size-base;
+    margin: 0;
+    background-color: $color-white;
     border: 1px solid $color-gray-dark;
-    border-bottom: 0;
-    text-align: right;
 
-    @include borderradius-top-right;
-
-    @include borderradius-top-left;
-
-    padding: $margin-vertical / 2;
-
-    .portlet-action {
-      display: inline-block;
-
-      button {
-        font-size: $font-size-base;
-        margin: 0;
-        padding: ($padding-vertical / 2) ($padding-horizontal / 2);
-      }
+    > a {
+      @include borderradius;
+      @include list-group-item-interactive();
+      border: 1px solid $color-gray-dark;
+      padding: $padding-vertical $padding-horizontal;
+      display: block;
     }
   }
+}
 
+.managedPortletActions {
+  display: block;
+  margin-bottom: $margin-vertical;
+
+  .portlet-action {
+    display: inline-block;
+
+    button {
+      margin: 0;
+      padding: ($padding-vertical / 2) ($padding-horizontal / 2);
+    }
+  }
+}
+
+.portlets-manager {
   .section {
-    margin-top: $margin-horizontal * 3;
     padding: $padding-vertical $padding-horizontal;
-    position: relative;
-    top: $padding-vertical * 2.5;
-    z-index: 1;
-  }
-
-  select[name="context_status:int"],
-  select[name="group_status:int"],
-  select[name="content_type_status:int"] {
-    margin: ($margin-vertical / 2) 0;
-  }
-
-  .portletAssignments > form > div {
-    background-color: $color-content-background;
+    background-color: $color-gray-light;
     border: 1px solid $color-gray-dark;
-    padding: $padding-vertical $padding-horizontal;
-    margin-bottom: $margin-vertical / 2;
+    margin-bottom: $margin-vertical;
+  }
 
-    &.formControls {
-      border: none;
-      padding: 0;
-      text-align: center;
-      background-color: transparent;
+  select {
+    width: 100%;
+  }
+}
 
-      input {
-        margin-top: $margin-vertical;
-        margin-bottom: $margin-vertical / 2;
-      }
+select[name="context_status:int"],
+select[name="group_status:int"],
+select[name="content_type_status:int"] {
+  margin: ($margin-vertical / 2) 0;
+}
+
+.portletAssignments > form > div {
+  background-color: $color-content-background;
+  border: 1px solid $color-gray-dark;
+  padding: $padding-vertical $padding-horizontal;
+  margin-bottom: $margin-vertical;
+  font-weight: bold;
+
+  .portletHeader {
+    padding: 0;
+    border: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &.formControls {
+    border: none;
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+
+    input {
+      margin: 0;
     }
   }
 }
