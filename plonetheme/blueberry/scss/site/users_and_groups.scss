@@ -1,0 +1,13 @@
+#users_search, #groups_search {
+  overflow-x: auto;
+}
+
+.template-usergroup-userprefs, .template-usergroup-groupprefs, .template-usergroup-groupmembership {
+  tbody tr {
+    th, td {
+      text-align: left;
+      white-space: nowrap;
+      border: 0;
+    }
+  }
+}
