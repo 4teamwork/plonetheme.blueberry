@@ -5,7 +5,11 @@ Changelog
 1.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- marketing: Fix overlapped content from heading
+  [Kevin Bieri]
+
+- marketing: Remove banner from theme
+  [Kevin Bieri]
 
 
 1.2.0 (2016-05-26)
