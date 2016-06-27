@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.1 (unreleased)
+1.2.1 (2016-06-27)
 ------------------
 
 - marketing: Fix overlapped content from heading
