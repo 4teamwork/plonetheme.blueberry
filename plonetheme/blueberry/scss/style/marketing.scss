@@ -1,10 +1,9 @@
-$height-banner: 800px !default;
 $color-header: $color-gray-light !default;
 $color-top-section: $color-primary !default;
 
 @include declare-variables(
-  $height-banner,
-  $color-header);
+  $color-header,
+  $color-top-section);
 
 .blueberry-marketing {
 
@@ -125,13 +124,6 @@ $color-top-section: $color-primary !default;
     padding-top: 0;
   }
 
-  .banner {
-    margin-top: $line-height-base * 2 + 6 * $padding-vertical + $margin-vertical;
-    margin-bottom: $margin-vertical;
-    height: $height-banner;
-    @include screen-large() {
-      background-position: center center;
-    }
   }
 
   .mobileButtons {
