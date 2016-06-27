@@ -1,9 +1,6 @@
 /*
   Fonts
  */
-$font-family-primary: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
-$font-family-heading: $font-family-primary !default;
-$font-family-code: "Courier New", Courier, monospace !default;
 
 $color-page-background: $color-gray-light !default;
 $color-content-background: $color-white !default;
@@ -11,8 +8,5 @@ $color-content-background: $color-white !default;
 $spinner-url: "++resource++plonetheme.blueberry/images/spinner.gif";
 
 @include declare-variables(
-  font-family-primary,
-  font-family-heading,
-  font-family-code,
   color-page-background,
   color-content-background);
