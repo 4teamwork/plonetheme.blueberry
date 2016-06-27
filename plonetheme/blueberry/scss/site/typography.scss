@@ -58,3 +58,7 @@ a, a:visited {
     text-decoration: $text-decoration-link-hover;
   }
 }
+
+strong a {
+  font-weight: inherit;
+}
