@@ -39,13 +39,6 @@ $color-top-section: $color-primary !default;
     padding: 2 * $padding-vertical 0;
   }
 
-  .top-section {
-    background-color: $color-top-section;
-    > .row {
-      @include row();
-    }
-  }
-
   .dachmarke {
     @include cell();
     @include gridposition(0);
@@ -70,6 +63,7 @@ $color-top-section: $color-primary !default;
       @include gridposition(0);
       @include gridwidth(4);
     }
+    margin-bottom: $margin-vertical;
   }
 
   #portal-logo {
@@ -107,12 +101,16 @@ $color-top-section: $color-primary !default;
 
       > a {
         border: 0;
-        font-size: 1em;
+        font-size: $font-size-medium;
         &:hover {
           color: $color-primary;
         }
       }
     }
+  }
+
+  #container {
+    margin-top: $margin-vertical;
   }
 
   #footer {
@@ -124,6 +122,8 @@ $color-top-section: $color-primary !default;
     padding-top: 0;
   }
 
+  #portal-top .actionMenuHeader > a {
+    @include auto-link-color($color-header);
   }
 
   .mobileButtons {
