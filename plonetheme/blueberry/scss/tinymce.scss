@@ -45,6 +45,10 @@ body.mceContentBody {
       text-decoration: $text-decoration-link-hover;
     }
   }
+
+  strong a {
+    font-weight: inherit;
+  }
 }
 
 /* TinyMCE dialog styles */
