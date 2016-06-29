@@ -55,7 +55,9 @@
         <theme:scss file="scss/additionallogo.scss" />
         <theme:scss file="scss/languageselector.scss" />
         <theme:scss file="scss/plonebrowser.scss" />
-        <theme:scss file="scss/print.scss" />
+
+        <theme:scss slot="bottom"
+                    file="scss/print.scss" />
 
         <theme:scss file="scss/iconset.scss"
                     slot="bottom"

@@ -1,4 +1,5 @@
 @include print {
+
   .globalnavRow {
     display: none !important;
   }
@@ -28,6 +29,10 @@
   }
 
   #breadcrumbs-wrapper {
+    display: none;
+  }
+
+  #portal-breadcrumbs {
     display: none;
   }
 
@@ -61,6 +66,34 @@
   }
 
   #footer {
+    display: none;
+  }
+
+  .masthead {
+    display: none;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  #portal-searchbox {
+    display: none;
+  }
+
+  #portal-logo {
+    display: inline-block;
+    float: right;
+    margin: $margin-vertical $margin-horizontal !important;
+    text-align: right;
+
+    > img {
+      max-height: 30px;
+      width: auto;
+    }
+  }
+
+  .managePortletsLink {
     display: none;
   }
 
