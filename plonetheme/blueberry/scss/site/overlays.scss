@@ -49,17 +49,15 @@
     top: - 1.5 * $padding-vertical;
     background: $color-link;
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
     &:hover {
       @include auto-text-color($color-link-hover);
       background-color: $color-link-hover;
     }
     &:before {
-      min-width: 0 !important;
-      margin: 0 !important;
-      width: $font-size-base;
-      height: $font-size-base;
-      line-height: $font-size-base;
-      padding: $padding-vertical;
+      line-height: 40px;
     }
   }
 
