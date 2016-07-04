@@ -1,7 +1,7 @@
 (function($) {
 
   function adjustHeader() {
-    $("#container").css("padding-top", $("#masthead").outerHeight());
+    $("#container").css("padding-top", $(".masthead").outerHeight());
   }
 
   $(function() {
