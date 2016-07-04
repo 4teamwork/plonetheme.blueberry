@@ -30,6 +30,7 @@
         <theme:scss file="scss/site/overlays.scss" />
         <theme:scss file="scss/site/controlpanel.scss" />
         <theme:scss file="scss/site/tables.scss" />
+        <theme:scss file="scss/site/users_and_groups.scss" />
 
         <theme:scss file="scss/widgets/datagrid.scss" />
         <theme:scss file="scss/widgets/select2.scss" />
