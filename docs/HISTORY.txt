@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.3 (unreleased)
+1.2.3 (2016-07-06)
 ------------------
 
 - Add support for ftw.mobile in standard and marketing theme.
