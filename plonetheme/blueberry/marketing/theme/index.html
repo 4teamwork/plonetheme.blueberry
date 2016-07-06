@@ -9,7 +9,7 @@
   </head>
   <body>
     <ul id="accesskeys" class="hiddenStructure" />
-    <header id="masthead" class="clearfix">
+    <header class="masthead">
       <div class="top-section">
         <div class="row">
           <div class="dachmarke">
@@ -59,22 +59,26 @@
           <a id="portal-logo" href="#"><img src="images/logo.png" alt="" /></a>
           <h2 class="hiddenStructure">Logo</h2>
         </div>
-        <nav class="globalnav">
-          <ul id="portal-globalnav">
-            <li class="">
-              <span class="wrapper"><a title="" href="#">Private</a></span>
-            </li>
-            <li class="">
-              <span class="wrapper"><a title="" href="#">Unternehmen</a></span>
-            </li>
-            <li class="plain">
-              <span class="wrapper"><a title="" href="#">Portrait</a></span>
-            </li>
-            <li class="selected">
-              <span class="wrapper"><a title="" href="#">Beh&ouml;rden</a></span>
-            </li>
-          </ul>
-        </nav>
+        <div class="navigation">
+          <div class="navigation-row">
+            <nav class="global-navigation">
+              <ul id="portal-globalnav">
+                <li class="">
+                  <span class="wrapper"><a title="" href="#">Private</a></span>
+                </li>
+                <li class="">
+                  <span class="wrapper"><a title="" href="#">Unternehmen</a></span>
+                </li>
+                <li class="plain">
+                  <span class="wrapper"><a title="" href="#">Portrait</a></span>
+                </li>
+                <li class="selected">
+                  <span class="wrapper"><a title="" href="#">Beh&ouml;rden</a></span>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
         <div id="portal-searchbox">
           <form action="#search" id="livesearch0" name="searchform">
             <div class="LSBox">
@@ -86,6 +90,7 @@
         <!-- closes #header -->
       </div>
       <div class="row">
+        <div id="ftw-mobile-wrapper" />
         <div id="portal-top">
           <div id="portal-personaltools-wrapper">
             <dl class="actionMenu deactivated" id="portal-personaltools">
@@ -307,6 +312,5 @@
 
       <!-- closes #container -->
     </div>
-
   </body>
 </html>

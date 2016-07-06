@@ -17,11 +17,6 @@
         <after css:content="#additional-logo" css:theme="#portal-logo" />
     </rules>
 
-    <replace css:content="#mobile-logo" css:theme="#mobile-logo" />
-    <rules if-content="not(//*[@id='mobile-logo']/*)">
-        <drop css:theme="#mobile-logo" />
-    </rules>
-
     <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
     <!-- Move hidden h2 of global section too -->
     <before css:content="#portal-header > h2.hiddenStructure" css:theme="#portal-globalnav"/>
@@ -48,6 +43,10 @@
         <drop css:theme="#ftw-mobile-wrapper" />
     </rules>
 
+    <replace css:content="#mobile-logo" css:theme="#mobile-logo" />
+    <rules if-content="not(//*[@id='mobile-logo']/*)">
+        <drop css:theme="#mobile-logo" />
+    </rules>
 
     <replace css:content-children="#edit-bar" css:theme-children="#edit-bar" />
     <rules if-content="not(//*[@id='edit-bar']/*)">

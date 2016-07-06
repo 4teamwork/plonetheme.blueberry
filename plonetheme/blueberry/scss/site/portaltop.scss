@@ -1,6 +1,6 @@
 .masthead {
   background-color: $color-primary;
-  height: $line-height-base + 2 * $padding-vertical;
+  min-height: $line-height-base + 2 * $padding-vertical;
   margin-bottom: $margin-vertical;
 }
 

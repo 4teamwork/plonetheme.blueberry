@@ -34,6 +34,11 @@
     <replace css:content="#service-navigation" css:theme="#service-navigation" />
     <replace css:content="ul.mobileButtons" css:theme="ul.mobileButtons" />
 
+    <replace css:content="#ftw-mobile-wrapper" css:theme="#ftw-mobile-wrapper" />
+    <rules if-content="not(//*[@id='ftw-mobile-wrapper']/*)">
+        <drop css:theme="#ftw-mobile-wrapper" />
+    </rules>
+
     <replace css:content-children="#edit-bar" css:theme-children="#edit-bar" />
     <rules if-content="not(//*[@id='edit-bar']/*)">
         <drop css:theme="#edit-bar" />

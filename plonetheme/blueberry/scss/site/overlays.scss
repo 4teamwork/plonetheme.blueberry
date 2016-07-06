@@ -11,9 +11,11 @@
   height: auto !important;
   width: auto !important;
   z-index: 999 !important;
-  background: #485563; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #485563 , #29323c); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #485563 , #29323c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  @include linear-gradient(
+    right,
+    #29323c,
+    #485563
+  );
 }
 
 .overlay-open {
@@ -49,17 +51,15 @@
     top: - 1.5 * $padding-vertical;
     background: $color-link;
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
     &:hover {
       @include auto-text-color($color-link-hover);
       background-color: $color-link-hover;
     }
     &:before {
-      min-width: 0 !important;
-      margin: 0 !important;
-      width: $font-size-base;
-      height: $font-size-base;
-      line-height: $font-size-base;
-      padding: $padding-vertical;
+      line-height: 40px;
     }
   }
 

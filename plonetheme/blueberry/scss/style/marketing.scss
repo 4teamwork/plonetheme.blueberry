@@ -21,12 +21,25 @@ $color-top-section: $color-primary !default;
     }
   }
 
-  #masthead {
-    background-color: $color-header;
+  #anon-personalbar > a {
+    @include auto-link-color($color-header)
+  }
+
+  #offcanvas-content {
+    @include screen-large() {
+      float: none;
+    }
+    float: left;
+  }
+
+  .masthead {
+    @include screen-large() {
+      background-color: $color-header;
+    }
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 2;
+    z-index: 5;
     box-shadow: $box-shadow-secondary;
   }
 
@@ -35,8 +48,12 @@ $color-top-section: $color-primary !default;
   }
 
   #header {
-    @include row();
-    padding: 2 * $padding-vertical 0;
+    @include screen-large() {
+      @include row();
+      display: block;
+    }
+    padding-top: $padding-vertical;
+    display: none;
   }
 
   .dachmarke {
@@ -58,12 +75,11 @@ $color-top-section: $color-primary !default;
     @include cell();
     @include gridposition(0);
     @include gridwidth(16);
+  }
 
-    @include screen-small() {
-      @include gridposition(0);
-      @include gridwidth(4);
-    }
-    margin-bottom: $margin-vertical;
+  .navigation {
+    margin: 0;
+    border: 0;
   }
 
   #portal-logo {
@@ -74,24 +90,8 @@ $color-top-section: $color-primary !default;
     width: auto;
   }
 
-  .globalnav {
-    @include cell();
-    @include gridposition(0);
-    @include gridwidth(16);
-    clear: both;
-
-    @include screen-small() {
-      @include gridposition(4);
-      @include gridwidth(12);
-      clear: none;
-    }
-  }
-
-
   #portal-globalnav {
-    @include screen-small() {
-      float: right;
-    }
+    float: right;
 
     > li {
 
@@ -126,10 +126,4 @@ $color-top-section: $color-primary !default;
     @include auto-link-color($color-header);
   }
 
-  .mobileButtons {
-    > li > a {
-      @extend .fa-icon;
-      @include auto-text-color($color-header);
-    }
-  }
 }
