@@ -5,17 +5,15 @@ Changelog
 1.2.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
-
-1.2.2 (2016-07-06)
-------------------
-
 - Add support for ftw.mobile in standard and marketing theme.
   [Kevin Bieri]
 
 - Define styling for users and groups.
   [Kevin Bieri]
+
+
+1.2.2 (2016-07-06)
+------------------
 
 - Move font family definitions to ftw.theming
   [Kevin Bieri]
