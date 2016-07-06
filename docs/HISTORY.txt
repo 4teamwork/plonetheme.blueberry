@@ -5,6 +5,9 @@ Changelog
 1.2.2 (unreleased)
 ------------------
 
+- Add support for ftw.mobile in standard and marketing theme.
+  [Kevin Bieri]
+
 - Define styling for users and groups.
   [Kevin Bieri]
 
