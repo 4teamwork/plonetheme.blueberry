@@ -5,6 +5,9 @@ Changelog
 1.2.4 (unreleased)
 ------------------
 
+- Fix word break of external links.
+  [Kevin Bieri]
+
 - Remove duplicated analytics javascript tag
   [Kevin Bieri]
 
