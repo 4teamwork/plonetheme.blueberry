@@ -5,6 +5,9 @@ Changelog
 1.2.4 (unreleased)
 ------------------
 
+- Fix list styles on mobile view.
+  [Kevin Bieri]
+
 - Fix list styles floating next to images.
   [Kevin Bieri]
 
