@@ -69,11 +69,12 @@ iframe {
 }
 
 #folderlisting-main-table #listing-table .draggable.draggingHook {
-  font-size: 0;
   @extend .fa-icon;
   @extend .fa-bars;
+  font-size: 0;
+  vertical-align: middle;
   &:before {
+    vertical-align: middle;
     font-size: $font-size-medium;
-    padding-left: $padding-horizontal * 2;
   }
 }

@@ -5,6 +5,10 @@ Changelog
 1.2.4 (unreleased)
 ------------------
 
+- Fix alignment of dragging hook
+  Define styling for dragging indicator
+  [Kevin Bieri]
+
 - Implement zindex system.
   [Kevin Bieri]
 

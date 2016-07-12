@@ -3,6 +3,14 @@
   font-weight: bold;
 }
 
+@mixin dragging-cell() {
+  @include auto-text-color();
+  background-color: $color-primary;
+  a {
+    @include auto-link-color();
+  }
+}
+
 table {
   width: 100%;
   margin-bottom: $margin-vertical;
@@ -54,8 +62,18 @@ table.listing tbody {
   td {
     border-color: $color-gray-light;
   }
-  tr:nth-child(even) td {
-    background-color: $color-gray-light;
+  tr {
+    &.dragindicator td {
+      @include dragging-cell();
+    }
+    &:nth-child(even) {
+      &.dragindicator td {
+        @include dragging-cell();
+      }
+      td {
+        background-color: $color-gray-light;
+      }
+    }
   }
 }
 
