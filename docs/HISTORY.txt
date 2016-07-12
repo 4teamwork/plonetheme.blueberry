@@ -5,6 +5,9 @@ Changelog
 1.2.4 (unreleased)
 ------------------
 
+- Fix list styles floating next to images.
+  [Kevin Bieri]
+
 - Fix alignment of dragging hook
   Define styling for dragging indicator
   [Kevin Bieri]
