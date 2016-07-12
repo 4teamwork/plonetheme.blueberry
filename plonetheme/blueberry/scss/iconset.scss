@@ -51,13 +51,13 @@
     }
   }
   span.link-external a, a.external-link {
-    @extend .fa-icon-right;
-    &:after {
-      @extend .fa-arrow-up:before;
-      transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      margin-right: -0.35em;
+    background-image: embed-resource("../resources/fonts/external.svg", $fill-css:['.icon': $color-link]);
+    &:hover {
+      background-image: embed-resource("../resources/fonts/external.svg", $fill-css:['.icon': $color-link-hover]);
     }
+    background-repeat: no-repeat;
+    background-position: center right;
+    padding-right: 1em + em(5px);
+    background-size: 1em;
   }
 }
