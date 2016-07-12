@@ -5,6 +5,9 @@ Changelog
 1.2.4 (unreleased)
 ------------------
 
+- Remove duplicated analytics javascript tag
+  [Kevin Bieri]
+
 - Fix list styles on mobile view.
   [Kevin Bieri]
 

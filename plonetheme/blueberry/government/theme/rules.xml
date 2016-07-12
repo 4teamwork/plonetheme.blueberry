@@ -111,7 +111,7 @@
 
     <replace css:content="#ftw-footer" css:theme-children="#footer" />
 
-    <!-- Insert content from IPortalFooter viewlet -->
+    <!-- Insert content from IPortalFooter viewlet (analytics JS and custom footer viewlets) -->
     <after css:content="#portal-footer-wrapper > div >*:not(#portal-footer):not(#portal-colophon):not(#portal-siteactions):not(#ftw-footer)"
            css:theme="#bottom-actions" />
 
@@ -126,10 +126,6 @@
             </p>
         </div>
     </replace>
-
-    <!-- Insert analytics js -->
-    <after content="//*[@id='portal-footer-wrapper']/div/script" css:theme="#container" />
-    <after content="//*[@id='portal-footer-wrapper']/div/noscript" css:theme="#container" />
 
     <!-- Drop empty attributes on the logo image tag -->
     <drop attributes="alt" content="//a[@id='portal-logo']/img[@alt='']" />
