@@ -5,6 +5,13 @@ Changelog
 1.3.1 (unreleased)
 ------------------
 
+- Drop support for mobile languageselector
+  Will be handled through ftw.mobile
+
+- Use font-awesome icons for contenttype menu
+
+  [Kevin Bieri]
+
 - Move zindex system to ftw.theming
   [Kevin Bieri]
 

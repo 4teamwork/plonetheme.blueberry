@@ -1,8 +1,4 @@
 #portal-languageselector-wrapper {
-  @include screen-small() {
-    display: block;
-  }
-  display: none;
   float: left;
 
   .actionMenuHeader {
