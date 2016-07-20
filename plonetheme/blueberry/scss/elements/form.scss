@@ -1,5 +1,6 @@
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
   @include input();
 }
 
@@ -94,7 +95,8 @@ label, .label {
 
 #column-navigation, #column-sidebar {
   input[type="text"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="email"] {
     @include screen-medium() {
       min-width: 0;
       width: 100%;
