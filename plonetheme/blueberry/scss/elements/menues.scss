@@ -1,6 +1,10 @@
 #portal-personaltools-wrapper .actionMenu {
   // We need to handle the personaltools menu diffrent becuase its always above the searchbar.
   z-index: $zindex-portal-top + $zindex-dropdown;
+
+  a:before {
+    height: 0;
+  }
 }
 
 .actionMenu {

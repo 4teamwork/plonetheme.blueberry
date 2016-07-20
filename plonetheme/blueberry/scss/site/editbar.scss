@@ -8,11 +8,24 @@
   float: right;
 }
 
+.arrowDownAlternative {
+  display: none;
+}
+
 #contentActionMenus {
   @include list-horizontal($direction: rtl);
 
   .actionMenuHeader a {
+    @extend .fa-icon-right;
     @include auto-text-color($color-edit);
+
+    padding-right: 0;
+
+    &:after {
+      font-family: FontAwesome;
+      content: "\f107";
+      height: 0;
+    }
   }
 
 }
