@@ -5,6 +5,9 @@ Changelog
 1.4.1 (unreleased)
 ------------------
 
+- Fix selector specificity for lists in textblocks
+  [Kevin Bieri]
+
 - Style email fields
   [Yves Siegrist]
 
