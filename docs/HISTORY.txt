@@ -5,6 +5,9 @@ Changelog
 1.4.2 (unreleased)
 ------------------
 
+- Replace fixed zindex value
+  [Kevin Bieri]
+
 - Increase visibility of selected item on contenttree widget.
   [Kevin Bieri]
 
