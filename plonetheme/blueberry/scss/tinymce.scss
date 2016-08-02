@@ -1,53 +1,33 @@
+.mceContentBody {
+  padding: $padding-vertical $padding-horizontal;
+}
+
 table.mceLayout {
   td.mceIframeContainer {
-    border: none;
     @include input();
     padding: 0;
-    width: 100%;
-  }
-
-  &.mceEditorFocus {
-    td.mceIframeContainer {
-      border: 1px solid $color-primary;
-      @include boxshadow(0 1px 1px transparentize($color-primary, 0.8) inset,
-                         0 0 5px transparentize($color-primary, 0.6));
-      background: $color-content-background;
-    }
+    border-bottom: 0;
   }
 
   tr.mceLast {
     td.mceStatusbar {
-      border: none;
-      #text_path_row {
-        display: none;
-      }
-      #text_resize {
-        top: -22px;
-        position: relative;
-        display: block;
-        float: right;
-      }
+      border: 1px solid $color-gray-dark;
+      border-top: 0;
     }
   }
 }
 
-body.mceContentBody {
-  padding: 0.5em;
+.ploneSkin .mceStatusbar a[id="form.widgets.text_resize"].mceResize {
+  border-top: 1px solid $color-gray-light;
+  border-left: 1px solid $color-gray-light;
+  background-position-y: -2px;
+  background-position-x: -806px;
+  width: 15px;
+}
 
-  a {
-    color: $color-link !important;
-    font-weight: $font-weight-link;
-    text-decoration: $text-decoration-link !important;
-    border-bottom: none !important;
-
-    &:hover {
-      color: $color-link-hover;
-      text-decoration: $text-decoration-link-hover;
-    }
-  }
-
-  strong a {
-    font-weight: inherit;
+.ploneSkin {
+  [id="form.widgets.text_path_row"] {
+    display: none;
   }
 }
 
