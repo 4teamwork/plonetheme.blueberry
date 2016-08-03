@@ -13,9 +13,10 @@
     width: 100%;
   }
 
-  .navTreeCurrentItem > a{
+  .navTreeCurrentItem > a {
     font-weight: bold;
     background-color: $color-gray-light;
+    border-left: 2px solid $color-primary;
   }
 }
 
