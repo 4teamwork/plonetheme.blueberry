@@ -5,6 +5,9 @@ Changelog
 1.4.2 (unreleased)
 ------------------
 
+- Fix link style in tinyMCE editor
+  [Kevin Bieri]
+
 - Replace fixed zindex value
   [Kevin Bieri]
 
