@@ -25,7 +25,7 @@
   opacity: .8 !important;
   height: auto !important;
   width: auto !important;
-  z-index: 999 !important;
+  z-index: $zindex-overlay - 10 !important;
   @include linear-gradient(
     right,
     #29323c,
