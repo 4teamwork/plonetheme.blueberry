@@ -5,6 +5,9 @@ Changelog
 1.4.2 (unreleased)
 ------------------
 
+- Apply styling for hightlighted searchterm
+  [Kevin Bieri]
+
 - Increase font rendering quality using font-smoothing
   [Kevin Bieri]
 
