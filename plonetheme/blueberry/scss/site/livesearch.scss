@@ -72,3 +72,8 @@
 .advancedsearchlink.advanced-search {
   font-weight: bold;
 }
+
+.highlightedSearchTerm {
+  background-color: transparentize($color-primary, 85%);
+  padding: 2px;
+}
