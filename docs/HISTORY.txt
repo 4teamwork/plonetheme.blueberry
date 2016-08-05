@@ -5,6 +5,9 @@ Changelog
 1.4.2 (unreleased)
 ------------------
 
+- Increase font rendering quality using font-smoothing
+  [Kevin Bieri]
+
 - Fix link style in tinyMCE editor
   [Kevin Bieri]
 
