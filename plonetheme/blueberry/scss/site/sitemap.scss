@@ -1,0 +1,13 @@
+.template-sitemap {
+  #portal-sitemap {
+    a:before { content: none; }
+    @include list();
+    &.navTreeLevel0 > li > div > a {
+      font-size: $font-size-medium;
+      color: $color-text;
+      margin-top: $margin-heading-vertical;
+      display: block;
+    }
+  }
+
+}
