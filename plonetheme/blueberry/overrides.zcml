@@ -1,0 +1,12 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="plonetheme.blueberry">
+
+    <adapter for="Products.CMFCore.interfaces.IFolderish"
+             provides="Products.TinyMCE.adapters.interfaces.JSONSearch.IJSONSearch"
+             factory=".browser.tinymce.BlueberryJSONSearch" />
+
+</configure>
