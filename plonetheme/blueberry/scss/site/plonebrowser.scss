@@ -1,0 +1,236 @@
+body#content {
+  background-color: $color-content-background;
+}
+
+.plonepopup {
+  @include overlay();
+  @include overlay-large();
+
+  .mceTop {
+    display: none !important;
+    background-color: $color-content-background !important;
+  }
+
+  .mceCenter {
+    position: static !important;
+    height: auto !important;
+    line-height: $line-height-base;
+    clip: auto;
+  }
+
+  .mceMove {
+    display: none !important;
+  }
+
+  .mceResize {
+    display: none !important;
+  }
+
+  div {
+    position: static;
+  }
+
+  .mceClose {
+    @extend .fa-icon;
+    @extend .fa-close;
+    @include link();
+    background-image: none !important;
+    background-color: $color-content-background;
+    top: 0;
+    right: 0;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .mceMiddle {
+    clip: auto !important;
+
+    .mceLeft, .mceRight {
+      display: none !important;
+    }
+
+    > span {
+      position: static !important;
+
+      > iframe {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+  }
+}
+
+#plonebrowser {
+  background-color: $color-content-background !important;
+  .dialog-wrapper#content {
+    @include row();
+    margin: 0 auto !important;
+    font-size: $font-size-base;
+    padding: 0;
+    background-color: $color-content-background;
+
+    > div:not(#footer) > [class*="width-3:4"] {
+      @include gridposition(0);
+      @include gridwidth(10);
+    }
+  }
+
+  #linktype_panel {
+    margin-bottom: $margin-vertical;
+  }
+
+  #linktype {
+    @include tab-list();
+
+    > div {
+      > a {
+        @include tab();
+        float: left;
+      }
+      &.current > a {
+        @include tab-select();
+      }
+      > img {
+        display: none;
+      }
+    }
+  }
+
+  #footer {
+    margin-top: $margin-vertical;
+    background-color: transparent;
+    border: 0;
+  }
+
+  #email_panel, #anchor_panel {
+    @include cell();
+    @include gridposition(0);
+    @include gridwidth(16);
+  }
+
+  #clear-btn {
+    display: none;
+  }
+
+  #shortcutsicon > img {
+    display: none;
+  }
+
+  #clear-btn, #search-btn {
+    > img {
+      display: none;
+    }
+  }
+
+  #shortcutsview {
+    @include clearfix();
+    margin-bottom: $margin-vertical;
+  }
+
+  .shortcut {
+    margin-right: $margin-horizontal;
+    float: left;
+    > img {
+      display: none;
+    }
+  }
+
+
+
+  .formHelp {
+    padding: 0;
+    margin-bottom: $margin-vertical;
+    #internalpath {
+      &:empty {
+        display: none;
+
+      }
+      > img {
+        display: none;
+      }
+    }
+  }
+
+  .radioscrolllist {
+    line-height: $line-height-base;
+    overflow-y: visible;
+    overflow-x: visible;
+
+    .list {
+      padding: 0;
+    }
+
+    > .row {
+      position: static;
+      > .cell {
+        margin: 0;
+        position: static;
+        float: none;
+        left: auto;
+        @include floatgrid(4);
+      }
+    }
+  }
+
+  .input-border {
+    border: 0;
+  }
+
+  .legend {
+    float: right;
+
+    > .current {
+      color: $color-text;
+    }
+  }
+
+  .action-icons {
+    float: right;
+  }
+
+  #details_panel, #addimage_panel {
+    @include gridposition(10);
+    @include gridwidth(6);
+  }
+
+  #listview > img {
+    display: none;
+  }
+
+  #thumbview > img {
+    display: none;
+  }
+
+  #internallinkcontainer {
+    margin-bottom: $margin-vertical;
+  }
+
+  #action-button {
+    @include gridposition(0);
+    @include gridwidth(4);
+  }
+
+  #upload-button {
+    @include gridposition(4);
+    @include gridwidth(8);
+
+    > img {
+      display: none;
+    }
+
+    > #upload {
+      @include button();
+    }
+  }
+
+  .thumb {
+    margin-top: $margin-vertical;
+    &:before {
+      font-size: $font-size-large;
+    }
+    > img {
+      display: none;
+    }
+  }
+
+}
