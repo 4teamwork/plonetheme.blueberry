@@ -51,7 +51,6 @@
         <theme:scss file="scss/plone-legacy.scss" />
         <theme:scss file="scss/messages.scss" />
         <theme:scss file="scss/batching.scss" />
-        <theme:scss file="scss/login.scss" />
         <theme:scss file="scss/languageselector.scss" />
         <theme:scss file="scss/plonebrowser.scss" />
 
