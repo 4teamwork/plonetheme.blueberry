@@ -52,7 +52,6 @@
         <theme:scss file="scss/batching.scss" />
         <theme:scss file="scss/login.scss" />
         <theme:scss file="scss/sitemap.scss" />
-        <theme:scss file="scss/additionallogo.scss" />
         <theme:scss file="scss/languageselector.scss" />
         <theme:scss file="scss/plonebrowser.scss" />
 
