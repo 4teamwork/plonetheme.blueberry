@@ -5,6 +5,9 @@ Changelog
 1.4.3 (unreleased)
 ------------------
 
+- Fix helper position when dragging with scroll offset
+  [Kevin Bieri]
+
 - Fix JSON search in plonebrowser
   - Fix styling of plonebrowser using ftw.theming
   - Remove obsolete login overlay styling
