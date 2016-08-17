@@ -5,6 +5,9 @@ Changelog
 1.4.4 (unreleased)
 ------------------
 
+- Fix external link icon
+  [Kevin Bieri]
+
 - Fix font-heading of plone delete overlay
   [Kevin Bieri]
 
