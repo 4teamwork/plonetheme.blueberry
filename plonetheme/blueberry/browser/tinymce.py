@@ -12,10 +12,6 @@ class BlueberryJSONSearch(JSONSearch):
 
     listing_base_query = {}
 
-    def __init__(self, context):
-        """Constructor"""
-        self.context = context
-
     def getSearchResults(self, filter_portal_types, searchtext):
         """Returns the actual search result"""
 
@@ -27,6 +23,9 @@ class BlueberryJSONSearch(JSONSearch):
             'parent_url': '',
             'path': [],
         }
+
+        normalizer = getUtility(IIDNormalizer)
+
         query = self.listing_base_query.copy()
         query.update({
             'portal_type': filter_portal_types,
@@ -45,10 +44,13 @@ class BlueberryJSONSearch(JSONSearch):
                     'uid': brain.UID,
                     'url': brain.getURL(),
                     'portal_type': brain.portal_type,
+                    'review_state': brain.review_state or None,
+                    'normalized_type': normalizer.normalize(brain.portal_type),
                     'title': brain.Title == "" and brain.id or brain.Title,
                     'icon': getIcon(brain),
                     'description': brain.Description,
                     'is_folderish': brain.is_folderish,
+
                     } for brain in brains if brain]
 
         # add catalog_results
