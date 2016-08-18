@@ -5,7 +5,12 @@ Changelog
 1.4.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix JSON search in plonebrowser
+  - Fix styling of plonebrowser using ftw.theming
+  - Remove obsolete login overlay styling
+  - Fix styling of sitemap using ftw.theming
+  - Remove unused `additional-logo`
+  [Kevin Bieri]
 
 
 1.4.2 (2016-08-08)

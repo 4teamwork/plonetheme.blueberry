@@ -31,6 +31,8 @@
         <theme:scss file="scss/site/controlpanel.scss" />
         <theme:scss file="scss/site/tables.scss" />
         <theme:scss file="scss/site/users_and_groups.scss" />
+        <theme:scss file="scss/site/plonebrowser.scss" />
+        <theme:scss file="scss/site/sitemap.scss" />
 
         <theme:scss file="scss/widgets/datagrid.scss" />
         <theme:scss file="scss/widgets/select2.scss" />
@@ -50,11 +52,7 @@
         <theme:scss file="scss/plone-legacy.scss" />
         <theme:scss file="scss/messages.scss" />
         <theme:scss file="scss/batching.scss" />
-        <theme:scss file="scss/login.scss" />
-        <theme:scss file="scss/sitemap.scss" />
-        <theme:scss file="scss/additionallogo.scss" />
         <theme:scss file="scss/languageselector.scss" />
-        <theme:scss file="scss/plonebrowser.scss" />
 
         <theme:scss slot="bottom"
                     file="scss/print.scss" />

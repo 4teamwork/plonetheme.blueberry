@@ -13,9 +13,6 @@
     <xi:include href="/++theme++plonetheme.blueberry.baserules/header.xml" />
 
     <replace css:content="#portal-logo" css:theme="#portal-logo" />
-    <rules if-content="//*[@id='additional-logo']">
-        <after css:content="#additional-logo" css:theme="#portal-logo" />
-    </rules>
 
     <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
     <!-- Move hidden h2 of global section too -->

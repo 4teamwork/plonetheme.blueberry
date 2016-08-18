@@ -7,9 +7,6 @@
   <script type="text/javascript" src="../../utils/mctabs.js"></script>
   <script type="text/javascript" src="../../utils/form_utils.js"></script>
   <script type="text/javascript" src="js/plonebrowser.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/plonebrowser.css" />
-  <link rel="stylesheet" type="text/css" tal:attributes="href string:${portal_url}/portal_css/columns.css" />
-  <link rel="stylesheet" type="text/css" href="css/plonebrowser.css" />
   <!-- PATCH START -->
   <link rel="stylesheet" type="text/css" tal:attributes="href context/theming.css/get_url" />
   <!-- PATCH END -->
