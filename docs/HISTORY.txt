@@ -5,7 +5,8 @@ Changelog
 1.4.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix font-heading of plone delete overlay
+  [Kevin Bieri]
 
 
 1.4.3 (2016-08-18)
