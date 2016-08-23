@@ -23,6 +23,7 @@
     <include package=".standard" />
     <include package=".marketing" />
     <include package=".government" />
+    <include package=".publisher" zcml:condition="installed ftw.publisher.core" />
 
     <browser:resourceDirectory
         name="plonetheme.blueberry"

@@ -5,6 +5,8 @@ Changelog
 1.4.4 (unreleased)
 ------------------
 
+- Let variables be published by ftw.publisher. [jone]
+
 - Swap mobileLogo and mobileWrapper node in index.html for styling reasons
   [Kevin Bieri]
 
