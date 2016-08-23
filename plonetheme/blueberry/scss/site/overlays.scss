@@ -120,6 +120,11 @@
   width: 100%;
   height: 100%;
 
+  .documentFirstHeading {
+    font-size: $font-size-base;
+    font-weight: normal;
+  }
+
   &:after {
     /*
       Add some space so that we can place the buttons (save / cancel)
