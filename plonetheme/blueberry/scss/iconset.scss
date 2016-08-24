@@ -50,6 +50,11 @@
       @extend .fa-th;
     }
   }
+
+  span.link-external {
+    display: inline-block;
+  }
+
   span.link-external a, a.external-link {
     background-image: embed-resource("../resources/fonts/external.svg", $fill-css:['.icon': $color-link]);
     &:hover {
@@ -60,4 +65,3 @@
     padding-right: 1em + em(5px);
     background-size: 1em;
   }
-}
