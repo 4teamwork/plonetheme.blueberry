@@ -5,10 +5,11 @@ version = '1.4.4.dev0'
 
 tests_require = [
     'ftw.builder',
+    'ftw.publisher.core',
     'ftw.testbrowser',
     'plone.app.testing',
     'unittest2',
-    ]
+]
 
 setup(name='plonetheme.blueberry',
       version=version,
