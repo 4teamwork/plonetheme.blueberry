@@ -5,6 +5,9 @@ Changelog
 1.4.4 (unreleased)
 ------------------
 
+- Swap mobileLogo and mobileWrapper node in index.html for styling reasons
+  [Kevin Bieri]
+
 - Fix external link icon
   [Kevin Bieri]
 
