@@ -5,7 +5,8 @@ Changelog
 1.5.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix toolbar actions width.
+  [Kevin Bieri]
 
 
 1.5.0 (2016-08-24)
