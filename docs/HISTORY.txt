@@ -5,6 +5,9 @@ Changelog
 1.5.1 (unreleased)
 ------------------
 
+- Style tel fields
+  [Yves Siegrist]
+
 - Fix toolbar actions width.
   [Kevin Bieri]
 
