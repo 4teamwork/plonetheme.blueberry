@@ -5,6 +5,9 @@ Changelog
 1.5.1 (unreleased)
 ------------------
 
+- Datagrid widget: Make datagrid actions clickable in IE11.
+  [mathias.leimgruber]
+
 - Style tel fields
   [Yves Siegrist]
 
