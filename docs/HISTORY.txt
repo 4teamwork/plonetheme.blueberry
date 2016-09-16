@@ -11,6 +11,9 @@ Changelog
 1.5.1 (2016-09-22)
 ------------------
 
+- Fix SCSS linting errors
+  [Kevin Bieri]
+
 - Datagrid widget: Make datagrid actions clickable in IE11.
   [mathias.leimgruber]
 
