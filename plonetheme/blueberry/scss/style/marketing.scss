@@ -39,7 +39,7 @@ $color-top-section: $color-primary !default;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 5;
+    z-index: $zindex-dropdown + $zindex-header;
     box-shadow: $box-shadow-secondary;
   }
 
@@ -80,6 +80,11 @@ $color-top-section: $color-primary !default;
   .navigation {
     margin: 0;
     border: 0;
+    @include cell();
+    @include screen-small() {
+      @include gridposition(6);
+      @include gridwidth(10);
+    }
   }
 
   #portal-logo {
