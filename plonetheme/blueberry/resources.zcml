@@ -17,6 +17,7 @@
         <theme:scss file="scss/elements/buttons.scss" />
         <theme:scss file="scss/elements/tabs.scss" />
         <theme:scss file="scss/elements/form.scss" />
+        <theme:scss file="scss/elements/statusmessage.scss" />
 
         <theme:scss file="scss/site/editbar.scss" />
         <theme:scss file="scss/site/portaltop.scss" />

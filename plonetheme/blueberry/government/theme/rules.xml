@@ -128,5 +128,7 @@
     <drop attributes="alt" content="//a[@id='portal-logo']/img[@alt='']" />
     <drop attributes="title" content="//a[@id='portal-logo']/img[@title='']" />
 
+    <replace css:content="#globalstatusmessage" css:theme="#globalstatusmessage" />
+
   </rules>
 </rules>
