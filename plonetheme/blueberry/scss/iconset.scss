@@ -56,9 +56,9 @@
   }
 
   span.link-external a, a.external-link {
-    background-image: embed-resource("../resources/fonts/external.svg", $fill-css:['.icon': $color-link]);
+    background-image: embed-resource("../resources/fonts/external.svg", $fill-css:('.icon', $color-link));
     &:hover {
-      background-image: embed-resource("../resources/fonts/external.svg", $fill-css:['.icon': $color-link-hover]);
+      background-image: embed-resource("../resources/fonts/external.svg", $fill-css:('.icon', $color-link-hover));
     }
     background-repeat: no-repeat;
     background-position: center right;
