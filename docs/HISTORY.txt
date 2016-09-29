@@ -8,6 +8,9 @@ Changelog
 - Define styling for select
   [Kevin Bieri]
 
+- Fix spacing on navigation elements
+  [Kevin Bieri]
+
 
 1.5.2 (2016-09-23)
 ------------------
