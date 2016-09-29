@@ -1,8 +1,35 @@
 input[type="text"],
 input[type="password"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+select {
   @include input();
+}
+
+// http://stackoverflow.com/questions/3773430/remove-outline-from-select-box-in-ff
+select:-moz-focusring {
+  color:transparent;
+  text-shadow:0 0 0 $color-text;
+}
+
+select {
+  @include appearance();
+  &:not([multiple]) {
+    background-image: embed-resource("../../resources/fonts/chevron-down.svg", $fill-css:('.icon', $color-text));
+    background-position: right $padding-horizontal center;
+    background-size: $font-size-base;
+    background-repeat: no-repeat;
+  }
+  &[multiple="multiple"] {
+    width: 100%;
+    overflow: auto;
+    min-height: 300px;
+    padding: 0;
+    option {
+      @include list-group-item();
+      padding: $padding-vertical $padding-horizontal;
+    }
+  }
 }
 
 textarea {
