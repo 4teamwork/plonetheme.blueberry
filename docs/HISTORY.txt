@@ -5,6 +5,9 @@ Changelog
 1.5.3 (unreleased)
 ------------------
 
+- Fix invalid tag in Products.TinyMCE.skins.tinymce.plugins.plonebrowser.plonebrowser.htm.pt.
+  [mathias.leimgruber]
+
 - Define styling for select
   [Kevin Bieri]
 
