@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.5.3 (unreleased)
+1.5.3 (2016-10-24)
 ------------------
 
 - Fix invalid tag in Products.TinyMCE.skins.tinymce.plugins.plonebrowser.plonebrowser.htm.pt.
