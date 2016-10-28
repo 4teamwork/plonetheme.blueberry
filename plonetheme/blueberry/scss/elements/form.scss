@@ -14,10 +14,13 @@ select:-moz-focusring {
 
 select {
   @include appearance();
+  min-width: 0;
+  padding: $padding-vertical $padding-horizontal / 2;
+  padding-right: $padding-horizontal * 1.5;
   &:not([multiple]) {
     background-image: embed-resource("../../resources/fonts/chevron-down.svg", $fill-css:('.icon', $color-text));
-    background-position: right $padding-horizontal center;
-    background-size: $font-size-base;
+    background-position: right $padding-horizontal / 2 center;
+    background-size: $font-size-small;
     background-repeat: no-repeat;
   }
   &[multiple="multiple"] {
