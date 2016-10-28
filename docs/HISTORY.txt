@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.5.4 (unreleased)
+1.5.4 (2016-10-28)
 ------------------
 
 - Fix size of select elements.
