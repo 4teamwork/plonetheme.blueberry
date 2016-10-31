@@ -1,7 +1,19 @@
 $calendar-portlet-bg-color: $portlet-column-bg-color !default;
+$calendar-portlet-tooltip-color-link: $color-link !default;
+$calendar-portlet-tooltip-color-link-hover: $color-secondary !default;
+$calendar-portlet-tooltip-color-background: $color-white !default;
+$calendar-portlet-tooltip-color-border: $color-gray-dark !default;
+$calendar-portlet-tooltip-color-shadow: $box-shadow-secondary !default;
+
 
 @include declare-variables(
-  calendar-portlet-bg-color);
+  calendar-portlet-bg-color,
+  calendar-portlet-tooltip-color-link,
+  calendar-portlet-tooltip-color-link-hover,
+  calendar-portlet-tooltip-color-background,
+  calendar-portlet-tooltip-color-border,
+  calendar-portlet-tooltip-color-shadow,
+);
 
 
 .portletCalendar {
@@ -76,4 +88,29 @@ $calendar-portlet-bg-color: $portlet-column-bg-color !default;
     td:empty:hover { background-color:transparent; }
   }
 
+}
+
+body .pae_calendar_tooltip {
+  /* This is the tooltip when hovering over a day (having events)
+     in the calendar portlet. */
+
+  padding: $padding-vertical * 0.5 $padding-horizontal * 0.5;
+  background-color: $calendar-portlet-tooltip-color-background;
+  border: 1px solid $calendar-portlet-tooltip-color-border;
+  box-shadow: $calendar-portlet-tooltip-color-shadow;
+  @include borderradius($border-radius-primary);
+  z-index: $zindex-tooltip;
+  font-size: inherit;
+
+  a {
+    @include list-group-interactive();
+    &,
+    &:visited,
+    &:link {
+      color: $calendar-portlet-tooltip-color-link;
+    }
+    &:hover {
+      color: $calendar-portlet-tooltip-color-link-hover;
+    }
+  }
 }

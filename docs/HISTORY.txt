@@ -5,7 +5,7 @@ Changelog
 1.5.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Styling for calender portlet tooltip. [jone]
 
 
 1.5.4 (2016-10-28)
