@@ -12,6 +12,11 @@ select:-moz-focusring {
   text-shadow:0 0 0 $color-text;
 }
 
+// http://stackoverflow.com/questions/20163079/remove-select-arrow-on-ie
+select::-ms-expand {
+  display: none;
+}
+
 select {
   @include appearance();
   min-width: 0;

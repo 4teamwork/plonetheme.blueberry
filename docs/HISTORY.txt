@@ -5,7 +5,8 @@ Changelog
 1.6.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix dropdown for Internet Explorer
+  [Kevin Bieri]
 
 
 1.6.0 (2016-10-31)
