@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-02-09 10:25+0000\n"
+"POT-Creation-Date: 2016-11-03 15:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,15 +14,24 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin1\n"
 
-#: ./plonetheme/blueberry/configure.zcml:30
+#: ./plonetheme/blueberry/government/configure.zcml:16
+#: ./plonetheme/blueberry/marketing/configure.zcml:16
+msgid "Blueberry Marketing Theme"
+msgstr ""
+
+#: ./plonetheme/blueberry/standard/configure.zcml:16
+msgid "Blueberry Standard Theme"
+msgstr ""
+
+#: ./plonetheme/blueberry/configure.zcml:39
 msgid "Blueberry Theme"
 msgstr ""
 
-#: ./plonetheme/blueberry/browser/forms.py:175
+#: ./plonetheme/blueberry/browser/forms.py:180
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: ./plonetheme/blueberry/browser/forms.py:172
+#: ./plonetheme/blueberry/browser/forms.py:177
 msgid "Changes saved"
 msgstr "Änderungen gespeichert"
 
@@ -32,10 +41,11 @@ msgstr "Inhalts Navigation"
 
 #: ./plonetheme/blueberry/profiles/default/actions.xml
 #: ./plonetheme/blueberry/upgrades/20160205141355_rename_customization_form/actions.xml
+#: ./plonetheme/blueberry/upgrades/20161103112208_fix__customize_design__action_permission_check/actions.xml
 msgid "Customize design"
 msgstr "Design anpassen"
 
-#: ./plonetheme/blueberry/browser/forms.py:181
+#: ./plonetheme/blueberry/browser/forms.py:186
 msgid "Edit cancelled"
 msgstr "Bearbeiten abgebrochen"
 
@@ -51,15 +61,16 @@ msgstr "Weitere Informationen."
 msgid "Navigation on ${title}"
 msgstr "Navigieren auf ${title}"
 
-#: ./plonetheme/blueberry/browser/forms.py:157
+#: ./plonetheme/blueberry/browser/forms.py:162
 msgid "Save"
 msgstr "Speichern"
 
 msgid "customize design variables"
 msgstr "Design-Variablen anpassen"
 
-#. Default: "This color is only visible in the logged in state. It is used to indicate edit sections e.q. Simplelayout or the portal Hauptnavigation"
+#. Default: "This color is only visible in the logged in state. It is used to indicate edit sections e.q. Simplelayout or the portal top navigation"
 #: ./plonetheme/blueberry/browser/forms.py:54
+#, fuzzy
 msgid "label_color_edit"
 msgstr "Diese Farbe wird nur im eingeloggten Zustand sichtbar. Sie wird gebraucht um Bereiche, die zum bearbeiten von Inhalten gedacht sind, zu markieren wie z.B. im Simplelayout oder in der Hauptnavigation."
 
@@ -88,6 +99,11 @@ msgstr "Dies ist die Sekundärfarbe. Sie sollte einen grossen Teil vom CI/CD aus
 msgid "label_font_size_base"
 msgstr "Basis-Schriftgrösse, z.B. für Inhaltstext."
 
+#. Default: "Define thickness of headings."
+#: ./plonetheme/blueberry/browser/forms.py:79
+msgid "label_font_weight_heading"
+msgstr "Dicke der Überschriften definieren"
+
 #. Default: "Base line height."
 #: ./plonetheme/blueberry/browser/forms.py:74
 msgid "label_line_height_base"
@@ -113,22 +129,34 @@ msgstr "Startseite"
 msgid "label_skiptonavigation"
 msgstr "Navigation"
 
-#: ./plonetheme/blueberry/configure.zcml:30
-msgid "plonetheme.blueberry"
+#: ./plonetheme/blueberry/configure.zcml:39
+msgid "plonetheme.blueberry (base)"
+msgstr ""
+
+#: ./plonetheme/blueberry/government/configure.zcml:16
+msgid "plonetheme.blueberry.government"
+msgstr ""
+
+#: ./plonetheme/blueberry/marketing/configure.zcml:16
+msgid "plonetheme.blueberry.marketing"
+msgstr ""
+
+#: ./plonetheme/blueberry/standard/configure.zcml:16
+msgid "plonetheme.blueberry.standard"
 msgstr ""
 
 #. Default: "This form can be used to customize a selection of the design variable defined in this theme."
-#: ./plonetheme/blueberry/browser/forms.py:129
+#: ./plonetheme/blueberry/browser/forms.py:134
 msgid "variables_form_description"
 msgstr "Dieses Formular dient dem Anpassen von einigen ausgewählten Design-Variablen des Themes."
 
 #. Default: "Variables will be inherited from the ancestors."
-#: ./plonetheme/blueberry/browser/forms.py:136
+#: ./plonetheme/blueberry/browser/forms.py:141
 msgid "variables_form_description_inheritance"
 msgstr "Variablen werden von den übergeordneten Inhalten geerbet, falls sie dort angepasst worden sind."
 
 #. Default: "Custom design variables (SCSS)"
-#: ./plonetheme/blueberry/browser/forms.py:122
+#: ./plonetheme/blueberry/browser/forms.py:127
 msgid "variables_form_label"
 msgstr "Design-Variablen überschreiben (SCSS)"
 
