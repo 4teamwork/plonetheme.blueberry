@@ -5,7 +5,7 @@ Changelog
 1.6.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix "customize design" action permission check. [jone]
 
 
 1.6.1 (2016-11-02)

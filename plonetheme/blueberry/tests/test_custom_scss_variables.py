@@ -8,6 +8,7 @@ from plonetheme.blueberry.tests import FunctionalTestCase
 from zope.annotation import IAnnotations
 import transaction
 
+PERMISSION = 'plonetheme.blueberry: Customize Design Variables'
 
 class TestCustomSCSSVariables(FunctionalTestCase):
 
@@ -128,8 +129,7 @@ class TestCustomSCSSVariables(FunctionalTestCase):
 
         # Give the user the permission to configure the contact form and
         # make sure the user can see the action.
-        permissions = 'plonetheme.blueberry: Customize Design Variables'
-        self.portal.manage_permission(permissions, roles=['Member'],
+        self.portal.manage_permission(PERMISSION, roles=['Member'],
                                       acquire=False)
         transaction.commit()
         browser.visit(self.portal)
@@ -137,3 +137,18 @@ class TestCustomSCSSVariables(FunctionalTestCase):
             action_link_url,
             browser.find(action_link_label).attrib['href']
         )
+
+    @browsing
+    def test_action_is_hidden_when_user_has_no_permission(self, browser):
+        subsite = create(Builder('folder')
+                         .titled(u'My Subsite')
+                         .providing(INavigationRoot))
+        browser.login().visit(subsite)
+        self.assertTrue(browser.find('Customize design'))
+
+        subsite.manage_permission(PERMISSION,
+                                  roles=[],
+                                  acquire=False)
+        transaction.commit()
+        browser.reload()
+        self.assertFalse(browser.find('Customize design'))
