@@ -74,6 +74,11 @@ class IDefaultDesignVariablesSchema(form.Schema):
         description=_('label_line_height_base', default=u'Base line height.')
     )
 
+    font_weight_heading = Variable(
+        '$font-weight-heading',
+        description=_('label_font_weight_heading', default=u'Define thickness of headings.')
+    )
+
 
 @adapter(INavigationRoot, Interface)
 @implementer(ICustomDesignVariablesSchema)

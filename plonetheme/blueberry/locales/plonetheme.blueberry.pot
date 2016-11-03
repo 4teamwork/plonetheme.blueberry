@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-02-09 10:25+0000\n"
+"POT-Creation-Date: 2016-11-03 15:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,15 +14,24 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin1\n"
 
-#: ./plonetheme/blueberry/configure.zcml:30
+#: ./plonetheme/blueberry/government/configure.zcml:16
+#: ./plonetheme/blueberry/marketing/configure.zcml:16
+msgid "Blueberry Marketing Theme"
+msgstr ""
+
+#: ./plonetheme/blueberry/standard/configure.zcml:16
+msgid "Blueberry Standard Theme"
+msgstr ""
+
+#: ./plonetheme/blueberry/configure.zcml:39
 msgid "Blueberry Theme"
 msgstr ""
 
-#: ./plonetheme/blueberry/browser/forms.py:175
+#: ./plonetheme/blueberry/browser/forms.py:180
 msgid "Cancel"
 msgstr ""
 
-#: ./plonetheme/blueberry/browser/forms.py:172
+#: ./plonetheme/blueberry/browser/forms.py:177
 msgid "Changes saved"
 msgstr ""
 
@@ -32,10 +41,11 @@ msgstr ""
 
 #: ./plonetheme/blueberry/profiles/default/actions.xml
 #: ./plonetheme/blueberry/upgrades/20160205141355_rename_customization_form/actions.xml
+#: ./plonetheme/blueberry/upgrades/20161103112208_fix__customize_design__action_permission_check/actions.xml
 msgid "Customize design"
 msgstr ""
 
-#: ./plonetheme/blueberry/browser/forms.py:181
+#: ./plonetheme/blueberry/browser/forms.py:186
 msgid "Edit cancelled"
 msgstr ""
 
@@ -51,7 +61,7 @@ msgstr ""
 msgid "Navigation on ${title}"
 msgstr ""
 
-#: ./plonetheme/blueberry/browser/forms.py:157
+#: ./plonetheme/blueberry/browser/forms.py:162
 msgid "Save"
 msgstr ""
 
@@ -88,6 +98,11 @@ msgstr ""
 msgid "label_font_size_base"
 msgstr ""
 
+#. Default: "Define thickness of headings."
+#: ./plonetheme/blueberry/browser/forms.py:79
+msgid "label_font_weight_heading"
+msgstr ""
+
 #. Default: "Base line height."
 #: ./plonetheme/blueberry/browser/forms.py:74
 msgid "label_line_height_base"
@@ -113,22 +128,34 @@ msgstr ""
 msgid "label_skiptonavigation"
 msgstr ""
 
-#: ./plonetheme/blueberry/configure.zcml:30
-msgid "plonetheme.blueberry"
+#: ./plonetheme/blueberry/configure.zcml:39
+msgid "plonetheme.blueberry (base)"
+msgstr ""
+
+#: ./plonetheme/blueberry/government/configure.zcml:16
+msgid "plonetheme.blueberry.government"
+msgstr ""
+
+#: ./plonetheme/blueberry/marketing/configure.zcml:16
+msgid "plonetheme.blueberry.marketing"
+msgstr ""
+
+#: ./plonetheme/blueberry/standard/configure.zcml:16
+msgid "plonetheme.blueberry.standard"
 msgstr ""
 
 #. Default: "This form can be used to customize a selection of the design variable defined in this theme."
-#: ./plonetheme/blueberry/browser/forms.py:129
+#: ./plonetheme/blueberry/browser/forms.py:134
 msgid "variables_form_description"
 msgstr ""
 
 #. Default: "Variables will be inherited from the ancestors."
-#: ./plonetheme/blueberry/browser/forms.py:136
+#: ./plonetheme/blueberry/browser/forms.py:141
 msgid "variables_form_description_inheritance"
 msgstr ""
 
 #. Default: "Custom design variables (SCSS)"
-#: ./plonetheme/blueberry/browser/forms.py:122
+#: ./plonetheme/blueberry/browser/forms.py:127
 msgid "variables_form_label"
 msgstr ""
 
