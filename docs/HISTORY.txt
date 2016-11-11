@@ -5,6 +5,9 @@ Changelog
 1.7.1 (unreleased)
 ------------------
 
+- Fix appearance of empty livesearch (plone search).
+  [Kevin Bieri]
+
 - Adjust zindeces of menu and livesearch.
   [Kevin Bieri]
 
