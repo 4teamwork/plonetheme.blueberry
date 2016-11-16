@@ -15,6 +15,11 @@
   @include hidden-structure();
 }
 
+#LSNothingFound, .advancedsearchlink {
+  padding: $padding-vertical $padding-horizontal;
+  display: block;
+}
+
 .LSBox {
   @extend .fa-icon-right;
   @include clearfix();
@@ -38,14 +43,22 @@
 }
 
 .LSResult {
+  left: 0;
+  right: 0;
   position: absolute;
   top: $line-height-base + 2 * $padding-vertical;
   z-index: $zindex-header + $zindex-dropdown;
+  box-shadow: $box-shadow-secondary;
+  background-color: $color-content-background;
+
+  @include screen-medium() {
+    left: auto;
+    right: auto;
+  }
 }
 
 .LSTable {
   @include list();
-  box-shadow: $box-shadow-secondary;
 
   > li {
     @include list-group-item();
