@@ -2,7 +2,7 @@
 <registry>
   <record name="plone.app.theming.interfaces.IThemeSettings.parameterExpressions">
     <value purge="False">
-        <element key="pathbar_full_width">python: True</element>
+        <element key="editmode_disabled">python: request.get('_disable_editmode', False)</element>
     </value>
   </record>
 </registry>
