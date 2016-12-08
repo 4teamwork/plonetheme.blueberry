@@ -5,6 +5,9 @@ Changelog
 1.7.1 (unreleased)
 ------------------
 
+- Define minimal styling for document actions.
+  [Kevin Bieri]
+
 - Fix appearance of empty livesearch (plone search).
   [Kevin Bieri]
 
