@@ -1,0 +1,12 @@
+#document-actions > ul {
+  @include clearfix();
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: $margin-vertical;
+
+  > li > a {
+    @include button();
+    float: right;
+  }
+}
