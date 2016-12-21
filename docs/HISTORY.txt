@@ -5,6 +5,9 @@ Changelog
 1.7.1 (unreleased)
 ------------------
 
+- Fix styling for datagrid widget.
+  [Kevin Bieri]
+
 - Define minimal styling for document actions.
   [Kevin Bieri]
 
