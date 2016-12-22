@@ -35,6 +35,7 @@
         <theme:scss file="scss/site/users_and_groups.scss" />
         <theme:scss file="scss/site/plonebrowser.scss" />
         <theme:scss file="scss/site/sitemap.scss" />
+        <theme:scss file="scss/site/documentactions.scss" />
 
         <theme:scss file="scss/widgets/datagrid.scss" />
         <theme:scss file="scss/widgets/select2.scss" />

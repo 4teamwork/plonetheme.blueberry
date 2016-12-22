@@ -6,44 +6,57 @@
 .datagridwidget-table-view {
 
   width: 100%;
+  border: 0;
+  background: none;
 
   .formControls {
     display: none;
   }
 
+  .select2.select2-container .select2-selection--single {
+    border: 0;
+  }
+
   .header {
+    font-size: em($font-size-base);
+    background-color: $color-gray-light;
+    color: $color-text;
+    padding: $padding-vertical $padding-horizontal;
+  }
+
+  label {
     padding: 0;
   }
 
-
-  input[type="text"] {
+  input[type="text"], select {
     min-width: 0;
     width: 100%;
     box-sizing: border-box;
+    border: 0;
+    padding: 0 $padding-horizontal / 2;
+
+    &:focus {
+      background-color: $color-gray-light;
+      border-color: $color-gray-dark;
+    }
+  }
+
+  input[type="checkbox"], input[type="radio"] {
+    margin-left: $padding-horizontal / 2;
+  }
+
+  input[type="button"] {
+    border-radius: 0;
   }
 
   .datagridwidget-cell {
-    vertical-align: bottom;
-  }
+    vertical-align: middle;
+    padding: 0;
+    border-left: 1px solid $color-gray-dark;
 
-  .cell-1 {
-    padding: $padding-vertical $padding-horizontal;
-    width: 20%;
-  }
-
-  .cell-2 {
-    padding: $padding-vertical $padding-horizontal;
-    width: 20%;
-  }
-
-  .cell-3 {
-    padding: $padding-vertical $padding-horizontal;
-    width: 30%;
-  }
-
-  .cell-4 {
-    padding: $padding-vertical $padding-horizontal;
-    width: 30%;
+    &:first-child {
+      border-left: 0;
+    }
   }
 
   .querySelectSearch {
@@ -69,12 +82,15 @@
   display: none;
 }
 
+.datagridwidget-empty-row { display: none; }
+
 .datagridwidget-manipulator {
   @extend .fa-icon;
   position: relative;
   padding: 0;
-  width: 0;
-  padding: 0;
+  width: 1px;
+  vertical-align: middle;
+  text-align: center;
 
   &.insert-row {
     @extend .fa-plus;
@@ -103,4 +119,16 @@
     opacity: 0;
   }
 
+}
+
+.insert-row {
+  border-left: 1px solid $color-gray-dark;
+}
+
+.auto-append  > .datagridwidget-manipulator {
+  &.insert-row, &.delete-row {
+    &:before {
+      content: none;
+    }
+  }
 }
