@@ -5,6 +5,10 @@ Changelog
 1.7.1 (unreleased)
 ------------------
 
+- Enable extensive support for collective.editmodeswitcher.
+  Hide all elements that are not hidden by the feature itself.
+  [raphael-s]
+  
 - Fix styling for datagrid widget.
   [Kevin Bieri]
 
@@ -14,7 +18,7 @@ Changelog
 - Fix appearance of empty livesearch (plone search).
   [Kevin Bieri]
 
-- Adjust zindeces of menu and livesearch.
+- Adjust zindices of menu and livesearch.
   [Kevin Bieri]
 
 

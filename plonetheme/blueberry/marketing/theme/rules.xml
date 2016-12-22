@@ -91,6 +91,7 @@
           <xsl:if css:test="#portal-column-one"> has-nav-column</xsl:if>
           <xsl:if css:test="#portal-column-content"> has-content-column</xsl:if>
           <xsl:if css:test="#portal-column-two"> has-sidebar-column</xsl:if>
+          <xsl:if test="$editmode_disabled"> editmode-disabled</xsl:if>
       </xsl:attribute>
     </before>
 

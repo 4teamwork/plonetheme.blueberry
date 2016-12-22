@@ -20,6 +20,7 @@
         <theme:scss file="scss/elements/statusmessage.scss" />
 
         <theme:scss file="scss/site/editbar.scss" />
+        <theme:scss file="scss/site/editmode.scss" />
         <theme:scss file="scss/site/portaltop.scss" />
         <theme:scss file="scss/site/layout.scss" />
         <theme:scss file="scss/site/typography.scss" />
