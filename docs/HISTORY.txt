@@ -5,10 +5,12 @@ Changelog
 1.7.1 (unreleased)
 ------------------
 
+- TinyMCE (table) panels: fix height so that buttons are visible. [jone]
+
 - Enable extensive support for collective.editmodeswitcher.
   Hide all elements that are not hidden by the feature itself.
   [raphael-s]
-  
+
 - Fix styling for datagrid widget.
   [Kevin Bieri]
 
