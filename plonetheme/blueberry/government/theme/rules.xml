@@ -79,6 +79,14 @@
          <xsl:attribute name="accesskey">9</xsl:attribute>
     </replace>
 
+    <!-- Move curser into the searchbox with accesskey 5 -->
+    <replace css:content="#searchGadget">
+        <xsl:copy>
+            <xsl:attribute name="accesskey">5</xsl:attribute>
+            <xsl:copy-of select="@*" />
+            <xsl:apply-templates />
+        </xsl:copy>
+    </replace>
 
     <drop css:content="#hidden_further_infos_title" />
     <before css:theme="#column-sidebar">

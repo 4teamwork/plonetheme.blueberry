@@ -5,6 +5,9 @@ Changelog
 1.8.1 (unreleased)
 ------------------
 
+- Move curser into the searchbox with accesskey 5.
+  [mathias.leimgruber]
+
 - Change accesskey of accessibilit-info to 9, since 0 is reserved for the startpage
   [mathias.leimgruber]
 
