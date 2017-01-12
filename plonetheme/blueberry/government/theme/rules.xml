@@ -74,6 +74,11 @@
          <xsl:attribute name="accesskey">4</xsl:attribute>
     </replace>
 
+    <!-- Change accesskey of accessibilit-info to 9, since 0 is reserved for the startpage -->
+    <replace content="//*[@id='siteaction-accessibility']/a/@accesskey">
+         <xsl:attribute name="accesskey">9</xsl:attribute>
+    </replace>
+
 
     <drop css:content="#hidden_further_infos_title" />
     <before css:theme="#column-sidebar">

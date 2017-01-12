@@ -5,6 +5,9 @@ Changelog
 1.8.1 (unreleased)
 ------------------
 
+- Change accesskey of accessibilit-info to 9, since 0 is reserved for the startpage
+  [mathias.leimgruber]
+
 - Change accesskey of sitemap to 4, since 3 is reserved for the contact form.
   [mathias.leimgruber]
 
