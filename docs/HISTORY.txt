@@ -5,7 +5,9 @@ Changelog
 1.8.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove accesskey 1 from portal-logo. According to access4all
+  accesskey 1 jumps to the global navigation (This is already implemented).
+  [mathias.leimgruber]
 
 
 1.8.0 (2017-01-06)

@@ -66,6 +66,9 @@
     <before css:theme="#column-navigation">
         <xsl:copy-of css:select="#hidden_content_navigation_title"/>
     </before>
+    <!-- Remove invalid accesskey=1 from portal-logo - Accesskey 1 is jump to navigation anchor -->
+    <drop css:content="#portal-logo" attributes="accesskey" />
+
 
     <drop css:content="#hidden_further_infos_title" />
     <before css:theme="#column-sidebar">
