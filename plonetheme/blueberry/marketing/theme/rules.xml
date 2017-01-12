@@ -68,6 +68,27 @@
         <xsl:copy-of css:select="#hidden_footer_title"/>
     </before>
 
+    <!-- Remove invalid accesskey=1 from portal-logo - Accesskey 1 is jump to navigation anchor -->
+    <drop css:content="#portal-logo" attributes="accesskey" />
+
+    <!-- Change accesskey of sitemap to 4, since 3 is reserved for the contact form -->
+    <replace content="//*[@id='siteaction-sitemap']/a/@accesskey">
+         <xsl:attribute name="accesskey">4</xsl:attribute>
+    </replace>
+
+    <!-- Change accesskey of accessibilit-info to 9, since 0 is reserved for the startpage -->
+    <replace content="//*[@id='siteaction-accessibility']/a/@accesskey">
+         <xsl:attribute name="accesskey">9</xsl:attribute>
+    </replace>
+
+    <!-- Move curser into the searchbox with accesskey 5 -->
+    <replace css:content="#searchGadget">
+        <xsl:copy>
+            <xsl:attribute name="accesskey">5</xsl:attribute>
+            <xsl:copy-of select="@*" />
+            <xsl:apply-templates />
+        </xsl:copy>
+    </replace>
 
     <replace css:content-children="#portal-column-one" css:theme-children="#column-navigation" />
     <replace css:content-children="#portal-column-content" css:theme-children="#column-content" />
