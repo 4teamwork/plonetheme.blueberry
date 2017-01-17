@@ -2,13 +2,6 @@
 <object name="portal_javascripts">
 
     <javascript
-        id="++resource++plonetheme.blueberry/javascript/fixed_header.js"
-        compression="none"
-        authenticated="False"
-        enabled="True"
-        />
-
-    <javascript
         id="++resource++plonetheme.blueberry/javascript/accesskeys.js"
         compression="safe"
         authenticated="False"
