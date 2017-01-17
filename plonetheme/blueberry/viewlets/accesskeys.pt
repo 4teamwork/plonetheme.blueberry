@@ -24,7 +24,7 @@
                     nav_root_url view/nav_root_url">
         <li>
             <a accesskey="0"
-               tal:attributes="href string:${url}"
+               tal:attributes="href string:${nav_root_url}"
                i18n:translate="label_skiptohomepage">Homepage</a>
         </li>
         <li>

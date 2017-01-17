@@ -78,6 +78,8 @@
         <xsl:copy-of css:select="#hidden_footer_title"/>
     </before>
 
+    <!-- Remove invalid accesskey=1 from portal-logo - Accesskey 1 is jump to navigation anchor -->
+    <drop css:content="#portal-logo" attributes="accesskey" />
 
     <replace css:content-children="#portal-column-one" css:theme-children="#column-navigation" />
     <replace css:content-children="#portal-column-content" css:theme-children="#column-content" />
