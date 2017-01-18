@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.8.1 (unreleased)
+1.8.1 (2017-01-18)
 ------------------
 
 - Move curser into the searchbox with accesskey 5.
