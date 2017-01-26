@@ -18,6 +18,7 @@ body .calendar {
   border: initial;
   background: initial;
   font-size: initial;
+  z-index: $zindex-base;
 
   table {
     border: initial;
