@@ -17,11 +17,6 @@ ul.listTypePlain {
   @include hidden-structure();
 }
 
-#content .visualNoMarker {
-  list-style: none;
-  margin-left: 0;
-}
-
 dl.collapsible {
   dt {
     cursor: pointer;

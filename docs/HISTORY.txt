@@ -5,6 +5,9 @@ Changelog
 1.8.2 (unreleased)
 ------------------
 
+- Fix sitemap styles.
+  [Kevin Bieri]
+
 - Fix calendar popup from not showing up on the content_status_history" form.
   [mbaechtold]
 
