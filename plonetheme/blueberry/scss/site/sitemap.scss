@@ -1,13 +1,17 @@
-.template-sitemap {
-  #portal-sitemap {
-    a:before { content: none; }
-    @include list();
-    &.navTreeLevel0 > li > div > a {
-      font-size: $font-size-medium;
-      color: $color-text;
-      margin-top: $margin-heading-vertical;
-      display: block;
-    }
-  }
+#portal-sitemap {
+    > li {
+        margin-bottom: $margin-vertical / 2;
 
+        > div > a {
+            font-size: $font-size-medium;
+        }
+    }
+
+    .navTree {
+        list-style-type: inherit;
+        padding-left: $padding-horizontal;
+        > li {
+            display: list-item;
+        }
+    }
 }
