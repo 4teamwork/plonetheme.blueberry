@@ -113,9 +113,13 @@
     margin: 0;
   }
 
-  #column-content {
-    margin-left: -100%;
-    width: 100%;
+  // Force the columns to use the full width
+  #column-content,
+  #column-sidebar {
+    float: none !important;
+    position: static !important;
+    margin-left: 0 !important;
+    width: 100% !important;
   }
 
 
@@ -154,7 +158,13 @@
     max-width: none;
   }
 
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+
   @page {
+    size: A4;
     margin: 2.5cm 2.5cm 2cm;
   }
 
