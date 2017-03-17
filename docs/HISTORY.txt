@@ -7,6 +7,8 @@ Changelog
 
 - Fix single status in editbar.
   [Kevin Bieri]
+- Restyle sitemap !this may break some custom sitemap-stylings!
+  [raphael-s]
 
 
 1.8.3 (2017-03-03)
