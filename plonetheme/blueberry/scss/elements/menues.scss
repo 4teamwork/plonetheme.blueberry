@@ -20,10 +20,17 @@
     }
   }
 }
-.actionMenuHeader a {
-  @include no-link();
-  display: block;
-  padding: $padding-vertical $padding-horizontal;
+.actionMenuHeader {
+  a {
+    @include no-link();
+    display: block;
+    padding: $padding-vertical $padding-horizontal;
+  }
+  .noMenuAction {
+    @include auto-text-color($color-edit);
+    display: block;
+    padding: $padding-vertical $padding-horizontal;
+  }
 }
 .actionMenuContent {
   margin: 0;
