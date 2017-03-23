@@ -140,3 +140,10 @@ label, .label {
     }
   }
 }
+
+input[placeholder] { text-overflow: ellipsis; }
+::-webkit-input-placeholder
+:-ms-input-placeholder
+::-ms-input-placeholder {
+  text-overflow: ellipsis;
+}
