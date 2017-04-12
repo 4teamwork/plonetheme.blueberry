@@ -23,7 +23,8 @@
         <replace css:content="#portal-languageselector-wrapper" css:theme="#portal-languageselector-wrapper" />
     </rules>
 
-    <replace css:content="#service-navigation" css:theme="#service-navigation" />
+    <replace css:content-children="#service-navigation" css:theme-children=".navigation" />
+    <drop css:theme="#service-navigation" />
     <replace css:content="ul.mobileButtons" css:theme="ul.mobileButtons" />
 
     <replace css:content="#ftw-mobile-wrapper" css:theme="#ftw-mobile-wrapper" />
