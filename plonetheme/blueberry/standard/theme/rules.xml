@@ -14,7 +14,6 @@
 
     <replace css:content="#portal-logo" css:theme="#portal-logo" />
 
-    <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
     <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper" />
 
     <rules if-content="not(//*[@id='portal-languageselector-wrapper'])">
