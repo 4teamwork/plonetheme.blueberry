@@ -14,10 +14,6 @@
 
     <replace css:content="#portal-logo" css:theme="#portal-logo" />
 
-    <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
-    <!-- Move hidden h2 of global section too -->
-    <before css:content="#portal-header > h2.hiddenStructure" css:theme="#portal-globalnav"/>
-
     <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
     <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper" />
 
@@ -52,10 +48,6 @@
     </rules>
     <drop css:content="#edit-bar" />
 
-    <replace css:content-children="#portal-breadcrumbs" css:theme-children="#portal-breadcrumbs" />
-    <drop css:content="#portal-breadcrumbs" if="$pathbar_full_width" />
-    <drop css:theme="#portal-breadcrumbs" if="$pathbar_full_width = False" />
-
     <replace css:content-children="div.documentActions" css:theme-children="#document-actions" />
     <drop css:content="div.documentActions" />
 
@@ -81,28 +73,16 @@
     <!-- Remove invalid accesskey=1 from portal-logo - Accesskey 1 is jump to navigation anchor -->
     <drop css:content="#portal-logo" attributes="accesskey" />
 
-    <replace css:content-children="#portal-column-one" css:theme-children="#column-navigation" />
     <replace css:content-children="#portal-column-content" css:theme-children="#column-content" />
-    <replace css:content-children="#portal-column-two" css:theme-children="#column-sidebar" />
 
     <replace css:content="div.to_top" css:theme="div.to_top" method="raw" />
     <drop css:content="div.to_top" />
-
-    <!-- Drop columns without content -->
-    <rules if-content="not(//*[@id='portal-column-one'])">
-      <drop css:theme="#column-navigation" />
-    </rules>
-    <rules if-content="not(//*[@id='portal-column-two'])">
-      <drop css:theme="#column-sidebar" />
-    </rules>
 
     <!-- Append css classes to body, which indicates the amount of rendered columns -->
     <before theme-children="/html/body" method="raw">
       <xsl:attribute name="class">
           <xsl:value-of select="/html/body/@class" />
-          <xsl:if css:test="#portal-column-one"> has-nav-column</xsl:if>
           <xsl:if css:test="#portal-column-content"> has-content-column</xsl:if>
-          <xsl:if css:test="#portal-column-two"> has-sidebar-column</xsl:if>
           <xsl:if test="$editmode_disabled"> editmode-disabled</xsl:if>
       </xsl:attribute>
     </before>
