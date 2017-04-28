@@ -5,6 +5,8 @@ Changelog
 1.8.6 (unreleased)
 ------------------
 
+- Move simplelayout specific print styles. [Kevin Bieri]
+
 - Style inuput type url like all other input fields.
   [mathias.leimgruber]
 
