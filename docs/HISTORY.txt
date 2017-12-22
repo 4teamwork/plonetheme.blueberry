@@ -23,6 +23,11 @@ Changelog
 1.8.6 (2018-01-25)
 ------------------
 
+- Plone 5.1 compatibility:
+
+  - No longer us `u` function of zope.schema._compat - was removed.
+
+
 - Move simplelayout specific print styles. [Kevin Bieri]
 
 - Style inuput type url like all other input fields.
