@@ -1,7 +1,7 @@
 plonetheme.blueberry
 =====================
 
-An `ftw.theming`_ based Plone 4 theme.
+An `ftw.theming`_ based Plone 4 and Plone 5.1 theme.
 
 
 Installation
