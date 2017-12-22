@@ -27,6 +27,7 @@ Changelog
 
   - No longer us `u` function of zope.schema._compat - was removed.
   - Load SkipLinks viewlet only for plone4, this no longer exists in plone5.
+  - Load TinyMCE 3 customization (JSONSearch) only for plone4.
 
 
 - Move simplelayout specific print styles. [Kevin Bieri]

@@ -3,10 +3,13 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="plonetheme.blueberry">
 
-    <adapter for="Products.CMFCore.interfaces.IFolderish"
-             provides="Products.TinyMCE.adapters.interfaces.JSONSearch.IJSONSearch"
-             factory=".browser.tinymce.BlueberryJSONSearch" />
+    <configure zcml:condition="not-have plone-5">
+        <adapter for="Products.CMFCore.interfaces.IFolderish"
+                 provides="Products.TinyMCE.adapters.interfaces.JSONSearch.IJSONSearch"
+                 factory=".browser.tinymce.BlueberryJSONSearch" />
+    </configure>
 
 </configure>
