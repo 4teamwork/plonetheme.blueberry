@@ -43,6 +43,7 @@
          - Move #portal-top script tags to the head
     -->
     <after content="/html/head/script[contains(text(), 'var raven_config')]" theme-children="/html/head" />
+    <after content="/html/head/script[contains(text(), 'PORTAL_URL =')]" theme-children="/html/head" />
     <after content="/html/head/script[@src]" theme-children="/html/head" />
     <after css:content="#portal-top script[src]" theme-children="/html/head" />
     <after content="/html/head/script[not(@src) and not(contains(text(), 'var raven_config'))]" theme-children="/html/head" />
