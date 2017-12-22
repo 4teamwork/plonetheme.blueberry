@@ -26,6 +26,7 @@ Changelog
 - Plone 5.1 compatibility:
 
   - No longer us `u` function of zope.schema._compat - was removed.
+  - Load SkipLinks viewlet only for plone4, this no longer exists in plone5.
 
 
 - Move simplelayout specific print styles. [Kevin Bieri]
