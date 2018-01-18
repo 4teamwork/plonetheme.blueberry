@@ -10,6 +10,7 @@ Changelog
 - Style inuput type url like all other input fields.
   [mathias.leimgruber]
 
+- Fix compatibility with ftw.theming 2.0.0 [Nachtalb]
 
 1.8.5 (2017-03-23)
 ------------------
