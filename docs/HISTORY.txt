@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.8.6 (unreleased)
+1.8.6 (2018-01-25)
 ------------------
 
 - Move simplelayout specific print styles. [Kevin Bieri]
