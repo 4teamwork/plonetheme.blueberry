@@ -44,7 +44,7 @@ class TestCustomSCSSVariables(FunctionalTestCase):
         }).save()
 
         page = create(Builder('folder').titled(u'My Subsite').providing(INavigationRoot))
-        browser.visit(page, view='manage-theme')
+        browser.visit(page, view='manage-theme', send_authenticator=True)
         browser.fill({
             '$color-secondary': 'green',
         }).save()
@@ -59,7 +59,7 @@ class TestCustomSCSSVariables(FunctionalTestCase):
 
         page2 = create(Builder('folder').titled(u'My Subsite').within(page)
                        .providing(INavigationRoot))
-        browser.visit(page2, view='manage-theme')
+        browser.visit(page2, view='manage-theme', send_authenticator=True)
         browser.fill({
             '$color-secondary': 'yellow',
         }).save()
