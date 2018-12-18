@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <metadata>
     <dependencies>
+        <dependency>profile-plonetheme.blueberry:base</dependency>
         <dependency>profile-plone.app.theming:default</dependency>
         <dependency>profile-ftw.theming:default</dependency>
         <dependency>profile-ftw.theming:base</dependency>
