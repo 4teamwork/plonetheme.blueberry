@@ -40,7 +40,7 @@ setup(name='plonetheme.blueberry',
       zip_safe=False,
 
       install_requires=[
-          'ftw.theming >= 1.7.0',
+          'ftw.theming >= 2.0.0',
           'ftw.upgrade',
           'plone.directives.form',
           'plone.api',
