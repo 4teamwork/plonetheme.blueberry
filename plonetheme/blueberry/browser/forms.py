@@ -14,7 +14,6 @@ from zope.interface import alsoProvides
 from zope.interface import implementer
 from zope.interface import Interface
 from zope.schema import TextLine
-from zope.schema._compat import u
 import time
 
 VARIABLES_ANNOTATION_KEY = 'plonetheme.blueberry.custom_scss_variables'
@@ -29,7 +28,7 @@ class Variable(TextLine):
             self.variable_name = '$' + self.__name__
 
         if 'title' not in kw:
-            kw['title'] = u(self.variable_name)
+            kw['title'] = unicode(self.variable_name, "unicode_escape")
 
         if 'required' not in kw:
             kw['required'] = False

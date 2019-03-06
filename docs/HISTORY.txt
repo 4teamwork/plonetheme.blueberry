@@ -23,6 +23,14 @@ Changelog
 1.8.6 (2018-01-25)
 ------------------
 
+- Plone 5.1 compatibility:
+
+  - No longer us `u` function of zope.schema._compat - was removed.
+  - Load SkipLinks viewlet only for plone4, this no longer exists in plone5.
+  - Load TinyMCE 3 customization (JSONSearch) only for plone4.
+  - Load js, which defines PORTAL_URL first and support data-base-url attr on body tag.
+
+
 - Move simplelayout specific print styles. [Kevin Bieri]
 
 - Style inuput type url like all other input fields.

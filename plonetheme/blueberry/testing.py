@@ -1,6 +1,7 @@
 from ftw.builder.testing import BUILDER_LAYER
 from ftw.builder.testing import functional_session_factory
 from ftw.builder.testing import set_builder_session_factory
+from ftw.testbrowser.tests import IS_PLONE_4
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import PLONE_FIXTURE
@@ -26,6 +27,9 @@ class ThemeLayer(PloneSandboxLayer):
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'plonetheme.blueberry:default')
+
+        if not IS_PLONE_4:
+            applyProfile(portal, 'plone.app.contenttypes:default')
 
 
 THEME_FIXTURE = ThemeLayer()
