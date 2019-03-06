@@ -4,6 +4,13 @@ plonetheme.blueberry
 An `ftw.theming`_ based Plone 4 and Plone 5.1 theme.
 
 
+Note on Plone 5.1.x
+-------------------
+
+Currently there is no upgrade path tested for this package. Consider a reinstall if you upgrade from Plone 4.3.x to Plone 5.1.x.
+A working upgrade path will be added later.
+
+
 Installation
 ------------
 
