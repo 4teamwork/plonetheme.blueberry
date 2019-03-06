@@ -13,6 +13,9 @@
     <include package="plone.app.theming" />
 
     <include file="resources.zcml" />
+    <configure zcml:condition="have plone-5">
+        <include file="plone5-resources.zcml" />
+    </configure>
     <include file="permissions.zcml" />
     <include file="lawgiver.zcml" zcml:condition="installed ftw.lawgiver" />
 

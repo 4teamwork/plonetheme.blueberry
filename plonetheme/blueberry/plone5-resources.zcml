@@ -1,0 +1,11 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:theme="http://namespaces.zope.org/ftw.theming"
+    i18n_domain="plonetheme.blueberry">
+
+    <include package="ftw.theming" file="meta.zcml" />
+    <theme:resources profile="plonetheme.blueberry:default" slot="theme">
+        <theme:scss file="scss/plone5_compatibility.scss" />
+    </theme:resources>
+
+</configure>
