@@ -5,7 +5,7 @@ Changelog
 1.11.1 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Improve datagrid widget styling. [jone]
 
 
 1.11.0 (2019-03-06)
