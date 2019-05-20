@@ -1,12 +1,7 @@
-/*
-  Styling this widget was a pain #tableflip.
-  (╯°□°)╯︵ ┻━━━━━━┻
- */
-
 .datagridwidget-table-view {
 
   width: 100%;
-  border: 0;
+  border: 1px solid $color-gray-dark;
   background: none;
 
   .formControls {
@@ -22,6 +17,12 @@
     background-color: $color-gray-light;
     color: $color-text;
     padding: $padding-vertical $padding-horizontal;
+    border-bottom: 1px solid $color-gray-dark;
+    border-left: 1px solid $color-gray-dark;
+
+    &:last-child {
+      border-left: none;
+    }
   }
 
   label {
@@ -125,10 +126,12 @@
   border-left: 1px solid $color-gray-dark;
 }
 
+// Disable "delete" action for auto-append column: it is used for inserting
+// new columns and should therefore not be removable.
 .auto-append  > .datagridwidget-manipulator {
-  &.insert-row, &.delete-row {
-    &:before {
-      content: none;
+  &.delete-row {
+    &:before, a {
+      display: none;
     }
   }
 }
