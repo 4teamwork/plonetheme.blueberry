@@ -6,7 +6,7 @@
         <object name="manage-theme" meta_type="CMF Action"
                 i18n:domain="plonetheme.blueberry">
             <property name="title" i18n:translate="">Customize design</property>
-            <property name="url_expr">string:@@manage-theme</property>
+            <property name="url_expr">string:${globals_view/navigationRootUrl}/@@manage-theme</property>
             <property name="icon_expr"></property>
             <property name="available_expr">python:checkPermission("plonetheme.blueberry: Customize Design Variables", object) and context.restrictedTraverse('@@plone_context_state').canonical_object().restrictedTraverse('@@plone_interface_info').provides('plone.app.layout.navigation.interfaces.INavigationRoot') and not context.REQUEST.get('_disable_editmode')</property>
             <property name="permissions">
