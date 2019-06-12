@@ -110,7 +110,7 @@ class TestCustomSCSSVariables(FunctionalTestCase):
     @browsing
     def test_user_action(self, browser):
         action_link_label = 'Customize design'
-        action_link_url = '@@manage-theme'
+        action_link_url = 'http://nohost/plone/@@manage-theme'
 
         # Make sure the manager
         browser.login().visit(self.portal)
