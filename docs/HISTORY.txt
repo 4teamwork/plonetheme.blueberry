@@ -5,6 +5,7 @@ Changelog
 1.11.1 (unreleased)
 -------------------
 
+- Fix: Link to custom design now points to correct location. [busykoala]
 - Improve datagrid widget styling. [jone]
 
 
