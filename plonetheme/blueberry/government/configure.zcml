@@ -11,7 +11,7 @@
         name="default"
         title="plonetheme.blueberry.government"
         directory="profiles/default"
-        description="Blueberry Marketing Theme"
+        description="Blueberry Government Theme"
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
