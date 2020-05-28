@@ -5,7 +5,7 @@ Changelog
 1.11.2 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix footer rule, since the markup is different. [mathias.leimgruber]
 
 
 1.11.1 (2019-07-05)
