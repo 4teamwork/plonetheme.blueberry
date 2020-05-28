@@ -133,7 +133,10 @@
     <drop attributes="alt" content="//a[@id='portal-logo']/img[@alt='']" />
     <drop attributes="title" content="//a[@id='portal-logo']/img[@title='']" />
 
+    <!-- status messages from Plone 4 and ftw.globalstatusmessage -->
     <replace css:content="#globalstatusmessage" css:theme="#globalstatusmessage" />
+    <!-- status messages from Plone 5 -->
+    <after css:content-children="#global_statusmessage" css:theme="#globalstatusmessage" />
 
   </rules>
 </rules>
