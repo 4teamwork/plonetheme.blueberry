@@ -116,9 +116,17 @@
 
     <replace css:content="#ftw-footer" css:theme-children="#footer" />
 
-    <!-- Insert content from IPortalFooter viewlet (analytics JS and custom footer viewlets) -->
-    <after css:content="#portal-footer-wrapper > div >*:not(#portal-footer):not(#portal-colophon):not(#portal-siteactions):not(#ftw-footer)"
-           css:theme="#bottom-actions" />
+    <!-- Insert content from IPortalFooter viewlet (analytics JS and custom footer viewlets) Plone 4 -->
+    <rules if-content="not(//footer)">
+        <after css:content="#portal-footer-wrapper > div >*:not(#portal-footer):not(#portal-colophon):not(#portal-siteactions):not(#ftw-footer)"
+               css:theme="#bottom-actions" />
+    </rules>
+    <!-- Insert content from IPortalFooter viewlet (analytics JS and custom footer viewlets) Plone 5 -->
+    <rules if-content="//footer">
+        <after css:content="#portal-footer-wrapper >*:not(#portal-footer):not(#portal-colophon):not(#portal-siteactions):not(#ftw-footer)"
+               css:theme="#bottom-actions" />
+    </rules>
+
 
 
     <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" />
