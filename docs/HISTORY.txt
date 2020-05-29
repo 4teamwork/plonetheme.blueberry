@@ -5,6 +5,7 @@ Changelog
 1.11.2 (unreleased)
 -------------------
 
+- Fix plone 5 toolbar positioning. [mathias.leimgruber]
 - Fix plone 5 pagination styles [mathias.leimgruber]
 - Fix footer rule, since the markup is different. [mathias.leimgruber]
 - Restore globalstatusmessages which were hidden for (at least some) parts of Plone 5. [djowett-ftw]
