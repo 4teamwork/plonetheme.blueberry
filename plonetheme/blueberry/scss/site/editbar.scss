@@ -34,3 +34,17 @@
   @include tab-list();
   float: left;
 }
+
+
+// Plone 5 toolbar
+.plone-toolbar-left-default #edit-zone {
+  margin-left: -60px;
+}
+
+.plone-toolbar-left-expanded #edit-zone {
+  margin-left: -120px;
+}
+
+body[class*="plone-toolbar"] #edit-bar {
+  position: absolute;
+}
