@@ -12,4 +12,14 @@
         permission="zope2.View"
         layer="plonetheme.blueberry.interfaces.IBlueberryLayer"
         />
+
+    <browser:viewlet
+        zcml:condition="have plone-5"
+        name="plone.globalstatusmessage"
+        manager="plone.app.layout.viewlets.interfaces.IGlobalStatusMessage"
+        class=".globalstatusmessage.BlueberryGlobalStatusMessage"
+        permission="zope2.View"
+        layer="plonetheme.blueberry.interfaces.IBlueberryLayer"
+        />
+
 </configure>
