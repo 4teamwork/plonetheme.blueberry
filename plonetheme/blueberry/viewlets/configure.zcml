@@ -22,4 +22,13 @@
         layer="plonetheme.blueberry.interfaces.IBlueberryLayer"
         />
 
+    <browser:viewlet
+        zcml:condition="have plone-5"
+        name="blueberry.basetag"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        class=".basetag.BaseTagViewlet"
+        permission="zope2.View"
+        layer="plonetheme.blueberry.interfaces.IBlueberryLayer"
+        />
+
 </configure>
