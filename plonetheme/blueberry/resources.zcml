@@ -52,6 +52,7 @@
         <theme:scss file="scss/tinymce.scss" />
         <theme:scss file="scss/plone-datepicker.scss" />
         <theme:scss file="scss/ploneformgen.scss" />
+        <theme:scss file="scss/easyform.scss" />
         <theme:scss file="scss/plone-legacy.scss" />
         <theme:scss file="scss/messages.scss" />
         <theme:scss file="scss/batching.scss" />
