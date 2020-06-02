@@ -1,0 +1,8 @@
+@include portal-type-font-awesome-icon(easyform, check-square);
+
+.portaltype-easyform {
+  #form-buttons-submit {
+    background-color: $color-primary;
+    @include auto-text-color($color-primary);
+  }
+}
