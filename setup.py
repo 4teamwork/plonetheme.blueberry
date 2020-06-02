@@ -14,7 +14,7 @@ tests_require = [
 
 setup(name='plonetheme.blueberry',
       version=version,
-      description='A Plone 4 theme',
+      description='A Plone 4 / 5 theme',
       long_description=(open('README.rst').read() + '\n' +
                         open(os.path.join('docs', 'HISTORY.txt')).read()),
 
