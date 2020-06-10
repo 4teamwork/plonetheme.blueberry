@@ -85,7 +85,7 @@
 
 .datagridwidget-empty-row { display: none; }
 
-.datagridwidget-manipulator {
+body:not(.pat-plone) .datagridwidget-manipulator {
   @extend .fa-icon;
   position: relative;
   padding: 0;
