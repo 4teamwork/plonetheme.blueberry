@@ -48,3 +48,9 @@
 body[class*="plone-toolbar"] #edit-bar {
   position: absolute;
 }
+
+.plone-toolbar-left #edit-zone {
+  nav > ul#personal-bar-container ul {
+    left: 0;
+  }
+}
