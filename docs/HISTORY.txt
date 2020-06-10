@@ -13,6 +13,7 @@ Changelog
 - Restore globalstatusmessages which were hidden for (at least some) parts of Plone 5. [djowett-ftw]
 - Add basetag. [busykoala]
 - Remove redundant symbol for external link. [busykoala]
+- Hide plone menu on mobile screens. [mathias.leimgruber]
 
 
 1.11.1 (2019-07-05)
