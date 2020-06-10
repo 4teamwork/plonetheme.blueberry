@@ -5,6 +5,7 @@ Changelog
 1.11.2 (unreleased)
 -------------------
 
+- Fix datagrid integration for plone 5. [mathias.leimgruber]
 - Fix body attributes. [mathias.leimgruber]
 - Fix plone 5 toolbar positioning. [mathias.leimgruber]
 - Fix plone 5 pagination styles [mathias.leimgruber]
