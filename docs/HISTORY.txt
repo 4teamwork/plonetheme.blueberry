@@ -7,6 +7,7 @@ Changelog
 
 - Fix plone 5 toolbar positioning. [mathias.leimgruber]
 - Fix plone 5 pagination styles [mathias.leimgruber]
+- Add ftw.logo support. [mathias.leimgruber]
 - Add slightly customized globalstatusmessage viewlet for plone 5.1 [mathias.leimgruber]
 - Add some minimal easyform styles. [mathias.leimgruber]
 - Fix footer rule, since the markup is different. [mathias.leimgruber]
