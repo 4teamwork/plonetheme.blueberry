@@ -2,7 +2,8 @@
     > li {
         margin-bottom: $margin-vertical / 2;
 
-        > div > a {
+        > div > a,
+        > a {
             font-size: $font-size-medium;
         }
     }

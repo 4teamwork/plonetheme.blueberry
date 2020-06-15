@@ -2,7 +2,7 @@
   border: 0;
 }
 
-.navTree {
+body:not(.template-sitemap) .navTree {
   @include list();
 
   > li {
