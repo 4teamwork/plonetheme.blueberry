@@ -49,6 +49,11 @@
         <drop css:theme="#mobile-logo" />
     </rules>
 
+    <replace css:content="#portal-mobilelogo" css:theme="#portal-mobilelogo" />
+    <rules if-content="not(//*[@id='portal-mobilelogo']/*)">
+        <drop css:theme="#portal-mobilelogo" />
+    </rules>
+
     <replace css:content-children="#edit-bar" css:theme-children="#edit-bar" />
     <rules if-content="not(//*[@id='edit-bar']/*)">
         <drop css:theme="#edit-bar" />
