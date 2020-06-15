@@ -7,6 +7,7 @@ Changelog
 
 - Fix datagrid integration for plone 5. [mathias.leimgruber]
 - Fix body attributes. [mathias.leimgruber]
+- Fix Checkbox display issue. [mathias.leimgruber]
 - Fix plone 5 toolbar positioning. [mathias.leimgruber]
 - Fix plone 5 pagination styles [mathias.leimgruber]
 - Add ftw.logo support. [mathias.leimgruber]

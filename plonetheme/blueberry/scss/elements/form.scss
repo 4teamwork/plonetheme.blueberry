@@ -46,12 +46,24 @@ textarea {
 }
 
 input[type="checkbox"], input[type="radio"] {
-  vertical-align: baseline;
+  vertical-align: top;
+  margin-top: 0.3em;
 
   &~label, ~.label {
     display: inline-block;
   }
+
+  &~label {
+    // 100% minus checkbox width
+    width: calc(100% - 1.5em);
+  }
 }
+
+// Hide required checkbox marker - has no effect at all
+.option span.required {
+  display: none;
+}
+
 
 fieldset {
   margin: 0;
