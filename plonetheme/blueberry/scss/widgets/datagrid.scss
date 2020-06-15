@@ -75,9 +75,13 @@
       margin: 0;
     }
   }
-
 }
 
+.field.error .datagridwidget-table-view {
+  input[type="text"] {
+    margin: -2px;
+  }  
+}
 
 .datagridwidget-hidden-data {
   display: none;
@@ -85,7 +89,7 @@
 
 .datagridwidget-empty-row { display: none; }
 
-.datagridwidget-manipulator {
+body:not(.pat-plone) .datagridwidget-manipulator {
   @extend .fa-icon;
   position: relative;
   padding: 0;
