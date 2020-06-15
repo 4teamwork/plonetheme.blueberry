@@ -47,6 +47,11 @@
 
 body[class*="plone-toolbar"] #edit-bar {
   position: absolute;
+  display: none;
+
+  @include screen-small {
+    display: block;
+  }
 }
 
 .plone-toolbar-left #edit-zone {
