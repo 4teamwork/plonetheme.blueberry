@@ -5,6 +5,7 @@ Changelog
 1.11.2 (unreleased)
 -------------------
 
+- Fix accesskeys viewlet for plone 5. [mathias.leimgruber]
 - Fix datagrid integration for plone 5. [mathias.leimgruber]
 - Fix body attributes. [mathias.leimgruber]
 - Fix Checkbox display issue. [mathias.leimgruber]
