@@ -3,7 +3,7 @@ from plone.app.layout.viewlets import common
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 
-class BlueberrySkipLinksViewlet(common.SkipLinksViewlet):
+class BlueberrySkipLinksViewlet(common.ViewletBase):
     index = ViewPageTemplateFile('accesskeys.pt')
 
     def update(self):
