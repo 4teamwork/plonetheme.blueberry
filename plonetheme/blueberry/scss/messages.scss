@@ -79,6 +79,7 @@ body.pat-plone {
 
     @include portal-message($portalmessage-undefined-color, portalMessage);
     @include portal-message($portalmessage-info-color, info);
+    @include portal-message($portalmessage-info-color, information);
     @include portal-message($portalmessage-warning-color, warning);
     @include portal-message($portalmessage-error-color, error);
 
