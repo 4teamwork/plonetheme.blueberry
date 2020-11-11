@@ -5,7 +5,7 @@ Changelog
 1.11.4 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Add "plone-{version}" class to body for plone versions 5 and above [Nachtalb]
 
 
 1.11.3 (2020-07-30)
