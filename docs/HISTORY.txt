@@ -6,6 +6,7 @@ Changelog
 -------------------
 
 - Add "plone-{version}" class to body for plone versions 5 and above [Nachtalb]
+- Fix duplicate globalstatusmessage with ftw.globalstatusmessage by using plone version specific conditions [Nachtalb]
 
 
 1.11.3 (2020-07-30)
