@@ -106,18 +106,6 @@
 
     <replace css:content="#ftw-footer" css:theme-children="#footer" />
 
-    <!-- Insert content from IPortalFooter viewlet (analytics JS and custom footer viewlets) Plone 4 -->
-    <rules if-content="not(//footer)">
-        <after css:content="#portal-footer-wrapper > div >*:not(#portal-footer):not(#portal-colophon):not(#portal-siteactions):not(#ftw-footer)"
-               css:theme="#bottom-actions" />
-    </rules>
-    <!-- Insert content from IPortalFooter viewlet (analytics JS and custom footer viewlets) Plone 5 -->
-    <rules if-content="//footer">
-        <after css:content="#portal-footer-wrapper >*:not(#portal-footer):not(#portal-colophon):not(#portal-siteactions):not(#ftw-footer)"
-               css:theme="#bottom-actions" />
-    </rules>
-
-
     <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" />
 
     <!-- Wrap p tag around the text inside of the documentDescription -->
@@ -133,10 +121,27 @@
     <drop attributes="alt" content="//a[@id='portal-logo']/img[@alt='']" />
     <drop attributes="title" content="//a[@id='portal-logo']/img[@title='']" />
 
-    <!-- status messages from Plone 4 and ftw.globalstatusmessage -->
-    <replace css:content="#globalstatusmessage" css:theme="#globalstatusmessage" />
-    <!-- status messages from Plone 5 -->
-    <after css:content-children="#global_statusmessage" css:theme="#globalstatusmessage" />
+    <!-- We don't use Plone 5 -->
+    <rules if-content="not(//body[contains(@class, 'plone-5')])">
+      <replace css:content="#globalstatusmessage" css:theme="#globalstatusmessage" />
+
+      <!-- Insert content from IPortalFooter viewlet -->
+      <rules if-content="not(//footer)">
+          <after css:content="#portal-footer-wrapper > div >*:not(#portal-footer):not(#portal-colophon):not(#portal-siteactions):not(#ftw-footer)"
+                 css:theme="#bottom-actions" />
+      </rules>
+    </rules>
+
+    <!-- We use Plone 5 -->
+    <rules if-content="//body[contains(@class, 'plone-5')]">
+      <after css:content-children="#global_statusmessage" css:theme="#globalstatusmessage" />
+
+      <!-- Insert content from IPortalFooter viewlet -->
+      <rules if-content="//footer">
+          <after css:content="#portal-footer-wrapper >*:not(#portal-footer):not(#portal-colophon):not(#portal-siteactions):not(#ftw-footer)"
+                 css:theme="#bottom-actions" />
+      </rules>
+    </rules>
 
   </rules>
 </rules>
