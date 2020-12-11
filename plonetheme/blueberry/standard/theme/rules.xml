@@ -23,7 +23,13 @@
     <before css:content="#portal-header > h2.hiddenStructure" css:theme="#portal-globalnav"/>
 
     <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
-    <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper" />
+    <!-- User actions rendered in Plone 4 and 5 -->
+    <rules if-content="not(//body[contains(@class, 'plone-5')])">
+      <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper" />
+    </rules>
+    <rules if-content="//body[contains(@class, 'plone-5')]">
+      <replace css:content="#portal-anontools" css:theme="#portal-personaltools-wrapper" />
+    </rules>
 
     <rules if-content="not(//*[@id='portal-languageselector-wrapper'])">
         <replace css:content="#portal-languageselector" css:theme="#portal-languageselector" />

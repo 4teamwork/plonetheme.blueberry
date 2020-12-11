@@ -8,14 +8,16 @@
   @include cell();
   @include gridposition(0);
   @include gridwidth(16);
-  .actionMenuHeader > a {
+  .actionMenuHeader > a,
+  #portal-anontools a  {
     @include auto-link-color($color-primary);
     padding-right: 0;
     padding-left: $padding-horizontal / 2;
   }
 }
 
-#portal-personaltools-wrapper {
+#portal-personaltools-wrapper,
+#portal-anontools {
   float: right;
   padding-left: $padding-horizontal;
   > ul {
