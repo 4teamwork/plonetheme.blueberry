@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.11.5 (unreleased)
+1.11.5 (2020-12-11)
 -------------------
 
 - Show login link in Plone 5 as previously in Plone 4 [Nachtalb]
