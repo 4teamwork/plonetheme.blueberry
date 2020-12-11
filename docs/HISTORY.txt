@@ -5,7 +5,7 @@ Changelog
 1.11.5 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Show login link in Plone 5 as previously in Plone 4 [Nachtalb]
 
 
 1.11.4 (2020-11-13)

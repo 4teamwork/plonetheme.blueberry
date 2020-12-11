@@ -45,7 +45,8 @@
     }
   }
 
-  #anon-personalbar a {
+  #anon-personalbar a,
+  #portal-top #portal-anontools a {
     @include auto-link-color($color-page-background);
   }
 
